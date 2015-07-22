@@ -1,0 +1,334 @@
+2015-07-11 10:47:22	-->	yuppie (~Space_Cas@unaffiliated/space-case/x-0038823) has joined #css
+2015-07-11 10:47:22	--	Topic for #css is "Cascading Style Sheets :: Don't paste! :: Need help? Validate (`v yoursite) and give a `live URL (see `paste and `testcase) :: Rules: http://hashcss.com/rules/ :: FAQ: http://hashcss.com/faq :: Harassment or disruption? Tell #css-ops :: More general discussions: ##frontend"
+2015-07-11 10:47:22	--	Topic set by preaction (~doug@irc.preaction.me) on Wed, 31 Dec 2014 16:44:02
+2015-07-11 10:47:22	--	Channel #css: 569 nicks (1 op, 0 voices, 568 normals)
+2015-07-11 10:47:22	***	Buffer Playback...
+2015-07-11 10:47:22	dewp	[09:35:22] thats what you said with your attributes - what do you want to achieve?
+2015-07-11 10:47:22	dewp	[09:36:21] if you want a stick footer you'll find lots of code snippets via google
+2015-07-11 10:47:22	thecoolguy	[09:36:56] i'm trying to understand what i'm doing wrong
+2015-07-11 10:47:22	thecoolguy	[09:37:54] if i remove position:abosolute it stays at the bottom but it is not always at the bottom of the page
+2015-07-11 10:47:22	thecoolguy	[09:41:14] This is what i have http://jsfiddle.net/vvb2xxte/1/
+2015-07-11 10:47:22	thecoolguy	[09:44:19] dewp ?
+2015-07-11 10:47:22	dewp	[09:51:58] not sure what you want
+2015-07-11 10:47:22	dewp	[09:52:08] maybehttp://jsfiddle.net/vvb2xxte/3/
+2015-07-11 10:47:22	dewp	[09:52:11] http://jsfiddle.net/vvb2xxte/3/
+2015-07-11 10:47:22	dewp	[09:53:32] i.e. what you would have made wrong if that's your desired result: wrap the content in an own div
+2015-07-11 10:47:22	thecoolguy	[10:03:55] ugh
+2015-07-11 10:47:22	thecoolguy	[10:04:05] the problem was i needed to set the height of container to 100%
+2015-07-11 10:47:22	thecoolguy	[10:04:07] :/
+2015-07-11 10:47:22	thecoolguy	[10:05:16] ugh
+2015-07-11 10:47:22	thecoolguy	[10:05:21] now that has side effects
+2015-07-11 10:47:22	thecoolguy	[10:21:23] Anyone here
+2015-07-11 10:47:22	Squarepy	[10:21:55] o/
+2015-07-11 10:47:22	thecoolguy	[10:23:52] How would i have my footer be at the bottom ?
+2015-07-11 10:47:22	thecoolguy	[10:23:53] http://jsfiddle.net/vvb2xxte/4/
+2015-07-11 10:47:22	thecoolguy	[10:24:20] without doing height 100% for body/html
+2015-07-11 10:47:22	Squarepy	[10:25:07] bottom?
+2015-07-11 10:47:22	hunboy	[10:25:15] http://jsfiddle.net/vvb2xxte/6/
+2015-07-11 10:47:22	thecoolguy	[10:26:08] hunboy that doesn't work when you have less content
+2015-07-11 10:47:22	thecoolguy	[10:26:10] http://jsfiddle.net/vvb2xxte/7/
+2015-07-11 10:47:22	thecoolguy	[10:26:18] yes Squarepy
+2015-07-11 10:47:22	Squarepy	[10:27:41] bottom of what, the screen? or the page?
+2015-07-11 10:47:22	Squarepy	[10:28:09] you'll have to fill a viewport first to define a bottom
+2015-07-11 10:47:22	Squarepy	[10:28:28] if you want bottom page = bottom screen, than height has to be set
+2015-07-11 10:47:22	thecoolguy	[10:29:20] bottom of page and bottom of screen when at bottom of page
+2015-07-11 10:47:22	thecoolguy	[10:30:58] Well Squarepy
+2015-07-11 10:47:22	Squarepy	[10:31:48] well what, you taking minimal effort to explain yourself and I have minimal effort to understand it :)
+2015-07-11 10:47:22	thecoolguy	[10:32:33] sorry didn't mean it like that lol i was trying to formulate what is going wrong
+2015-07-11 10:47:22	thecoolguy	[10:32:45] to type
+2015-07-11 10:47:22	thecoolguy	[10:36:03] ah i see
+2015-07-11 10:47:22	Squarepy	[10:36:09] https://jsfiddle.net/hxvaqpud/2/
+2015-07-11 10:47:22	thecoolguy	[10:37:01] i was getting vertical scroll when i did height = 100% but i see that i can't have body be relative i had to wrap my bootstrap container in a div and make the div relative and my footer absolute
+2015-07-11 10:47:22	thecoolguy	[10:37:04] ugh xx
+2015-07-11 10:47:22	thecoolguy	[10:39:51] wait nope xx
+2015-07-11 10:47:22	thecoolguy	[10:40:52] i will check out your fiddle
+2015-07-11 10:47:22	b4b	[10:41:27] i hate text inputs on mobile devices
+2015-07-11 10:47:22	thecoolguy	[10:41:32] Squarepy notive the scroll that it has
+2015-07-11 10:47:22	thecoolguy	[10:41:35] notice*
+2015-07-11 10:47:22	thecoolguy	[10:41:40] that is what i'm trying to solve
+2015-07-11 10:47:22	thecoolguy	[10:42:50] Squarepy trying to achive this http://www.cssreset.com/demos/layouts/how-to-keep-footer-at-bottom-of-page-with-css/#
+2015-07-11 10:47:22	Squarepy	[10:44:35] that is just a fiddle artifact is my guess
+2015-07-11 10:47:22	thecoolguy	[10:45:06] it isn't because i'm having the same problem on my site
+2015-07-11 10:47:22	Squarepy	[10:46:02] set padding: 0; on html
+2015-07-11 10:47:22	Squarepy	[10:46:11] oops sry
+2015-07-11 10:47:22	Squarepy	[10:46:37] on bidy
+2015-07-11 10:47:22	Squarepy	[10:46:41] body
+2015-07-11 10:47:22	***	Playback Complete.
+2015-07-11 10:47:51	--	Channel created on Sun, 26 Nov 2006 00:42:45
+2015-07-11 10:47:58	Squarepy	thecoolguy,
+2015-07-11 10:49:14	<--	Paradisee (~quassel@2.239.28.120) has quit (Remote host closed the connection)
+2015-07-11 10:50:05	-->	AlphaAtom (~textual@cpc17-heme10-2-0-cust806.9-1.cable.virginm.net) has joined #css
+2015-07-11 10:50:41	thecoolguy	yes
+2015-07-11 10:53:08	thecoolguy	how do they do it on that page ?
+2015-07-11 10:53:22	thecoolguy	i tried the whole relative absolute thing but my header goes over my content
+2015-07-11 10:57:32	<--	mrkie (~mrkie@a77091.upc-a.chello.nl) has quit (Ping timeout: 264 seconds)
+2015-07-11 10:59:41	<--	AlphaAtom (~textual@cpc17-heme10-2-0-cust806.9-1.cable.virginm.net) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2015-07-11 10:59:41	-->	AlphaAtom (~textual@cpc17-heme10-2-0-cust806.9-1.cable.virginm.net) has joined #css
+2015-07-11 11:01:25	<--	remyo (uid1142@gateway/web/irccloud.com/x-zdvbeowiasgzkuja) has quit (Quit: Connection closed for inactivity)
+2015-07-11 11:01:49	-->	RonRichie (~textual@cpe-75-83-197-58.socal.res.rr.com) has joined #css
+2015-07-11 11:03:39	<--	AlphaAtom (~textual@cpc17-heme10-2-0-cust806.9-1.cable.virginm.net) has quit (Client Quit)
+2015-07-11 11:04:01	-->	Relequestual (~Relequest@cpc11-cmbg17-2-0-cust348.5-4.cable.virginm.net) has joined #css
+2015-07-11 11:04:53	<--	Squarepy (~Squarepy_@unaffiliated/squarepy) has quit (Quit: Leaving)
+2015-07-11 11:04:59	-->	wicope (~wicope@31.Red-81-36-192.dynamicIP.rima-tde.net) has joined #css
+2015-07-11 11:05:02	-->	AlphaAtom (~textual@cpc17-heme10-2-0-cust806.9-1.cable.virginm.net) has joined #css
+2015-07-11 11:05:29	--	irc: disconnected from server
+2015-07-11 11:06:01	-->	yuppie (~Space_Cas@unaffiliated/space-case/x-0038823) has joined #css
+2015-07-11 11:06:01	--	Topic for #css is "Cascading Style Sheets :: Don't paste! :: Need help? Validate (`v yoursite) and give a `live URL (see `paste and `testcase) :: Rules: http://hashcss.com/rules/ :: FAQ: http://hashcss.com/faq :: Harassment or disruption? Tell #css-ops :: More general discussions: ##frontend"
+2015-07-11 11:06:01	--	Topic set by preaction (~doug@irc.preaction.me) on Wed, 31 Dec 2014 16:44:02
+2015-07-11 11:06:01	--	Channel #css: 569 nicks (1 op, 0 voices, 568 normals)
+2015-07-11 11:06:15	--	Channel created on Sun, 26 Nov 2006 00:42:45
+2015-07-11 11:07:24	<--	AlphaAtom (~textual@cpc17-heme10-2-0-cust806.9-1.cable.virginm.net) has quit (Client Quit)
+2015-07-11 11:08:21	-->	mven (~textual@cpe-173-174-112-125.austin.res.rr.com) has joined #css
+2015-07-11 11:10:19	<--	eezYboi (eezYboi@gateway/shell/bnc4free/x-xmxzhfpeaeddbfrs) has quit (Remote host closed the connection)
+2015-07-11 11:12:51	-->	Audioburn (~not_mike@unaffiliated/not-mike/x-4399907) has joined #css
+2015-07-11 11:13:00	<--	Audioburn (~not_mike@unaffiliated/not-mike/x-4399907) has quit (Max SendQ exceeded)
+2015-07-11 11:14:28	<--	ManikM (~quassel@14.139.122.114) has quit (Read error: Connection reset by peer)
+2015-07-11 11:14:35	-->	ManikM_ (~quassel@14.139.122.114) has joined #css
+2015-07-11 11:15:28	<--	apoasdasdasd (~whatupbra@CPEbc1401279703-CMbc1401279700.cpe.net.cable.rogers.com) has quit (Ping timeout: 252 seconds)
+2015-07-11 11:17:16	-->	sazed__ (~saze__@IGLD-84-228-17-145.inter.net.il) has joined #css
+2015-07-11 11:17:44	--	irc: disconnected from server
+2015-07-11 13:07:43	-->	yuppie (~Space_Cas@unaffiliated/space-case/x-0038823) has joined #css
+2015-07-11 13:07:43	--	Topic for #css is "Cascading Style Sheets :: Don't paste! :: Need help? Validate (`v yoursite) and give a `live URL (see `paste and `testcase) :: Rules: http://hashcss.com/rules/ :: FAQ: http://hashcss.com/faq :: Harassment or disruption? Tell #css-ops :: More general discussions: ##frontend"
+2015-07-11 13:07:43	--	Topic set by preaction (~doug@irc.preaction.me) on Wed, 31 Dec 2014 16:44:02
+2015-07-11 13:07:43	--	Channel #css: 569 nicks (1 op, 0 voices, 568 normals)
+2015-07-11 13:07:43	***	Buffer Playback...
+2015-07-11 13:07:43	thecoolguy	[11:46:10] because i've raninto occasions where my footoer goes up the page slightly to far but i'm not sure why
+2015-07-11 13:07:43	thecoolguy	[11:46:25] is it only block elements that contrute or something ?
+2015-07-11 13:07:43	b4b	[11:47:59] I think it’s the width/height of any static position element
+2015-07-11 13:07:43	thecoolguy	[11:49:07] does it also account for the margins of those elements
+2015-07-11 13:07:43	b4b	[11:49:24] yes i believe so
+2015-07-11 13:07:43	thecoolguy	[11:49:27] i'm wondering if maybe it happens because i use margin when i should be using padding ?
+2015-07-11 13:07:43	b4b	[11:50:42] I would setup a few test cases, they would give you definitive answers
+2015-07-11 13:07:43	thecoolguy	[11:51:02] man csss can be fustrating
+2015-07-11 13:07:43	b4b	[11:51:17] no doubt
+2015-07-11 13:07:43	thecoolguy	[11:51:27] i spent like 4 hours trying to figure out why my footer was riding so far up my page
+2015-07-11 13:07:43	thecoolguy	[11:51:58] ended up just wrapping everything and adding padding to that div whichfixed it
+2015-07-11 13:07:43	thecoolguy	[11:52:22] 4 hours to figure out 1 line :(
+2015-07-11 13:07:43	thecoolguy	[11:53:06] I'm betting if i was to go back and replace my margin code with padding so the sizes are altered it would work without me having to add padding and wrappingit again but ugh iwill prob test that when i refactor
+2015-07-11 13:07:43	b4b	[11:54:34] when it comes to css positioning nothing beats experimentation
+2015-07-11 13:07:43	hackal	[12:17:22] Hello I am trying to select my first paragraph tag on site. but p:first-of-type selects first paragraphs with parents. Any other way to do it? Thank you
+2015-07-11 13:07:43	boogyman	[12:19:10] body > p:first-of-type
+2015-07-11 13:07:43	marrenarre	[12:19:25] boogyman: I don't think that works.
+2015-07-11 13:07:43	marrenarre	[12:19:36] hackal: There is no general way to do it. The selector will need to be specific to your site.
+2015-07-11 13:07:43	hackal	[12:20:09] body > p would work only if p is direct child.
+2015-07-11 13:07:43	hackal	[12:20:25] ok, so no general way
+2015-07-11 13:07:43	marrenarre	[12:20:30] And only if the first p is a direct child.
+2015-07-11 13:07:43	marrenarre	[12:20:47] hackal: Link to site?
+2015-07-11 13:07:43	marrenarre	[12:20:56] I have to go, though, so someone else will have to help.
+2015-07-11 13:07:43	hackal	[12:21:24] I have no site, I just need to find a way to select first element
+2015-07-11 13:07:43	boogyman	[12:21:51] marrenarre: http://jsbin.com/girocegoto/edit?html,css,output seems to work fine for me
+2015-07-11 13:07:43	b4b	[12:23:04] is there a media query for touchscreen ?
+2015-07-11 13:07:43	marrenarre	[12:23:27] boogyman: Really?: http://jsbin.com/rehoyuzece/1/edit?html,css,output
+2015-07-11 13:07:43	boogyman	[12:23:31] b4b: there aren't "named" breakpoints
+2015-07-11 13:07:43	marrenarre	[12:23:47] boogyman: I think he meant something like @media touch, but I could be wrong.
+2015-07-11 13:07:43	marrenarre	[12:24:03] (And I don't think it exists, if that is what he meant.)
+2015-07-11 13:07:43	marrenarre	[12:24:32] I will go now.
+2015-07-11 13:07:43	 *	marrenarre [12:24:38] will be back later. ---
+2015-07-11 13:07:43	Alexendoo	[12:24:42] There are some vendor prefixed ones but *shrug*
+2015-07-11 13:07:43	b4b	[12:25:01] marrenarre: is correct
+2015-07-11 13:07:43	Alexendoo	[12:25:28] Better to just go by size really
+2015-07-11 13:07:43	b4b	[12:59:11] :not(.selectfields) .sizer does this mean any class of sizer that is not a child of .selectfields?
+2015-07-11 13:07:43	marrenarre	[13:01:10] b4b: It means any .sizer that is a child of something that is not .selectfields.
+2015-07-11 13:07:43	b4b	[13:01:51] weird doesnt seem to be working
+2015-07-11 13:07:43	marrenarre	[13:02:11] b4b: Testcase?
+2015-07-11 13:07:43	b4b	[13:02:30] does depth level matter?
+2015-07-11 13:07:43	arup_r	[13:02:47] the lock should be beside the billing address text .. but it went up.. how to fix it using CSS ? https://gist.github.com/aruprakshit/f84f7bd207a34378d930
+2015-07-11 13:07:43	b4b	[13:02:53] like .selectfields div div div div .sizer?
+2015-07-11 13:07:43	arup_r	[13:02:56] I am using bootstrap3
+2015-07-11 13:07:43	marrenarre	[13:02:57] The only requirement is that it has one parent (as far as I know).
+2015-07-11 13:07:43	arup_r	[13:03:07] and https://fezvrasta.github.io/bootstrap-material-design/#button
+2015-07-11 13:07:43	marrenarre	[13:03:36] b4b: If an elemnt is targeted by that selector, it will not be targeted by the first selector that you wrote.
+2015-07-11 13:07:43	b4b	[13:05:16] f it i’ll just write it the oppisite way
+2015-07-11 13:07:43	marrenarre	[13:05:29] `live @ b4b
+2015-07-11 13:07:43	Selvvir	[13:05:29] b4b, Always provide a link to a *live* page or pared-down testcase so we can see the problem in action. Looking at code or images alone usually isn't very effective. Also see `paste and `testcase.
+2015-07-11 13:07:43	arup_r	[13:06:51] any hints to me to fix ?
+2015-07-11 13:07:43	***	Playback Complete.
+2015-07-11 13:08:10	--	Channel created on Sun, 26 Nov 2006 00:42:45
+2015-07-11 13:09:59	<--	Hink (~Hink@146-115-61-133.c3-0.frm-ubr1.sbo-frm.ma.cable.rcn.com) has quit (Quit: Leaving)
+2015-07-11 13:10:12	<--	xar (~xar@41.228.224.56) has quit (Quit: Quitte)
+2015-07-11 13:10:18	-->	Hink (~Hink@146-115-61-133.c3-0.frm-ubr1.sbo-frm.ma.cable.rcn.com) has joined #css
+2015-07-11 13:10:57	-->	xar (~xar@41.228.224.56) has joined #css
+2015-07-11 13:11:21	--	irc: disconnected from server
+2015-07-11 13:11:34	-->	yuppie (~Space_Cas@unaffiliated/space-case/x-0038823) has joined #css
+2015-07-11 13:11:34	--	Topic for #css is "Cascading Style Sheets :: Don't paste! :: Need help? Validate (`v yoursite) and give a `live URL (see `paste and `testcase) :: Rules: http://hashcss.com/rules/ :: FAQ: http://hashcss.com/faq :: Harassment or disruption? Tell #css-ops :: More general discussions: ##frontend"
+2015-07-11 13:11:34	--	Topic set by preaction (~doug@irc.preaction.me) on Wed, 31 Dec 2014 16:44:02
+2015-07-11 13:11:34	--	Channel #css: 569 nicks (1 op, 0 voices, 568 normals)
+2015-07-11 13:12:02	--	Channel created on Sun, 26 Nov 2006 00:42:45
+2015-07-11 13:13:43	<--	iChatter (~iChatter@x5ce620f6.dyn.telefonica.de) has quit (Changing host)
+2015-07-11 13:13:43	-->	iChatter (~iChatter@unaffiliated/billy71) has joined #css
+2015-07-11 13:14:18	<--	ManikM_ (~quassel@14.139.122.114) has quit (Read error: Connection reset by peer)
+2015-07-11 13:14:36	-->	ManikM (~quassel@14.139.122.114) has joined #css
+2015-07-11 13:15:36	--	Mode #css [-o preaction] by preaction
+2015-07-11 13:16:38	-->	Icehuu (~Icehuu@s-27-147.flex.volo.net) has joined #css
+2015-07-11 13:18:15	marrenarre	arup_r: Because the h3 is display: block;.
+2015-07-11 13:18:49	-->	donguston (~adamh@cpc8-sprt2-2-0-cust26.17-2.cable.virginm.net) has joined #css
+2015-07-11 13:19:00	arup_r	what I need to do then ?
+2015-07-11 13:19:11	marrenarre	You can remove the span that it is wrapped in and just put it after the i, and make it display: inline-block;.
+2015-07-11 13:19:27	<--	HewwoThere (~HewloTher@ppp-54-31.grapevine.net.au) has left #css ("Leaving")
+2015-07-11 13:20:17	<--	s00pcan (~chris@209.197.20.203) has quit (Ping timeout: 240 seconds)
+2015-07-11 13:20:45	<--	zap0 (~moofy@123-243-103-30.static.tpgi.com.au) has quit (Quit: zap0)
+2015-07-11 13:22:27	-->	s00pcan (~chris@108-208-65-111.lightspeed.livnmi.sbcglobal.net) has joined #css
+2015-07-11 13:23:06	<--	s00pcan (~chris@108-208-65-111.lightspeed.livnmi.sbcglobal.net) has quit (Remote host closed the connection)
+2015-07-11 13:23:21	-->	Zectbumo (~Zectbumo@67-203-185-136.static-ip.telepacific.net) has joined #css
+2015-07-11 13:23:58	-->	remyo (uid1142@gateway/web/irccloud.com/x-qpxmqdeargeqfpcs) has joined #css
+2015-07-11 13:24:12	<--	NeverDie (~NeverDie@cpe-74-72-21-199.nyc.res.rr.com) has quit (Quit: I'm off to sleep. ZZZzzz…)
+2015-07-11 13:26:59	<--	danecando (~danecando@50.144.3.137) has quit (Quit: yo my computer went to sleep holla)
+2015-07-11 13:28:04	<--	dust-- (~dust--@p5083C1DB.dip0.t-ipconnect.de) has quit (Quit: dust--)
+2015-07-11 13:28:07	<--	Zectbumo (~Zectbumo@67-203-185-136.static-ip.telepacific.net) has quit (Ping timeout: 264 seconds)
+2015-07-11 13:30:00	-->	ceterizine (~ceterizin@209-6-208-73.c3-0.smr-ubr2.sbo-smr.ma.cable.rcn.com) has joined #css
+2015-07-11 13:30:27	-->	nick1 (Nick1@gateway/shell/elitebnc/x-syrmaezkhpfpsyyq) has joined #css
+2015-07-11 13:33:54	-->	s00pcan (~chris@209.197.20.204) has joined #css
+2015-07-11 13:34:57	<--	hackal (bca70515@gateway/web/freenode/ip.188.167.5.21) has quit (Ping timeout: 246 seconds)
+2015-07-11 13:35:42	-->	Zectbumo (~Zectbumo@67-203-185-136.static-ip.telepacific.net) has joined #css
+2015-07-11 13:36:39	-->	Tennis (~Tennis@unaffiliated/tennis) has joined #css
+2015-07-11 13:37:52	<--	Ceber (~PHP5439-0@dslb-088-072-187-133.088.072.pools.vodafone-ip.de) has quit (Ping timeout: 246 seconds)
+2015-07-11 13:38:27	-->	danecando (~danecando@50.144.1.25) has joined #css
+2015-07-11 13:42:52	<--	wicope (~wicope@31.Red-81-36-192.dynamicIP.rima-tde.net) has quit (Remote host closed the connection)
+2015-07-11 13:44:33	-->	Ceber (~PHP5439-0@dslb-092-072-036-039.092.072.pools.vodafone-ip.de) has joined #css
+2015-07-11 13:44:38	-->	RegulationD (~regulatio@71-14-10-66.static.stbr.ga.charter.com) has joined #css
+2015-07-11 13:46:55	<--	Hink (~Hink@146-115-61-133.c3-0.frm-ubr1.sbo-frm.ma.cable.rcn.com) has quit (Quit: Leaving)
+2015-07-11 13:47:15	-->	Hink (~Hink@146-115-61-133.c3-0.frm-ubr1.sbo-frm.ma.cable.rcn.com) has joined #css
+2015-07-11 13:48:02	<--	coellobranco (~FoRcEr@154.97.27.77.dynamic.mundo-r.com) has quit (Quit: Arch User...)
+2015-07-11 13:48:04	<--	mathu (~matt@104.236.250.51) has quit (Ping timeout: 246 seconds)
+2015-07-11 13:48:41	-->	Phoenixz (~quassel@187.135.31.141) has joined #css
+2015-07-11 13:49:13	<--	RegulationD (~regulatio@71-14-10-66.static.stbr.ga.charter.com) has quit (Ping timeout: 256 seconds)
+2015-07-11 13:50:21	<--	Zectbumo (~Zectbumo@67-203-185-136.static-ip.telepacific.net) has quit (Ping timeout: 256 seconds)
+2015-07-11 13:51:59	-->	rcyr (~rcyr@modemcable247.129-163-184.mc.videotron.ca) has joined #css
+2015-07-11 13:52:17	<--	rcyr (~rcyr@modemcable247.129-163-184.mc.videotron.ca) has quit (Client Quit)
+2015-07-11 13:52:42	-->	rcyr (~rcyr@modemcable247.129-163-184.mc.videotron.ca) has joined #css
+2015-07-11 13:53:03	--	irc: disconnected from server
+2015-07-11 13:53:08	-->	yuppie (~Space_Cas@unaffiliated/space-case/x-0038823) has joined #css
+2015-07-11 13:53:08	--	Topic for #css is "Cascading Style Sheets :: Don't paste! :: Need help? Validate (`v yoursite) and give a `live URL (see `paste and `testcase) :: Rules: http://hashcss.com/rules/ :: FAQ: http://hashcss.com/faq :: Harassment or disruption? Tell #css-ops :: More general discussions: ##frontend"
+2015-07-11 13:53:08	--	Topic set by preaction (~doug@irc.preaction.me) on Wed, 31 Dec 2014 16:44:02
+2015-07-11 13:53:08	--	Channel #css: 569 nicks (0 ops, 0 voices, 569 normals)
+2015-07-11 13:53:36	--	Channel created on Sun, 26 Nov 2006 00:42:45
+2015-07-11 13:54:24	-->	Relequestual (~Relequest@cpc11-cmbg17-2-0-cust348.5-4.cable.virginm.net) has joined #css
+2015-07-11 13:54:37	-->	mathu (~matt@104.236.250.51) has joined #css
+2015-07-11 13:55:35	-->	jkoudys (~jkoudys@CPEbc4dfb6d7f23-CMbc4dfb6d7f20.cpe.net.cable.rogers.com) has joined #css
+2015-07-11 14:00:38	-->	janelleb (~janelleb@unaffiliated/janelleb) has joined #css
+2015-07-11 14:01:19	<--	sazed__ (~saze__@IGLD-84-228-34-62.inter.net.il) has quit (Ping timeout: 246 seconds)
+2015-07-11 14:01:34	<--	sazed (~saze__@IGLD-84-228-34-62.inter.net.il) has quit (Ping timeout: 256 seconds)
+2015-07-11 14:01:56	-->	DLSteve (~DLSteve@c-24-30-90-21.hsd1.ga.comcast.net) has joined #css
+2015-07-11 14:02:13	-->	[1]abeym (~abeym@ool-2f14013a.dyn.optonline.net) has joined #css
+2015-07-11 14:04:27	<--	abeym (~abeym@ool-2f14013a.dyn.optonline.net) has quit (Ping timeout: 255 seconds)
+2015-07-11 14:06:19	-->	gnudon (~user@50.12.145.188) has joined #css
+2015-07-11 14:08:21	-->	I (~Jacta@0170201099.0.fullrate.dk) has joined #css
+2015-07-11 14:08:45	--	I is now known as Guest2257
+2015-07-11 14:09:01	-->	basiclaser (uid10861@gateway/web/irccloud.com/x-qlgylezndjbdnnpb) has joined #css
+2015-07-11 14:10:24	-->	mepowers (~mepowers@unaffiliated/mepowers) has joined #css
+2015-07-11 14:12:48	<--	crakrjak (~merc@unaffiliated/crakrjak) has quit (Quit: meh)
+2015-07-11 14:13:13	<--	danecando (~danecando@50.144.1.25) has quit (Quit: yo my computer went to sleep holla)
+2015-07-11 14:14:00	arup_r	marrenarre: You there ?
+2015-07-11 14:14:28	<--	sphenxes (~sphenxes@178-191-161-139.adsl.highway.telekom.at) has quit (Remote host closed the connection)
+2015-07-11 14:14:30	-->	devmikey (~irc@unaffiliated/devmikey) has joined #css
+2015-07-11 14:15:36	-->	KnownSyntax (~KnownSynt@unaffiliated/knownsyntax) has joined #css
+2015-07-11 14:16:16	arup_r	I tried it didn't work
+2015-07-11 14:16:35	-->	sazed (~saze__@IGLD-84-228-34-62.inter.net.il) has joined #css
+2015-07-11 14:16:46	-->	Skrypter (~skrypter@2601:645:8004:5219:553f:36c7:6a17:b64c) has joined #css
+2015-07-11 14:16:59	-->	sazed__ (~saze__@IGLD-84-228-34-62.inter.net.il) has joined #css
+2015-07-11 14:17:36	-->	startupality (~startupal@95.90.243.81) has joined #css
+2015-07-11 14:17:54	-->	bin_005 (~ctlM@80.83.238.93) has joined #css
+2015-07-11 14:19:07	-->	Jon9012 (~Jonathan@2605:e000:8712:3500:ec6e:199a:3f1d:ee69) has joined #css
+2015-07-11 14:19:07	<--	Jon9012 (~Jonathan@2605:e000:8712:3500:ec6e:199a:3f1d:ee69) has quit (Changing host)
+2015-07-11 14:19:07	-->	Jon9012 (~Jonathan@unaffiliated/jon9012) has joined #css
+2015-07-11 14:19:36	nick1	i need help making my site responsive,
+2015-07-11 14:19:56	<--	Skrypter (~skrypter@2601:645:8004:5219:553f:36c7:6a17:b64c) has quit (Remote host closed the connection)
+2015-07-11 14:20:04	nick1	does anyone with experience have a few minutes to point me in the right direction
+2015-07-11 14:20:06	-->	Skrypter (~skrypter@c-69-181-68-143.hsd1.ca.comcast.net) has joined #css
+2015-07-11 14:20:09	boogyman	s/make/keep/ **
+2015-07-11 14:20:21	-->	plamb (~plamb@2601:1c0:5002:a269:f018:91:83c0:da91) has joined #css
+2015-07-11 14:21:01	boogyman	nick1: design for your least capable UA and/or screen, then adjust as the height/width/other capabilities allow
+2015-07-11 14:21:42	nick1	thanks for the tip boogyman, unfortunately the site is already designed for the desktop so I need to go back to fix it up
+2015-07-11 14:21:47	ferr	Hey, I need on this button click "submit" to provide with a "sucessfull" message, any ideas how could I do that? http://pastie.org/private/msrlxfpc348n1plqkya1xq
+2015-07-11 14:22:11	boogyman	nick1: the "new" design should follow the principles
+2015-07-11 14:22:40	boogyman	ferr: research addEventListener() and query ##javascript
+2015-07-11 14:23:38	<--	Relequestual (~Relequest@cpc11-cmbg17-2-0-cust348.5-4.cable.virginm.net) has quit (Quit: Textual IRC Client: www.textualapp.com)
+2015-07-11 14:26:18	<--	devmikey (~irc@unaffiliated/devmikey) has quit (Quit: devmikey)
+2015-07-11 14:27:09	<--	Maurice` (~copyman@unaffiliated/maurice) has quit
+2015-07-11 14:27:45	<--	krizoek (~krizoek@vmi24145.contabo.host) has quit (Quit: ZNC - http://znc.in)
+2015-07-11 14:28:37	<--	eggoez (galau@just.eg.goez.my.id) has quit (Ping timeout: 256 seconds)
+2015-07-11 14:30:03	-->	devmikey (~irc@unaffiliated/devmikey) has joined #css
+2015-07-11 14:31:10	<--	devmikey (~irc@unaffiliated/devmikey) has quit (Read error: Connection reset by peer)
+2015-07-11 14:31:38	<--	m451^AFK (~masi@p5B0A6E01.dip0.t-ipconnect.de) has quit (Remote host closed the connection)
+2015-07-11 14:32:19	nick1	right, that makes sense. Do you have any recommended tutorials on how I could start? Or any specific starting points for my page? http://coursepickle.com
+2015-07-11 14:32:58	-->	AlphaAtom (~textual@cpc17-heme10-2-0-cust806.9-1.cable.virginm.net) has joined #css
+2015-07-11 14:33:34	<--	plamb (~plamb@2601:1c0:5002:a269:f018:91:83c0:da91) has quit (Ping timeout: 248 seconds)
+2015-07-11 14:33:36	<--	AlphaAtom (~textual@cpc17-heme10-2-0-cust806.9-1.cable.virginm.net) has quit (Max SendQ exceeded)
+2015-07-11 14:34:23	-->	AlphaAtom (~textual@cpc17-heme10-2-0-cust806.9-1.cable.virginm.net) has joined #css
+2015-07-11 14:35:02	arup_r	the lock should be beside the billing address text .. but it went up.. how to fix it using CSS ? gist.github.com/aruprakshit/… .. I am using bootstrap3
+2015-07-11 14:35:10	<--	AlphaAtom (~textual@cpc17-heme10-2-0-cust806.9-1.cable.virginm.net) has quit (Read error: Connection reset by peer)
+2015-07-11 14:35:23	arup_r	https://gist.github.com/aruprakshit/f84f7bd207a34378d930
+2015-07-11 14:36:23	-->	Zectbumo (~Zectbumo@ip98-182-18-229.sb.sd.cox.net) has joined #css
+2015-07-11 14:37:05	-->	eggoez (galau@just.eg.goez.my.id) has joined #css
+2015-07-11 14:38:26	-->	felixjet (~felixjet@198.Red-79-148-153.dynamicIP.rima-tde.net) has joined #css
+2015-07-11 14:39:03	-->	jrockjiggz (~jrockjigg@cpebc4dfb1ecb13-cmbc4dfb1ecb10.cpe.net.cable.rogers.com) has joined #css
+2015-07-11 14:40:10	jrockjiggz	hi, i'm trying:  content: '&#8226;'   (it's a bullet char). but it shows up as &8226;
+2015-07-11 14:40:28	jrockjiggz	if I try: content: '•' it shows up as silly
+2015-07-11 14:41:10	jrockjiggz	nm. it's content: '\2022'
+2015-07-11 14:44:48	<--	microdex (~microdex@184-96-26-249.hlrn.qwest.net) has quit (Ping timeout: 264 seconds)
+2015-07-11 14:47:21	-->	Spunk (~Spunk@87-57-62-124-dynamic.dk.customer.tdc.net) has joined #css
+2015-07-11 14:48:06	-->	bin_005_j (~ctlM@80.83.238.93) has joined #css
+2015-07-11 14:50:09	-->	eperez (~eperez@c-69-140-232-70.hsd1.md.comcast.net) has joined #css
+2015-07-11 14:51:10	<--	bin_005 (~ctlM@80.83.238.93) has quit (Ping timeout: 248 seconds)
+2015-07-11 14:51:51	<--	mepowers (~mepowers@unaffiliated/mepowers) has left #css
+2015-07-11 14:51:57	-->	bprompt (4b914db9@gateway/web/freenode/ip.75.145.77.185) has joined #css
+2015-07-11 14:52:24	<--	eperez (~eperez@c-69-140-232-70.hsd1.md.comcast.net) has quit (Remote host closed the connection)
+2015-07-11 14:52:48	-->	devmikey (~irc@unaffiliated/devmikey) has joined #css
+2015-07-11 14:55:15	<--	ferr (~ferr@37.157.144.44) has quit (Quit: WeeChat 1.2)
+2015-07-11 14:56:25	-->	scottbot84 (~scottbot8@c-98-215-92-128.hsd1.il.comcast.net) has joined #css
+2015-07-11 14:58:14	<--	lessless (~textual@117.2.16.124) has quit (Quit: Textual IRC Client: www.textualapp.com)
+2015-07-11 15:00:34	-->	kokut (~ayy@81.202.203.91.dyn.user.ono.com) has joined #css
+2015-07-11 15:00:43	kokut	Hello i'm workin
+2015-07-11 15:00:56	Zectbumo	nice, me too
+2015-07-11 15:01:02	-->	oxhak (~OxHaK@unaffiliated/oxhak) has joined #css
+2015-07-11 15:01:22	<--	kokut (~ayy@81.202.203.91.dyn.user.ono.com) has left #css
+2015-07-11 15:01:25	-->	kokut (~ayy@81.202.203.91.dyn.user.ono.com) has joined #css
+2015-07-11 15:02:19	<--	Phoenixz (~quassel@187.135.31.141) has quit (Ping timeout: 256 seconds)
+2015-07-11 15:02:50	kokut	I'm working on some media queries for smartphones and i came to this chart https://goo.gl/aT0Gy9 as you can see the amount of pixels is too big for the small screens, is there a way to rescale that to the actual phone screen?
+2015-07-11 15:03:10	<--	s00pcan (~chris@209.197.20.204) has quit (Ping timeout: 252 seconds)
+2015-07-11 15:03:15	-->	mywdev (~mydev@S01061c1b689ccb0e.vs.shawcable.net) has joined #css
+2015-07-11 15:03:34	kokut	those are probably density independent pixels or something
+2015-07-11 15:04:15	<--	z3l (~z3l@178-37-133-210.adsl.inetia.pl) has quit
+2015-07-11 15:04:57	kokut	for example, i dont know any smartphones with 1080 x 1920 screens but id like to know how my website looks in one of those, are those rescaled to 360 x 640 or what?
+2015-07-11 15:05:05	-->	s00pcan (~chris@108-208-65-111.lightspeed.livnmi.sbcglobal.net) has joined #css
+2015-07-11 15:05:41	Zectbumo	you don't use a phone emulator?
+2015-07-11 15:07:31	kokut	yea i'm using google chrome, if i select Apple Iphone 6 + for example it shows 414 x 736px
+2015-07-11 15:07:59	<--	sazed (~saze__@IGLD-84-228-34-62.inter.net.il) has quit (Ping timeout: 244 seconds)
+2015-07-11 15:08:19	<--	sazed__ (~saze__@IGLD-84-228-34-62.inter.net.il) has quit (Ping timeout: 264 seconds)
+2015-07-11 15:10:34	Zectbumo	then type in chrome 360 x 640
+2015-07-11 15:11:16	<--	b4b (~b4b@32.211.52.104) has quit (Quit: b4b)
+2015-07-11 15:14:26	<--	ManikM (~quassel@14.139.122.114) has quit (Read error: Connection reset by peer)
+2015-07-11 15:14:35	-->	ManikM (~quassel@14.139.122.114) has joined #css
+2015-07-11 15:16:32	-->	daivyk (~daivyk@177.133.129.122) has joined #css
+2015-07-11 15:17:31	-->	bambanx (~sdsad@pc-110-246-45-190.cm.vtr.net) has joined #css
+2015-07-11 15:18:39	--	irc: disconnected from server
+2015-07-11 15:18:49	-->	yuppie (~Space_Cas@unaffiliated/space-case/x-0038823) has joined #css
+2015-07-11 15:18:49	--	Topic for #css is "Cascading Style Sheets :: Don't paste! :: Need help? Validate (`v yoursite) and give a `live URL (see `paste and `testcase) :: Rules: http://hashcss.com/rules/ :: FAQ: http://hashcss.com/faq :: Harassment or disruption? Tell #css-ops :: More general discussions: ##frontend"
+2015-07-11 15:18:49	--	Topic set by preaction (~doug@irc.preaction.me) on Wed, 31 Dec 2014 16:44:02
+2015-07-11 15:18:49	--	Channel #css: 579 nicks (0 ops, 0 voices, 579 normals)
+2015-07-11 15:19:17	--	Channel created on Sun, 26 Nov 2006 00:42:45
+2015-07-11 15:19:17	--	irc: disconnected from server
+2015-07-11 15:19:23	-->	yuppie (~Space_Cas@unaffiliated/space-case/x-0038823) has joined #css
+2015-07-11 15:19:23	--	Topic for #css is "Cascading Style Sheets :: Don't paste! :: Need help? Validate (`v yoursite) and give a `live URL (see `paste and `testcase) :: Rules: http://hashcss.com/rules/ :: FAQ: http://hashcss.com/faq :: Harassment or disruption? Tell #css-ops :: More general discussions: ##frontend"
+2015-07-11 15:19:23	--	Topic set by preaction (~doug@irc.preaction.me) on Wed, 31 Dec 2014 16:44:02
+2015-07-11 15:19:23	--	Channel #css: 579 nicks (0 ops, 0 voices, 579 normals)
+2015-07-11 15:19:53	--	Channel created on Sun, 26 Nov 2006 00:42:45
+2015-07-11 15:20:27	<--	cryptopsy (~cryptopsy@unaffiliated/cryptopsy) has quit (Read error: Connection reset by peer)
+2015-07-11 15:20:29	--	irc: disconnected from server
+2015-07-11 15:20:34	-->	yuppie (~Space_Cas@unaffiliated/space-case/x-0038823) has joined #css
+2015-07-11 15:20:34	--	Topic for #css is "Cascading Style Sheets :: Don't paste! :: Need help? Validate (`v yoursite) and give a `live URL (see `paste and `testcase) :: Rules: http://hashcss.com/rules/ :: FAQ: http://hashcss.com/faq :: Harassment or disruption? Tell #css-ops :: More general discussions: ##frontend"
+2015-07-11 15:20:34	--	Topic set by preaction (~doug@irc.preaction.me) on Wed, 31 Dec 2014 16:44:02
+2015-07-11 15:20:34	--	Channel #css: 578 nicks (0 ops, 0 voices, 578 normals)
+2015-07-11 15:21:02	--	Channel created on Sun, 26 Nov 2006 00:42:45
+2015-07-11 15:21:31	<--	the_dave (dave@unaffiliated/chemicalburn) has quit (Ping timeout: 246 seconds)
+2015-07-11 15:22:30	<--	startupality (~startupal@95.90.243.81) has quit (Quit: startupality)
+2015-07-11 15:22:41	-->	RonRichie (~textual@69.31.121.142) has joined #css
+2015-07-11 15:22:58	-->	startupality (~startupal@95.90.243.81) has joined #css
+2015-07-11 15:23:14	<--	startupality (~startupal@95.90.243.81) has quit (Client Quit)
+2015-07-11 15:23:51	<--	apoplexy (~whatupbra@CPEbc1401279703-CMbc1401279700.cpe.net.cable.rogers.com) has quit (Ping timeout: 256 seconds)
+2015-07-11 15:24:43	arup_r	any body can give me pointers
+2015-07-11 15:25:05	Zectbumo	<---  <---  <---
+2015-07-11 15:25:43	arup_r	Zectbumo: please help me then :)
+2015-07-11 15:26:34	RonRichie	hey there, I need a help people, please could somebody help me to vertically and horizontally center my `about` section in this web page? https://jsfiddle.net/n1b6x1vj/
+2015-07-11 15:27:27	rcyr	int *x, *y, *z;
+2015-07-11 15:27:55	--	irc: disconnected from server

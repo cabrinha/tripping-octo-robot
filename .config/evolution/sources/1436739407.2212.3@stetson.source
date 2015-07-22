@@ -1,0 +1,7 @@
+[Data Source]
+DisplayName=scott.cabrinha@rackspace.com
+Enabled=true
+Parent=1436739406.2212.0@stetson
+
+[Mail Transport]
+BackendName=ews

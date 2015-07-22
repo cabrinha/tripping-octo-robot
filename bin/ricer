@@ -1,0 +1,44 @@
+#!/bin/fish
+#
+# rice - Display some rice info with a smug trianle face
+# onodera, https://github.com/onodera-punpun
+
+## CONFIGURATION
+
+# Set colors
+set fg normal
+set c1 yellow
+
+# Resize the terminal
+set resize true
+
+# Set variables
+set hostname (hostname)
+set distro (crux)
+set kernel (uname -r -s)
+set init busybox/minirc
+set shell (echo $SHELL)
+set packages (pkginfo -i | wc -l)
+set wm Openbox
+set font Gohufont 14
+
+
+## EXECUTE
+
+# Resize terminal
+if begin test -n $DISPLAY; and test $resize = true; end
+    #wtp 0 0 200 500 "$(pfw)"
+        sleep 0.1
+        end
+
+        # Echo rice
+        echo "                   "(set_color $c1)"$USER"(set_color $fg)"@"(set_color $c1)"$hostname"(set_color $fg)""
+        echo "       /\\"
+        echo "      /  \         "(set_color $c1)"Distro:"(set_color $fg)"    $distro"
+        echo "     /    \        "(set_color $c1)"Kernel:"(set_color $fg)"    $kernel"
+        echo "    /˚̆̈̉` ˚̆̈̉` \       "(set_color $c1)"Init/rc:"(set_color $fg)"   $init"
+        echo "   /   レ   \      "(set_color $c1)"Shell:"(set_color $fg)"     $shell"
+        echo "  /     つ   \     "(set_color $c1)"Packages:"(set_color $fg)"  $packages"
+        echo " /            \    "(set_color $c1)"WM:"(set_color $fg)"        $wm"
+        echo " ‾‾‾‾‾‾‾‾‾‾‾‾‾‾    "(set_color $c1)"Font:"(set_color $fg)"      $font"
+        "

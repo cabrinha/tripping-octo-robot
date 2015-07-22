@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<application-state>
+  <context id="">
+    <application id="gnome-control-center.desktop" open-window-count="0" score="22" last-seen="1437417831"/>
+    <application id="evolution.desktop" open-window-count="0" score="21" last-seen="1436838751"/>
+    <application id="firefox.desktop" open-window-count="1" score="1383" last-seen="1437418961"/>
+    <application id="rhythmbox.desktop" open-window-count="0" score="8" last-seen="1436839313"/>
+    <application id="org.gnome.Terminal.desktop" open-window-count="2" score="10591" last-seen="1437418985"/>
+    <application id="org.gnome.Software.desktop" open-window-count="0" score="9" last-seen="1436839309"/>
+  </context>
+</application-state>

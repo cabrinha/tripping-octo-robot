@@ -1,0 +1,83 @@
+2015-07-11 10:47:22	-->	yuppie (~Space_Cas@unaffiliated/space-case/x-0038823) has joined #machomebrew
+2015-07-11 10:47:22	--	Topic for #machomebrew is "Ask anything, but check the wiki or grep through existing formula if nobody is around | homebrew@librelist.com | http://github.com/Homebrew/homebrew | http://twitter.com/machomebrew | JSON fallacies are not allowed"
+2015-07-11 10:47:22	--	Topic set by mistym (~mistym@pdpc/supporter/active/mistym) on Wed, 26 Nov 2014 11:48:04
+2015-07-11 10:47:22	--	Channel #machomebrew: 186 nicks (0 ops, 0 voices, 186 normals)
+2015-07-11 10:47:37	--	Channel created on Sat, 30 Jan 2010 01:48:24
+2015-07-11 10:49:10	<--	tristanp (~tristanp@2601:192:4202:1c0b::4) has quit (Remote host closed the connection)
+2015-07-11 10:54:05	-->	blackmesa (~blackmesa@f050101067.adsl.alicedsl.de) has joined #machomebrew
+2015-07-11 11:01:49	-->	mizu_no_oto (~textual@c-73-219-2-228.hsd1.ma.comcast.net) has joined #machomebrew
+2015-07-11 11:05:29	--	irc: disconnected from server
+2015-07-11 11:05:43	-->	yuppie (~Space_Cas@unaffiliated/space-case/x-0038823) has joined #machomebrew
+2015-07-11 11:05:43	--	Topic for #machomebrew is "Ask anything, but check the wiki or grep through existing formula if nobody is around | homebrew@librelist.com | http://github.com/Homebrew/homebrew | http://twitter.com/machomebrew | JSON fallacies are not allowed"
+2015-07-11 11:05:43	--	Topic set by mistym (~mistym@pdpc/supporter/active/mistym) on Wed, 26 Nov 2014 11:48:04
+2015-07-11 11:05:43	--	Channel #machomebrew: 187 nicks (0 ops, 0 voices, 187 normals)
+2015-07-11 11:06:02	--	Channel created on Sat, 30 Jan 2010 01:48:24
+2015-07-11 11:09:26	<--	ilovezfs (ilovezfs@gateway/shell/panicbnc/x-nbmrnmetcprplzod) has quit (Ping timeout: 256 seconds)
+2015-07-11 11:17:44	--	irc: disconnected from server
+2015-07-11 13:07:42	-->	yuppie (~Space_Cas@unaffiliated/space-case/x-0038823) has joined #machomebrew
+2015-07-11 13:07:42	--	Topic for #machomebrew is "Ask anything, but check the wiki or grep through existing formula if nobody is around | homebrew@librelist.com | http://github.com/Homebrew/homebrew | http://twitter.com/machomebrew | JSON fallacies are not allowed"
+2015-07-11 13:07:42	--	Topic set by mistym (~mistym@pdpc/supporter/active/mistym) on Wed, 26 Nov 2014 11:48:04
+2015-07-11 13:07:42	--	Channel #machomebrew: 185 nicks (0 ops, 0 voices, 185 normals)
+2015-07-11 13:07:56	--	Channel created on Sat, 30 Jan 2010 01:48:24
+2015-07-11 13:08:21	-->	blackmesa (~blackmesa@f050101067.adsl.alicedsl.de) has joined #machomebrew
+2015-07-11 13:11:14	<--	blackmesa (~blackmesa@f050101067.adsl.alicedsl.de) has quit (Client Quit)
+2015-07-11 13:11:21	--	irc: disconnected from server
+2015-07-11 13:11:33	-->	yuppie (~Space_Cas@unaffiliated/space-case/x-0038823) has joined #machomebrew
+2015-07-11 13:11:33	--	Topic for #machomebrew is "Ask anything, but check the wiki or grep through existing formula if nobody is around | homebrew@librelist.com | http://github.com/Homebrew/homebrew | http://twitter.com/machomebrew | JSON fallacies are not allowed"
+2015-07-11 13:11:33	--	Topic set by mistym (~mistym@pdpc/supporter/active/mistym) on Wed, 26 Nov 2014 11:48:04
+2015-07-11 13:11:33	--	Channel #machomebrew: 185 nicks (0 ops, 0 voices, 185 normals)
+2015-07-11 13:11:48	--	Channel created on Sat, 30 Jan 2010 01:48:24
+2015-07-11 13:18:10	-->	alerante (~irrealis@unaffiliated/alerante) has joined #machomebrew
+2015-07-11 13:19:57	<--	Kunda (~Kunda@unaffiliated/kunda) has quit (Quit: Leaving...)
+2015-07-11 13:25:15	<--	tristanp (~tristanp@2601:192:4202:1c0b::4) has quit (Remote host closed the connection)
+2015-07-11 13:33:05	<--	jlf (~user@pdpc/supporter/active/jlf) has quit (Ping timeout: 256 seconds)
+2015-07-11 13:35:01	-->	Kunda (~Kunda@unaffiliated/kunda) has joined #machomebrew
+2015-07-11 13:50:19	-->	juanpablo_ (~juanpablo@186.101.153.165) has joined #machomebrew
+2015-07-11 13:52:27	<--	Cafeine (~Cafeine@44.150.26.93.rev.sfr.net) has quit (Quit: Well, cya !)
+2015-07-11 13:53:02	--	irc: disconnected from server
+2015-07-11 13:53:08	-->	yuppie (~Space_Cas@unaffiliated/space-case/x-0038823) has joined #machomebrew
+2015-07-11 13:53:08	--	Topic for #machomebrew is "Ask anything, but check the wiki or grep through existing formula if nobody is around | homebrew@librelist.com | http://github.com/Homebrew/homebrew | http://twitter.com/machomebrew | JSON fallacies are not allowed"
+2015-07-11 13:53:08	--	Topic set by mistym (~mistym@pdpc/supporter/active/mistym) on Wed, 26 Nov 2014 11:48:04
+2015-07-11 13:53:08	--	Channel #machomebrew: 184 nicks (0 ops, 0 voices, 184 normals)
+2015-07-11 13:53:22	--	Channel created on Sat, 30 Jan 2010 01:48:24
+2015-07-11 13:54:51	<--	juanpablo_ (~juanpablo@186.101.153.165) has quit (Ping timeout: 265 seconds)
+2015-07-11 14:23:29	-->	pasadinhas (~textual@bl8-95-94.dsl.telepac.pt) has joined #machomebrew
+2015-07-11 14:32:23	<--	Kunda (~Kunda@unaffiliated/kunda) has quit (Quit: Leaving...)
+2015-07-11 14:39:51	-->	Kunda (~Kunda@unaffiliated/kunda) has joined #machomebrew
+2015-07-11 14:40:57	-->	fields_ (~rafael@167.160.116.60) has joined #machomebrew
+2015-07-11 14:40:57	<--	Kunda (~Kunda@unaffiliated/kunda) has quit (Client Quit)
+2015-07-11 14:44:25	fields_	hi everyone - I’m having a hard time with environment variables. Is every environment variable set in bash from where I invoke brew available to the makefile called from within the homebrew recipe?
+2015-07-11 14:46:43	mistym	fields_: No - Homebrew sanitizes the build environment, so most variables that commonly influence the build are controlled by Homebrew.
+2015-07-11 14:47:03	-->	h1ro (~h1ro@cpc1-reig4-2-0-cust338.6-3.cable.virginm.net) has joined #machomebrew
+2015-07-11 14:48:10	fields_	thanks, that explains a lot; what’s the recommended way for me to make the required ones available?
+2015-07-11 14:48:22	mistym	What are you trying to do?
+2015-07-11 14:50:27	fields_	The makefile runs a custom 3rd party script whose path is specified by an environment variable, which was set by sourcing a .sh script file prior to invoking brew.
+2015-07-11 14:51:18	mistym	Can you set up that script inside Homebrew? e.g., don't require the user to have run it outside it, but download and run the script inside the install method?
+2015-07-11 14:52:05	fields_	That’d be ideal, but I don’t think source can be invoked from ruby, right?
+2015-07-11 14:53:12	mistym	It wouldn't have the desired effect, no. But if you need just one path, can you just set the path to the script inside the buildscript rather than sourcing it?
+2015-07-11 14:53:45	mistym	I need to run to do some errands, but I'll be back in a little bit.
+2015-07-11 14:53:55	fields_	thanks for the help!!
+2015-07-11 15:01:25	-->	mckendricks (~mckendric@60.sub-70-211-134.myvzw.com) has joined #machomebrew
+2015-07-11 15:02:12	<--	h1ro (~h1ro@cpc1-reig4-2-0-cust338.6-3.cable.virginm.net) has quit (Quit: l8r)
+2015-07-11 15:05:33	-->	h1ro (~h1ro@cpc1-reig4-2-0-cust338.6-3.cable.virginm.net) has joined #machomebrew
+2015-07-11 15:12:27	<--	mckendricks (~mckendric@60.sub-70-211-134.myvzw.com) has quit (Quit: My MacBook Pro has gone to sleep. ZZZzzz…)
+2015-07-11 15:17:49	-->	mckendricks (~mckendric@60.sub-70-211-134.myvzw.com) has joined #machomebrew
+2015-07-11 15:18:39	--	irc: disconnected from server
+2015-07-11 15:18:49	-->	yuppie (~Space_Cas@unaffiliated/space-case/x-0038823) has joined #machomebrew
+2015-07-11 15:18:49	--	Topic for #machomebrew is "Ask anything, but check the wiki or grep through existing formula if nobody is around | homebrew@librelist.com | http://github.com/Homebrew/homebrew | http://twitter.com/machomebrew | JSON fallacies are not allowed"
+2015-07-11 15:18:49	--	Topic set by mistym (~mistym@pdpc/supporter/active/mistym) on Wed, 26 Nov 2014 11:48:04
+2015-07-11 15:18:49	--	Channel #machomebrew: 186 nicks (0 ops, 0 voices, 186 normals)
+2015-07-11 15:19:03	--	Channel created on Sat, 30 Jan 2010 01:48:24
+2015-07-11 15:19:17	--	irc: disconnected from server
+2015-07-11 15:19:23	-->	yuppie (~Space_Cas@unaffiliated/space-case/x-0038823) has joined #machomebrew
+2015-07-11 15:19:23	--	Topic for #machomebrew is "Ask anything, but check the wiki or grep through existing formula if nobody is around | homebrew@librelist.com | http://github.com/Homebrew/homebrew | http://twitter.com/machomebrew | JSON fallacies are not allowed"
+2015-07-11 15:19:23	--	Topic set by mistym (~mistym@pdpc/supporter/active/mistym) on Wed, 26 Nov 2014 11:48:04
+2015-07-11 15:19:23	--	Channel #machomebrew: 186 nicks (0 ops, 0 voices, 186 normals)
+2015-07-11 15:19:39	--	Channel created on Sat, 30 Jan 2010 01:48:24
+2015-07-11 15:20:29	--	irc: disconnected from server
+2015-07-11 15:20:34	-->	yuppie (~Space_Cas@unaffiliated/space-case/x-0038823) has joined #machomebrew
+2015-07-11 15:20:34	--	Topic for #machomebrew is "Ask anything, but check the wiki or grep through existing formula if nobody is around | homebrew@librelist.com | http://github.com/Homebrew/homebrew | http://twitter.com/machomebrew | JSON fallacies are not allowed"
+2015-07-11 15:20:34	--	Topic set by mistym (~mistym@pdpc/supporter/active/mistym) on Wed, 26 Nov 2014 11:48:04
+2015-07-11 15:20:34	--	Channel #machomebrew: 186 nicks (0 ops, 0 voices, 186 normals)
+2015-07-11 15:20:48	--	Channel created on Sat, 30 Jan 2010 01:48:24
+2015-07-11 15:27:55	--	irc: disconnected from server

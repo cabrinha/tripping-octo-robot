@@ -1,0 +1,9 @@
+[Data Source]
+DisplayName=scott.cabrinha@rackspace.com
+Enabled=true
+Parent=1436739406.2212.0@stetson
+
+[Mail Account]
+BackendName=ews
+IdentityUid=1436739407.2212.2@stetson
+ArchiveFolder=

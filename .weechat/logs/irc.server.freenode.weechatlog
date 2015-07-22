@@ -1,0 +1,488 @@
+2015-07-11 10:47:21	--	irc: connecting to server znc.internaught.io/65420 (SSL)...
+2015-07-11 10:47:21	--	gnutls: connected using 2048-bit Diffie-Hellman shared secret exchange
+2015-07-11 10:47:21	--	gnutls: receiving 1 certificate
+2015-07-11 10:47:21	--	 - certificate[1] info:
+2015-07-11 10:47:21	--	   - subject `OU=realeyes,CN=internaught.io,EMAIL=realeyes@internaught.io', issuer `OU=realeyes,CN=internaught.io,EMAIL=realeyes@internaught.io', RSA key 2048 bits, signed using RSA-SHA256, activated `2015-04-06 06:02:52 UTC', expires `2025-04-03 06:02:52 UTC', SHA-1 fingerprint `3680b7bf96f303ee7b5237d40721ebe64c1ba076'
+2015-07-11 10:47:21	=!=	gnutls: the hostname in the certificate does NOT match "znc.internaught.io"
+2015-07-11 10:47:21	=!=	gnutls: peer's certificate is NOT trusted
+2015-07-11 10:47:21	=!=	gnutls: peer's certificate issuer is unknown
+2015-07-11 10:47:21	--	irc: connected to znc.internaught.io/65420 (104.130.13.237)
+2015-07-11 10:47:21	--	Welcome to the freenode Internet Relay Chat Network yuppie
+2015-07-11 10:47:21	--	Your host is card.freenode.net[38.229.70.22/6697], running version ircd-seven-1.1.3
+2015-07-11 10:47:21	--	This server was created Thu Sep 18 2014 at 18:48:25 UTC
+2015-07-11 10:47:21	--	card.freenode.net ircd-seven-1.1.3 DOQRSZaghilopswz CFILMPQSbcefgijklmnopqrstvz bkloveqjfI
+2015-07-11 10:47:21	--	CHANTYPES=# EXCEPTS INVEX CHANMODES=eIbq,k,flj,CFLMPQScgimnprstz CHANLIMIT=#:120 PREFIX=(ov)@+ MAXLIST=bqeI:100 MODES=4 NETWORK=freenode KNOCK STATUSMSG=@+ CALLERID=g :are supported by this server
+2015-07-11 10:47:21	--	CASEMAPPING=rfc1459 CHARSET=ascii NICKLEN=16 CHANNELLEN=50 TOPICLEN=390 ETRACE CPRIVMSG CNOTICE DEAF=D MONITOR=100 FNC TARGMAX=NAMES:1,LIST:1,KICK:1,WHOIS:1,PRIVMSG:4,NOTICE:4,ACCEPT:,MONITOR: :are supported by this server
+2015-07-11 10:47:21	--	EXTBAN=$,ajrxz WHOX CLIENTVER=3.0 SAFELIST ELIST=CTU :are supported by this server
+2015-07-11 10:47:21	--	There are 150 users and 78310 invisible on 27 servers
+2015-07-11 10:47:21	--	20 :IRC Operators online
+2015-07-11 10:47:21	--	59136 :channels formed
+2015-07-11 10:47:21	--	I have 4605 clients and 3 servers
+2015-07-11 10:47:21	--	4605 8011 :Current local users 4605, max 8011
+2015-07-11 10:47:21	--	78460 101901 :Current global users 78460, max 101901
+2015-07-11 10:47:21	--	Highest connection count: 8015 (8011 clients) (4237002 connections received)
+2015-07-11 10:47:21	--	- card.freenode.net Message of the Day -
+2015-07-11 10:47:21	--	-
+2015-07-11 10:47:21	--	- Welcome to card.freenode.net in Washington, DC, US, kindly sponsored by
+2015-07-11 10:47:21	--	- Team Cymru (http://www.team-cymru.org).
+2015-07-11 10:47:21	--	-
+2015-07-11 10:47:21	--	- CARD, ORSON SCOTT [1951-].  Born in Richland, Washington, Card grew up in
+2015-07-11 10:47:21	--	- California, Arizona, and Utah.  He lived in Brazil for two years as an
+2015-07-11 10:47:21	--	- unpaid missionary for the Mormon Church.  Author of the Ender and Alvin
+2015-07-11 10:47:21	--	- Maker books, Card's science fiction and fantasy work is strongly influenced
+2015-07-11 10:47:21	--	- by his Mormon cultural background.  The first author to win the Hugo and
+2015-07-11 10:47:21	--	- Nebula novel awards two years in a row, Card currently lives in Greensboro,
+2015-07-11 10:47:21	--	- North Carolina, US.
+2015-07-11 10:47:21	--	-
+2015-07-11 10:47:21	--	-
+2015-07-11 10:47:21	--	- Welcome to freenode - supporting the free and open source
+2015-07-11 10:47:21	--	- software communities since 1998.
+2015-07-11 10:47:21	--	-
+2015-07-11 10:47:21	--	- By connecting to freenode you indicate that you have read and
+2015-07-11 10:47:21	--	- accept our policies as set out on http://www.freenode.net
+2015-07-11 10:47:21	--	- freenode runs an open proxy scanner. Please join #freenode for
+2015-07-11 10:47:21	--	- any network-related questions or queries, where a number of
+2015-07-11 10:47:21	--	- volunteer staff and helpful users will be happy to assist you.
+2015-07-11 10:47:21	--	-
+2015-07-11 10:47:21	--	- You can meet us at FOSSCON (http://www.fosscon.org) where we get
+2015-07-11 10:47:21	--	- together with like-minded FOSS enthusiasts for talks and
+2015-07-11 10:47:21	--	- real-life collaboration.
+2015-07-11 10:47:21	--	-
+2015-07-11 10:47:21	--	- We would like to thank Private Internet Access
+2015-07-11 10:47:21	--	- (https://www.privateinternetaccess.com/) and the other
+2015-07-11 10:47:21	--	- organisations that help keep freenode and our other projects
+2015-07-11 10:47:22	--	- running for their sustained support.
+2015-07-11 10:47:22	--	-
+2015-07-11 10:47:22	--	- In particular we would like to thank the sponsor
+2015-07-11 10:47:22	--	- of this server, details of which can be found above.
+2015-07-11 10:47:22	--	-
+2015-07-11 10:47:22	--	End of /MOTD command.
+2015-07-11 10:47:22	--	User mode [+Zi] by yuppie
+2015-07-11 11:05:29	--	irc: disconnected from server
+2015-07-11 11:05:41	--	irc: connecting to server znc.internaught.io/65420 (SSL)...
+2015-07-11 11:05:42	--	gnutls: connected using 2048-bit Diffie-Hellman shared secret exchange
+2015-07-11 11:05:42	--	gnutls: receiving 1 certificate
+2015-07-11 11:05:42	--	 - certificate[1] info:
+2015-07-11 11:05:42	--	   - subject `OU=realeyes,CN=internaught.io,EMAIL=realeyes@internaught.io', issuer `OU=realeyes,CN=internaught.io,EMAIL=realeyes@internaught.io', RSA key 2048 bits, signed using RSA-SHA256, activated `2015-04-06 06:02:52 UTC', expires `2025-04-03 06:02:52 UTC', SHA-1 fingerprint `3680b7bf96f303ee7b5237d40721ebe64c1ba076'
+2015-07-11 11:05:42	=!=	gnutls: the hostname in the certificate does NOT match "znc.internaught.io"
+2015-07-11 11:05:42	=!=	gnutls: peer's certificate is NOT trusted
+2015-07-11 11:05:42	=!=	gnutls: peer's certificate issuer is unknown
+2015-07-11 11:05:43	--	irc: connected to znc.internaught.io/65420 (104.130.13.237)
+2015-07-11 11:05:43	--	Welcome to the freenode Internet Relay Chat Network yuppie
+2015-07-11 11:05:43	--	Your host is card.freenode.net[38.229.70.22/6697], running version ircd-seven-1.1.3
+2015-07-11 11:05:43	--	This server was created Thu Sep 18 2014 at 18:48:25 UTC
+2015-07-11 11:05:43	--	card.freenode.net ircd-seven-1.1.3 DOQRSZaghilopswz CFILMPQSbcefgijklmnopqrstvz bkloveqjfI
+2015-07-11 11:05:43	--	CHANTYPES=# EXCEPTS INVEX CHANMODES=eIbq,k,flj,CFLMPQScgimnprstz CHANLIMIT=#:120 PREFIX=(ov)@+ MAXLIST=bqeI:100 MODES=4 NETWORK=freenode KNOCK STATUSMSG=@+ CALLERID=g :are supported by this server
+2015-07-11 11:05:43	--	CASEMAPPING=rfc1459 CHARSET=ascii NICKLEN=16 CHANNELLEN=50 TOPICLEN=390 ETRACE CPRIVMSG CNOTICE DEAF=D MONITOR=100 FNC TARGMAX=NAMES:1,LIST:1,KICK:1,WHOIS:1,PRIVMSG:4,NOTICE:4,ACCEPT:,MONITOR: :are supported by this server
+2015-07-11 11:05:43	--	EXTBAN=$,ajrxz WHOX CLIENTVER=3.0 SAFELIST ELIST=CTU :are supported by this server
+2015-07-11 11:05:43	--	There are 150 users and 78310 invisible on 27 servers
+2015-07-11 11:05:43	--	20 :IRC Operators online
+2015-07-11 11:05:43	--	59136 :channels formed
+2015-07-11 11:05:43	--	I have 4605 clients and 3 servers
+2015-07-11 11:05:43	--	4605 8011 :Current local users 4605, max 8011
+2015-07-11 11:05:43	--	78460 101901 :Current global users 78460, max 101901
+2015-07-11 11:05:43	--	Highest connection count: 8015 (8011 clients) (4237002 connections received)
+2015-07-11 11:05:43	--	- card.freenode.net Message of the Day -
+2015-07-11 11:05:43	--	-
+2015-07-11 11:05:43	--	- Welcome to card.freenode.net in Washington, DC, US, kindly sponsored by
+2015-07-11 11:05:43	--	- Team Cymru (http://www.team-cymru.org).
+2015-07-11 11:05:43	--	-
+2015-07-11 11:05:43	--	- CARD, ORSON SCOTT [1951-].  Born in Richland, Washington, Card grew up in
+2015-07-11 11:05:43	--	- California, Arizona, and Utah.  He lived in Brazil for two years as an
+2015-07-11 11:05:43	--	- unpaid missionary for the Mormon Church.  Author of the Ender and Alvin
+2015-07-11 11:05:43	--	- Maker books, Card's science fiction and fantasy work is strongly influenced
+2015-07-11 11:05:43	--	- by his Mormon cultural background.  The first author to win the Hugo and
+2015-07-11 11:05:43	--	- Nebula novel awards two years in a row, Card currently lives in Greensboro,
+2015-07-11 11:05:43	--	- North Carolina, US.
+2015-07-11 11:05:43	--	-
+2015-07-11 11:05:43	--	-
+2015-07-11 11:05:43	--	- Welcome to freenode - supporting the free and open source
+2015-07-11 11:05:43	--	- software communities since 1998.
+2015-07-11 11:05:43	--	-
+2015-07-11 11:05:43	--	- By connecting to freenode you indicate that you have read and
+2015-07-11 11:05:43	--	- accept our policies as set out on http://www.freenode.net
+2015-07-11 11:05:43	--	- freenode runs an open proxy scanner. Please join #freenode for
+2015-07-11 11:05:43	--	- any network-related questions or queries, where a number of
+2015-07-11 11:05:43	--	- volunteer staff and helpful users will be happy to assist you.
+2015-07-11 11:05:43	--	-
+2015-07-11 11:05:43	--	- You can meet us at FOSSCON (http://www.fosscon.org) where we get
+2015-07-11 11:05:43	--	- together with like-minded FOSS enthusiasts for talks and
+2015-07-11 11:05:43	--	- real-life collaboration.
+2015-07-11 11:05:43	--	-
+2015-07-11 11:05:43	--	- We would like to thank Private Internet Access
+2015-07-11 11:05:43	--	- (https://www.privateinternetaccess.com/) and the other
+2015-07-11 11:05:43	--	- organisations that help keep freenode and our other projects
+2015-07-11 11:05:43	--	- running for their sustained support.
+2015-07-11 11:05:43	--	-
+2015-07-11 11:05:43	--	- In particular we would like to thank the sponsor
+2015-07-11 11:05:43	--	- of this server, details of which can be found above.
+2015-07-11 11:05:43	--	-
+2015-07-11 11:05:43	--	End of /MOTD command.
+2015-07-11 11:05:43	--	User mode [+Zi] by yuppie
+2015-07-11 11:17:44	--	irc: disconnected from server
+2015-07-11 13:07:41	--	irc: connecting to server znc.internaught.io/65420 (SSL)...
+2015-07-11 13:07:42	--	gnutls: connected using 2048-bit Diffie-Hellman shared secret exchange
+2015-07-11 13:07:42	--	gnutls: receiving 1 certificate
+2015-07-11 13:07:42	--	 - certificate[1] info:
+2015-07-11 13:07:42	--	   - subject `OU=realeyes,CN=internaught.io,EMAIL=realeyes@internaught.io', issuer `OU=realeyes,CN=internaught.io,EMAIL=realeyes@internaught.io', RSA key 2048 bits, signed using RSA-SHA256, activated `2015-04-06 06:02:52 UTC', expires `2025-04-03 06:02:52 UTC', SHA-1 fingerprint `3680b7bf96f303ee7b5237d40721ebe64c1ba076'
+2015-07-11 13:07:42	=!=	gnutls: the hostname in the certificate does NOT match "znc.internaught.io"
+2015-07-11 13:07:42	=!=	gnutls: peer's certificate is NOT trusted
+2015-07-11 13:07:42	=!=	gnutls: peer's certificate issuer is unknown
+2015-07-11 13:07:42	--	irc: connected to znc.internaught.io/65420 (104.130.13.237)
+2015-07-11 13:07:42	--	Welcome to the freenode Internet Relay Chat Network yuppie
+2015-07-11 13:07:42	--	Your host is card.freenode.net[38.229.70.22/6697], running version ircd-seven-1.1.3
+2015-07-11 13:07:42	--	This server was created Thu Sep 18 2014 at 18:48:25 UTC
+2015-07-11 13:07:42	--	card.freenode.net ircd-seven-1.1.3 DOQRSZaghilopswz CFILMPQSbcefgijklmnopqrstvz bkloveqjfI
+2015-07-11 13:07:42	--	CHANTYPES=# EXCEPTS INVEX CHANMODES=eIbq,k,flj,CFLMPQScgimnprstz CHANLIMIT=#:120 PREFIX=(ov)@+ MAXLIST=bqeI:100 MODES=4 NETWORK=freenode KNOCK STATUSMSG=@+ CALLERID=g :are supported by this server
+2015-07-11 13:07:42	--	CASEMAPPING=rfc1459 CHARSET=ascii NICKLEN=16 CHANNELLEN=50 TOPICLEN=390 ETRACE CPRIVMSG CNOTICE DEAF=D MONITOR=100 FNC TARGMAX=NAMES:1,LIST:1,KICK:1,WHOIS:1,PRIVMSG:4,NOTICE:4,ACCEPT:,MONITOR: :are supported by this server
+2015-07-11 13:07:42	--	EXTBAN=$,ajrxz WHOX CLIENTVER=3.0 SAFELIST ELIST=CTU :are supported by this server
+2015-07-11 13:07:42	--	There are 150 users and 78310 invisible on 27 servers
+2015-07-11 13:07:42	--	20 :IRC Operators online
+2015-07-11 13:07:42	--	59136 :channels formed
+2015-07-11 13:07:42	--	I have 4605 clients and 3 servers
+2015-07-11 13:07:42	--	4605 8011 :Current local users 4605, max 8011
+2015-07-11 13:07:42	--	78460 101901 :Current global users 78460, max 101901
+2015-07-11 13:07:42	--	Highest connection count: 8015 (8011 clients) (4237002 connections received)
+2015-07-11 13:07:42	--	- card.freenode.net Message of the Day -
+2015-07-11 13:07:42	--	-
+2015-07-11 13:07:42	--	- Welcome to card.freenode.net in Washington, DC, US, kindly sponsored by
+2015-07-11 13:07:42	--	- Team Cymru (http://www.team-cymru.org).
+2015-07-11 13:07:42	--	-
+2015-07-11 13:07:42	--	- CARD, ORSON SCOTT [1951-].  Born in Richland, Washington, Card grew up in
+2015-07-11 13:07:42	--	- California, Arizona, and Utah.  He lived in Brazil for two years as an
+2015-07-11 13:07:42	--	- unpaid missionary for the Mormon Church.  Author of the Ender and Alvin
+2015-07-11 13:07:42	--	- Maker books, Card's science fiction and fantasy work is strongly influenced
+2015-07-11 13:07:42	--	- by his Mormon cultural background.  The first author to win the Hugo and
+2015-07-11 13:07:42	--	- Nebula novel awards two years in a row, Card currently lives in Greensboro,
+2015-07-11 13:07:42	--	- North Carolina, US.
+2015-07-11 13:07:42	--	-
+2015-07-11 13:07:42	--	-
+2015-07-11 13:07:42	--	- Welcome to freenode - supporting the free and open source
+2015-07-11 13:07:42	--	- software communities since 1998.
+2015-07-11 13:07:42	--	-
+2015-07-11 13:07:42	--	- By connecting to freenode you indicate that you have read and
+2015-07-11 13:07:42	--	- accept our policies as set out on http://www.freenode.net
+2015-07-11 13:07:42	--	- freenode runs an open proxy scanner. Please join #freenode for
+2015-07-11 13:07:42	--	- any network-related questions or queries, where a number of
+2015-07-11 13:07:42	--	- volunteer staff and helpful users will be happy to assist you.
+2015-07-11 13:07:42	--	-
+2015-07-11 13:07:42	--	- You can meet us at FOSSCON (http://www.fosscon.org) where we get
+2015-07-11 13:07:42	--	- together with like-minded FOSS enthusiasts for talks and
+2015-07-11 13:07:42	--	- real-life collaboration.
+2015-07-11 13:07:42	--	-
+2015-07-11 13:07:42	--	- We would like to thank Private Internet Access
+2015-07-11 13:07:42	--	- (https://www.privateinternetaccess.com/) and the other
+2015-07-11 13:07:42	--	- organisations that help keep freenode and our other projects
+2015-07-11 13:07:42	--	- running for their sustained support.
+2015-07-11 13:07:42	--	-
+2015-07-11 13:07:42	--	- In particular we would like to thank the sponsor
+2015-07-11 13:07:42	--	- of this server, details of which can be found above.
+2015-07-11 13:07:42	--	-
+2015-07-11 13:07:42	--	End of /MOTD command.
+2015-07-11 13:07:42	--	User mode [+Zi] by yuppie
+2015-07-11 13:11:22	--	irc: disconnected from server
+2015-07-11 13:11:33	--	irc: connecting to server znc.internaught.io/65420 (SSL)...
+2015-07-11 13:11:33	--	gnutls: connected using 2048-bit Diffie-Hellman shared secret exchange
+2015-07-11 13:11:33	--	gnutls: receiving 1 certificate
+2015-07-11 13:11:33	--	 - certificate[1] info:
+2015-07-11 13:11:33	--	   - subject `OU=realeyes,CN=internaught.io,EMAIL=realeyes@internaught.io', issuer `OU=realeyes,CN=internaught.io,EMAIL=realeyes@internaught.io', RSA key 2048 bits, signed using RSA-SHA256, activated `2015-04-06 06:02:52 UTC', expires `2025-04-03 06:02:52 UTC', SHA-1 fingerprint `3680b7bf96f303ee7b5237d40721ebe64c1ba076'
+2015-07-11 13:11:33	=!=	gnutls: the hostname in the certificate does NOT match "znc.internaught.io"
+2015-07-11 13:11:33	=!=	gnutls: peer's certificate is NOT trusted
+2015-07-11 13:11:33	=!=	gnutls: peer's certificate issuer is unknown
+2015-07-11 13:11:33	--	irc: connected to znc.internaught.io/65420 (104.130.13.237)
+2015-07-11 13:11:33	--	Welcome to the freenode Internet Relay Chat Network yuppie
+2015-07-11 13:11:33	--	Your host is card.freenode.net[38.229.70.22/6697], running version ircd-seven-1.1.3
+2015-07-11 13:11:33	--	This server was created Thu Sep 18 2014 at 18:48:25 UTC
+2015-07-11 13:11:33	--	card.freenode.net ircd-seven-1.1.3 DOQRSZaghilopswz CFILMPQSbcefgijklmnopqrstvz bkloveqjfI
+2015-07-11 13:11:33	--	CHANTYPES=# EXCEPTS INVEX CHANMODES=eIbq,k,flj,CFLMPQScgimnprstz CHANLIMIT=#:120 PREFIX=(ov)@+ MAXLIST=bqeI:100 MODES=4 NETWORK=freenode KNOCK STATUSMSG=@+ CALLERID=g :are supported by this server
+2015-07-11 13:11:33	--	CASEMAPPING=rfc1459 CHARSET=ascii NICKLEN=16 CHANNELLEN=50 TOPICLEN=390 ETRACE CPRIVMSG CNOTICE DEAF=D MONITOR=100 FNC TARGMAX=NAMES:1,LIST:1,KICK:1,WHOIS:1,PRIVMSG:4,NOTICE:4,ACCEPT:,MONITOR: :are supported by this server
+2015-07-11 13:11:33	--	EXTBAN=$,ajrxz WHOX CLIENTVER=3.0 SAFELIST ELIST=CTU :are supported by this server
+2015-07-11 13:11:33	--	There are 150 users and 78310 invisible on 27 servers
+2015-07-11 13:11:33	--	20 :IRC Operators online
+2015-07-11 13:11:33	--	59136 :channels formed
+2015-07-11 13:11:33	--	I have 4605 clients and 3 servers
+2015-07-11 13:11:33	--	4605 8011 :Current local users 4605, max 8011
+2015-07-11 13:11:33	--	78460 101901 :Current global users 78460, max 101901
+2015-07-11 13:11:33	--	Highest connection count: 8015 (8011 clients) (4237002 connections received)
+2015-07-11 13:11:33	--	- card.freenode.net Message of the Day -
+2015-07-11 13:11:33	--	-
+2015-07-11 13:11:33	--	- Welcome to card.freenode.net in Washington, DC, US, kindly sponsored by
+2015-07-11 13:11:33	--	- Team Cymru (http://www.team-cymru.org).
+2015-07-11 13:11:33	--	-
+2015-07-11 13:11:33	--	- CARD, ORSON SCOTT [1951-].  Born in Richland, Washington, Card grew up in
+2015-07-11 13:11:33	--	- California, Arizona, and Utah.  He lived in Brazil for two years as an
+2015-07-11 13:11:33	--	- unpaid missionary for the Mormon Church.  Author of the Ender and Alvin
+2015-07-11 13:11:33	--	- Maker books, Card's science fiction and fantasy work is strongly influenced
+2015-07-11 13:11:33	--	- by his Mormon cultural background.  The first author to win the Hugo and
+2015-07-11 13:11:33	--	- Nebula novel awards two years in a row, Card currently lives in Greensboro,
+2015-07-11 13:11:33	--	- North Carolina, US.
+2015-07-11 13:11:33	--	-
+2015-07-11 13:11:33	--	-
+2015-07-11 13:11:33	--	- Welcome to freenode - supporting the free and open source
+2015-07-11 13:11:33	--	- software communities since 1998.
+2015-07-11 13:11:33	--	-
+2015-07-11 13:11:33	--	- By connecting to freenode you indicate that you have read and
+2015-07-11 13:11:33	--	- accept our policies as set out on http://www.freenode.net
+2015-07-11 13:11:33	--	- freenode runs an open proxy scanner. Please join #freenode for
+2015-07-11 13:11:33	--	- any network-related questions or queries, where a number of
+2015-07-11 13:11:33	--	- volunteer staff and helpful users will be happy to assist you.
+2015-07-11 13:11:33	--	-
+2015-07-11 13:11:33	--	- You can meet us at FOSSCON (http://www.fosscon.org) where we get
+2015-07-11 13:11:33	--	- together with like-minded FOSS enthusiasts for talks and
+2015-07-11 13:11:33	--	- real-life collaboration.
+2015-07-11 13:11:33	--	-
+2015-07-11 13:11:33	--	- We would like to thank Private Internet Access
+2015-07-11 13:11:33	--	- (https://www.privateinternetaccess.com/) and the other
+2015-07-11 13:11:33	--	- organisations that help keep freenode and our other projects
+2015-07-11 13:11:33	--	- running for their sustained support.
+2015-07-11 13:11:33	--	-
+2015-07-11 13:11:33	--	- In particular we would like to thank the sponsor
+2015-07-11 13:11:33	--	- of this server, details of which can be found above.
+2015-07-11 13:11:33	--	-
+2015-07-11 13:11:33	--	End of /MOTD command.
+2015-07-11 13:11:33	--	User mode [+Zi] by yuppie
+2015-07-11 13:53:03	--	irc: disconnected from server
+2015-07-11 13:53:07	--	irc: connecting to server znc.internaught.io/65420 (SSL)...
+2015-07-11 13:53:08	--	gnutls: connected using 2048-bit Diffie-Hellman shared secret exchange
+2015-07-11 13:53:08	--	gnutls: receiving 1 certificate
+2015-07-11 13:53:08	--	 - certificate[1] info:
+2015-07-11 13:53:08	--	   - subject `OU=realeyes,CN=internaught.io,EMAIL=realeyes@internaught.io', issuer `OU=realeyes,CN=internaught.io,EMAIL=realeyes@internaught.io', RSA key 2048 bits, signed using RSA-SHA256, activated `2015-04-06 06:02:52 UTC', expires `2025-04-03 06:02:52 UTC', SHA-1 fingerprint `3680b7bf96f303ee7b5237d40721ebe64c1ba076'
+2015-07-11 13:53:08	=!=	gnutls: the hostname in the certificate does NOT match "znc.internaught.io"
+2015-07-11 13:53:08	=!=	gnutls: peer's certificate is NOT trusted
+2015-07-11 13:53:08	=!=	gnutls: peer's certificate issuer is unknown
+2015-07-11 13:53:08	--	irc: connected to znc.internaught.io/65420 (104.130.13.237)
+2015-07-11 13:53:08	--	Welcome to the freenode Internet Relay Chat Network yuppie
+2015-07-11 13:53:08	--	Your host is card.freenode.net[38.229.70.22/6697], running version ircd-seven-1.1.3
+2015-07-11 13:53:08	--	This server was created Thu Sep 18 2014 at 18:48:25 UTC
+2015-07-11 13:53:08	--	card.freenode.net ircd-seven-1.1.3 DOQRSZaghilopswz CFILMPQSbcefgijklmnopqrstvz bkloveqjfI
+2015-07-11 13:53:08	--	CHANTYPES=# EXCEPTS INVEX CHANMODES=eIbq,k,flj,CFLMPQScgimnprstz CHANLIMIT=#:120 PREFIX=(ov)@+ MAXLIST=bqeI:100 MODES=4 NETWORK=freenode KNOCK STATUSMSG=@+ CALLERID=g :are supported by this server
+2015-07-11 13:53:08	--	CASEMAPPING=rfc1459 CHARSET=ascii NICKLEN=16 CHANNELLEN=50 TOPICLEN=390 ETRACE CPRIVMSG CNOTICE DEAF=D MONITOR=100 FNC TARGMAX=NAMES:1,LIST:1,KICK:1,WHOIS:1,PRIVMSG:4,NOTICE:4,ACCEPT:,MONITOR: :are supported by this server
+2015-07-11 13:53:08	--	EXTBAN=$,ajrxz WHOX CLIENTVER=3.0 SAFELIST ELIST=CTU :are supported by this server
+2015-07-11 13:53:08	--	There are 150 users and 78310 invisible on 27 servers
+2015-07-11 13:53:08	--	20 :IRC Operators online
+2015-07-11 13:53:08	--	59136 :channels formed
+2015-07-11 13:53:08	--	I have 4605 clients and 3 servers
+2015-07-11 13:53:08	--	4605 8011 :Current local users 4605, max 8011
+2015-07-11 13:53:08	--	78460 101901 :Current global users 78460, max 101901
+2015-07-11 13:53:08	--	Highest connection count: 8015 (8011 clients) (4237002 connections received)
+2015-07-11 13:53:08	--	- card.freenode.net Message of the Day -
+2015-07-11 13:53:08	--	-
+2015-07-11 13:53:08	--	- Welcome to card.freenode.net in Washington, DC, US, kindly sponsored by
+2015-07-11 13:53:08	--	- Team Cymru (http://www.team-cymru.org).
+2015-07-11 13:53:08	--	-
+2015-07-11 13:53:08	--	- CARD, ORSON SCOTT [1951-].  Born in Richland, Washington, Card grew up in
+2015-07-11 13:53:08	--	- California, Arizona, and Utah.  He lived in Brazil for two years as an
+2015-07-11 13:53:08	--	- unpaid missionary for the Mormon Church.  Author of the Ender and Alvin
+2015-07-11 13:53:08	--	- Maker books, Card's science fiction and fantasy work is strongly influenced
+2015-07-11 13:53:08	--	- by his Mormon cultural background.  The first author to win the Hugo and
+2015-07-11 13:53:08	--	- Nebula novel awards two years in a row, Card currently lives in Greensboro,
+2015-07-11 13:53:08	--	- North Carolina, US.
+2015-07-11 13:53:08	--	-
+2015-07-11 13:53:08	--	-
+2015-07-11 13:53:08	--	- Welcome to freenode - supporting the free and open source
+2015-07-11 13:53:08	--	- software communities since 1998.
+2015-07-11 13:53:08	--	-
+2015-07-11 13:53:08	--	- By connecting to freenode you indicate that you have read and
+2015-07-11 13:53:08	--	- accept our policies as set out on http://www.freenode.net
+2015-07-11 13:53:08	--	- freenode runs an open proxy scanner. Please join #freenode for
+2015-07-11 13:53:08	--	- any network-related questions or queries, where a number of
+2015-07-11 13:53:08	--	- volunteer staff and helpful users will be happy to assist you.
+2015-07-11 13:53:08	--	-
+2015-07-11 13:53:08	--	- You can meet us at FOSSCON (http://www.fosscon.org) where we get
+2015-07-11 13:53:08	--	- together with like-minded FOSS enthusiasts for talks and
+2015-07-11 13:53:08	--	- real-life collaboration.
+2015-07-11 13:53:08	--	-
+2015-07-11 13:53:08	--	- We would like to thank Private Internet Access
+2015-07-11 13:53:08	--	- (https://www.privateinternetaccess.com/) and the other
+2015-07-11 13:53:08	--	- organisations that help keep freenode and our other projects
+2015-07-11 13:53:08	--	- running for their sustained support.
+2015-07-11 13:53:08	--	-
+2015-07-11 13:53:08	--	- In particular we would like to thank the sponsor
+2015-07-11 13:53:08	--	- of this server, details of which can be found above.
+2015-07-11 13:53:08	--	-
+2015-07-11 13:53:08	--	End of /MOTD command.
+2015-07-11 13:53:08	--	User mode [+Zi] by yuppie
+2015-07-11 15:18:39	--	irc: disconnected from server
+2015-07-11 15:18:48	--	irc: connecting to server znc.internaught.io/65420 (SSL)...
+2015-07-11 15:18:48	--	gnutls: connected using 2048-bit Diffie-Hellman shared secret exchange
+2015-07-11 15:18:48	--	gnutls: receiving 1 certificate
+2015-07-11 15:18:48	--	 - certificate[1] info:
+2015-07-11 15:18:48	--	   - subject `OU=realeyes,CN=internaught.io,EMAIL=realeyes@internaught.io', issuer `OU=realeyes,CN=internaught.io,EMAIL=realeyes@internaught.io', RSA key 2048 bits, signed using RSA-SHA256, activated `2015-04-06 06:02:52 UTC', expires `2025-04-03 06:02:52 UTC', SHA-1 fingerprint `3680b7bf96f303ee7b5237d40721ebe64c1ba076'
+2015-07-11 15:18:48	=!=	gnutls: the hostname in the certificate does NOT match "znc.internaught.io"
+2015-07-11 15:18:48	=!=	gnutls: peer's certificate is NOT trusted
+2015-07-11 15:18:48	=!=	gnutls: peer's certificate issuer is unknown
+2015-07-11 15:18:48	--	irc: connected to znc.internaught.io/65420 (104.130.13.237)
+2015-07-11 15:18:48	--	Welcome to the freenode Internet Relay Chat Network yuppie
+2015-07-11 15:18:48	--	Your host is card.freenode.net[38.229.70.22/6697], running version ircd-seven-1.1.3
+2015-07-11 15:18:48	--	This server was created Thu Sep 18 2014 at 18:48:25 UTC
+2015-07-11 15:18:48	--	card.freenode.net ircd-seven-1.1.3 DOQRSZaghilopswz CFILMPQSbcefgijklmnopqrstvz bkloveqjfI
+2015-07-11 15:18:48	--	CHANTYPES=# EXCEPTS INVEX CHANMODES=eIbq,k,flj,CFLMPQScgimnprstz CHANLIMIT=#:120 PREFIX=(ov)@+ MAXLIST=bqeI:100 MODES=4 NETWORK=freenode KNOCK STATUSMSG=@+ CALLERID=g :are supported by this server
+2015-07-11 15:18:48	--	CASEMAPPING=rfc1459 CHARSET=ascii NICKLEN=16 CHANNELLEN=50 TOPICLEN=390 ETRACE CPRIVMSG CNOTICE DEAF=D MONITOR=100 FNC TARGMAX=NAMES:1,LIST:1,KICK:1,WHOIS:1,PRIVMSG:4,NOTICE:4,ACCEPT:,MONITOR: :are supported by this server
+2015-07-11 15:18:48	--	EXTBAN=$,ajrxz WHOX CLIENTVER=3.0 SAFELIST ELIST=CTU :are supported by this server
+2015-07-11 15:18:48	--	There are 150 users and 78310 invisible on 27 servers
+2015-07-11 15:18:48	--	20 :IRC Operators online
+2015-07-11 15:18:48	--	59136 :channels formed
+2015-07-11 15:18:48	--	I have 4605 clients and 3 servers
+2015-07-11 15:18:48	--	4605 8011 :Current local users 4605, max 8011
+2015-07-11 15:18:48	--	78460 101901 :Current global users 78460, max 101901
+2015-07-11 15:18:48	--	Highest connection count: 8015 (8011 clients) (4237002 connections received)
+2015-07-11 15:18:48	--	- card.freenode.net Message of the Day -
+2015-07-11 15:18:48	--	-
+2015-07-11 15:18:48	--	- Welcome to card.freenode.net in Washington, DC, US, kindly sponsored by
+2015-07-11 15:18:48	--	- Team Cymru (http://www.team-cymru.org).
+2015-07-11 15:18:48	--	-
+2015-07-11 15:18:48	--	- CARD, ORSON SCOTT [1951-].  Born in Richland, Washington, Card grew up in
+2015-07-11 15:18:48	--	- California, Arizona, and Utah.  He lived in Brazil for two years as an
+2015-07-11 15:18:48	--	- unpaid missionary for the Mormon Church.  Author of the Ender and Alvin
+2015-07-11 15:18:48	--	- Maker books, Card's science fiction and fantasy work is strongly influenced
+2015-07-11 15:18:48	--	- by his Mormon cultural background.  The first author to win the Hugo and
+2015-07-11 15:18:48	--	- Nebula novel awards two years in a row, Card currently lives in Greensboro,
+2015-07-11 15:18:48	--	- North Carolina, US.
+2015-07-11 15:18:48	--	-
+2015-07-11 15:18:48	--	-
+2015-07-11 15:18:48	--	- Welcome to freenode - supporting the free and open source
+2015-07-11 15:18:48	--	- software communities since 1998.
+2015-07-11 15:18:48	--	-
+2015-07-11 15:18:48	--	- By connecting to freenode you indicate that you have read and
+2015-07-11 15:18:48	--	- accept our policies as set out on http://www.freenode.net
+2015-07-11 15:18:48	--	- freenode runs an open proxy scanner. Please join #freenode for
+2015-07-11 15:18:48	--	- any network-related questions or queries, where a number of
+2015-07-11 15:18:48	--	- volunteer staff and helpful users will be happy to assist you.
+2015-07-11 15:18:48	--	-
+2015-07-11 15:18:48	--	- You can meet us at FOSSCON (http://www.fosscon.org) where we get
+2015-07-11 15:18:48	--	- together with like-minded FOSS enthusiasts for talks and
+2015-07-11 15:18:48	--	- real-life collaboration.
+2015-07-11 15:18:48	--	-
+2015-07-11 15:18:48	--	- We would like to thank Private Internet Access
+2015-07-11 15:18:48	--	- (https://www.privateinternetaccess.com/) and the other
+2015-07-11 15:18:48	--	- organisations that help keep freenode and our other projects
+2015-07-11 15:18:48	--	- running for their sustained support.
+2015-07-11 15:18:48	--	-
+2015-07-11 15:18:48	--	- In particular we would like to thank the sponsor
+2015-07-11 15:18:48	--	- of this server, details of which can be found above.
+2015-07-11 15:18:48	--	-
+2015-07-11 15:18:49	--	End of /MOTD command.
+2015-07-11 15:18:49	--	User mode [+Zi] by yuppie
+2015-07-11 15:19:17	--	irc: disconnected from server
+2015-07-11 15:19:23	--	irc: connecting to server znc.internaught.io/65420 (SSL)...
+2015-07-11 15:19:23	--	gnutls: connected using 2048-bit Diffie-Hellman shared secret exchange
+2015-07-11 15:19:23	--	gnutls: receiving 1 certificate
+2015-07-11 15:19:23	--	 - certificate[1] info:
+2015-07-11 15:19:23	--	   - subject `OU=realeyes,CN=internaught.io,EMAIL=realeyes@internaught.io', issuer `OU=realeyes,CN=internaught.io,EMAIL=realeyes@internaught.io', RSA key 2048 bits, signed using RSA-SHA256, activated `2015-04-06 06:02:52 UTC', expires `2025-04-03 06:02:52 UTC', SHA-1 fingerprint `3680b7bf96f303ee7b5237d40721ebe64c1ba076'
+2015-07-11 15:19:23	=!=	gnutls: the hostname in the certificate does NOT match "znc.internaught.io"
+2015-07-11 15:19:23	=!=	gnutls: peer's certificate is NOT trusted
+2015-07-11 15:19:23	=!=	gnutls: peer's certificate issuer is unknown
+2015-07-11 15:19:23	--	irc: connected to znc.internaught.io/65420 (104.130.13.237)
+2015-07-11 15:19:23	--	Welcome to the freenode Internet Relay Chat Network yuppie
+2015-07-11 15:19:23	--	Your host is card.freenode.net[38.229.70.22/6697], running version ircd-seven-1.1.3
+2015-07-11 15:19:23	--	This server was created Thu Sep 18 2014 at 18:48:25 UTC
+2015-07-11 15:19:23	--	card.freenode.net ircd-seven-1.1.3 DOQRSZaghilopswz CFILMPQSbcefgijklmnopqrstvz bkloveqjfI
+2015-07-11 15:19:23	--	CHANTYPES=# EXCEPTS INVEX CHANMODES=eIbq,k,flj,CFLMPQScgimnprstz CHANLIMIT=#:120 PREFIX=(ov)@+ MAXLIST=bqeI:100 MODES=4 NETWORK=freenode KNOCK STATUSMSG=@+ CALLERID=g :are supported by this server
+2015-07-11 15:19:23	--	CASEMAPPING=rfc1459 CHARSET=ascii NICKLEN=16 CHANNELLEN=50 TOPICLEN=390 ETRACE CPRIVMSG CNOTICE DEAF=D MONITOR=100 FNC TARGMAX=NAMES:1,LIST:1,KICK:1,WHOIS:1,PRIVMSG:4,NOTICE:4,ACCEPT:,MONITOR: :are supported by this server
+2015-07-11 15:19:23	--	EXTBAN=$,ajrxz WHOX CLIENTVER=3.0 SAFELIST ELIST=CTU :are supported by this server
+2015-07-11 15:19:23	--	There are 150 users and 78310 invisible on 27 servers
+2015-07-11 15:19:23	--	20 :IRC Operators online
+2015-07-11 15:19:23	--	59136 :channels formed
+2015-07-11 15:19:23	--	I have 4605 clients and 3 servers
+2015-07-11 15:19:23	--	4605 8011 :Current local users 4605, max 8011
+2015-07-11 15:19:23	--	78460 101901 :Current global users 78460, max 101901
+2015-07-11 15:19:23	--	Highest connection count: 8015 (8011 clients) (4237002 connections received)
+2015-07-11 15:19:23	--	- card.freenode.net Message of the Day -
+2015-07-11 15:19:23	--	-
+2015-07-11 15:19:23	--	- Welcome to card.freenode.net in Washington, DC, US, kindly sponsored by
+2015-07-11 15:19:23	--	- Team Cymru (http://www.team-cymru.org).
+2015-07-11 15:19:23	--	-
+2015-07-11 15:19:23	--	- CARD, ORSON SCOTT [1951-].  Born in Richland, Washington, Card grew up in
+2015-07-11 15:19:23	--	- California, Arizona, and Utah.  He lived in Brazil for two years as an
+2015-07-11 15:19:23	--	- unpaid missionary for the Mormon Church.  Author of the Ender and Alvin
+2015-07-11 15:19:23	--	- Maker books, Card's science fiction and fantasy work is strongly influenced
+2015-07-11 15:19:23	--	- by his Mormon cultural background.  The first author to win the Hugo and
+2015-07-11 15:19:23	--	- Nebula novel awards two years in a row, Card currently lives in Greensboro,
+2015-07-11 15:19:23	--	- North Carolina, US.
+2015-07-11 15:19:23	--	-
+2015-07-11 15:19:23	--	-
+2015-07-11 15:19:23	--	- Welcome to freenode - supporting the free and open source
+2015-07-11 15:19:23	--	- software communities since 1998.
+2015-07-11 15:19:23	--	-
+2015-07-11 15:19:23	--	- By connecting to freenode you indicate that you have read and
+2015-07-11 15:19:23	--	- accept our policies as set out on http://www.freenode.net
+2015-07-11 15:19:23	--	- freenode runs an open proxy scanner. Please join #freenode for
+2015-07-11 15:19:23	--	- any network-related questions or queries, where a number of
+2015-07-11 15:19:23	--	- volunteer staff and helpful users will be happy to assist you.
+2015-07-11 15:19:23	--	-
+2015-07-11 15:19:23	--	- You can meet us at FOSSCON (http://www.fosscon.org) where we get
+2015-07-11 15:19:23	--	- together with like-minded FOSS enthusiasts for talks and
+2015-07-11 15:19:23	--	- real-life collaboration.
+2015-07-11 15:19:23	--	-
+2015-07-11 15:19:23	--	- We would like to thank Private Internet Access
+2015-07-11 15:19:23	--	- (https://www.privateinternetaccess.com/) and the other
+2015-07-11 15:19:23	--	- organisations that help keep freenode and our other projects
+2015-07-11 15:19:23	--	- running for their sustained support.
+2015-07-11 15:19:23	--	-
+2015-07-11 15:19:23	--	- In particular we would like to thank the sponsor
+2015-07-11 15:19:23	--	- of this server, details of which can be found above.
+2015-07-11 15:19:23	--	-
+2015-07-11 15:19:23	--	End of /MOTD command.
+2015-07-11 15:19:23	--	User mode [+Zi] by yuppie
+2015-07-11 15:20:29	--	irc: disconnected from server
+2015-07-11 15:20:33	--	irc: connecting to server znc.internaught.io/65420 (SSL)...
+2015-07-11 15:20:34	--	gnutls: connected using 2048-bit Diffie-Hellman shared secret exchange
+2015-07-11 15:20:34	--	gnutls: receiving 1 certificate
+2015-07-11 15:20:34	--	 - certificate[1] info:
+2015-07-11 15:20:34	--	   - subject `OU=realeyes,CN=internaught.io,EMAIL=realeyes@internaught.io', issuer `OU=realeyes,CN=internaught.io,EMAIL=realeyes@internaught.io', RSA key 2048 bits, signed using RSA-SHA256, activated `2015-04-06 06:02:52 UTC', expires `2025-04-03 06:02:52 UTC', SHA-1 fingerprint `3680b7bf96f303ee7b5237d40721ebe64c1ba076'
+2015-07-11 15:20:34	=!=	gnutls: the hostname in the certificate does NOT match "znc.internaught.io"
+2015-07-11 15:20:34	=!=	gnutls: peer's certificate is NOT trusted
+2015-07-11 15:20:34	=!=	gnutls: peer's certificate issuer is unknown
+2015-07-11 15:20:34	--	irc: connected to znc.internaught.io/65420 (104.130.13.237)
+2015-07-11 15:20:34	--	Welcome to the freenode Internet Relay Chat Network yuppie
+2015-07-11 15:20:34	--	Your host is card.freenode.net[38.229.70.22/6697], running version ircd-seven-1.1.3
+2015-07-11 15:20:34	--	This server was created Thu Sep 18 2014 at 18:48:25 UTC
+2015-07-11 15:20:34	--	card.freenode.net ircd-seven-1.1.3 DOQRSZaghilopswz CFILMPQSbcefgijklmnopqrstvz bkloveqjfI
+2015-07-11 15:20:34	--	CHANTYPES=# EXCEPTS INVEX CHANMODES=eIbq,k,flj,CFLMPQScgimnprstz CHANLIMIT=#:120 PREFIX=(ov)@+ MAXLIST=bqeI:100 MODES=4 NETWORK=freenode KNOCK STATUSMSG=@+ CALLERID=g :are supported by this server
+2015-07-11 15:20:34	--	CASEMAPPING=rfc1459 CHARSET=ascii NICKLEN=16 CHANNELLEN=50 TOPICLEN=390 ETRACE CPRIVMSG CNOTICE DEAF=D MONITOR=100 FNC TARGMAX=NAMES:1,LIST:1,KICK:1,WHOIS:1,PRIVMSG:4,NOTICE:4,ACCEPT:,MONITOR: :are supported by this server
+2015-07-11 15:20:34	--	EXTBAN=$,ajrxz WHOX CLIENTVER=3.0 SAFELIST ELIST=CTU :are supported by this server
+2015-07-11 15:20:34	--	There are 150 users and 78310 invisible on 27 servers
+2015-07-11 15:20:34	--	20 :IRC Operators online
+2015-07-11 15:20:34	--	59136 :channels formed
+2015-07-11 15:20:34	--	I have 4605 clients and 3 servers
+2015-07-11 15:20:34	--	4605 8011 :Current local users 4605, max 8011
+2015-07-11 15:20:34	--	78460 101901 :Current global users 78460, max 101901
+2015-07-11 15:20:34	--	Highest connection count: 8015 (8011 clients) (4237002 connections received)
+2015-07-11 15:20:34	--	- card.freenode.net Message of the Day -
+2015-07-11 15:20:34	--	-
+2015-07-11 15:20:34	--	- Welcome to card.freenode.net in Washington, DC, US, kindly sponsored by
+2015-07-11 15:20:34	--	- Team Cymru (http://www.team-cymru.org).
+2015-07-11 15:20:34	--	-
+2015-07-11 15:20:34	--	- CARD, ORSON SCOTT [1951-].  Born in Richland, Washington, Card grew up in
+2015-07-11 15:20:34	--	- California, Arizona, and Utah.  He lived in Brazil for two years as an
+2015-07-11 15:20:34	--	- unpaid missionary for the Mormon Church.  Author of the Ender and Alvin
+2015-07-11 15:20:34	--	- Maker books, Card's science fiction and fantasy work is strongly influenced
+2015-07-11 15:20:34	--	- by his Mormon cultural background.  The first author to win the Hugo and
+2015-07-11 15:20:34	--	- Nebula novel awards two years in a row, Card currently lives in Greensboro,
+2015-07-11 15:20:34	--	- North Carolina, US.
+2015-07-11 15:20:34	--	-
+2015-07-11 15:20:34	--	-
+2015-07-11 15:20:34	--	- Welcome to freenode - supporting the free and open source
+2015-07-11 15:20:34	--	- software communities since 1998.
+2015-07-11 15:20:34	--	-
+2015-07-11 15:20:34	--	- By connecting to freenode you indicate that you have read and
+2015-07-11 15:20:34	--	- accept our policies as set out on http://www.freenode.net
+2015-07-11 15:20:34	--	- freenode runs an open proxy scanner. Please join #freenode for
+2015-07-11 15:20:34	--	- any network-related questions or queries, where a number of
+2015-07-11 15:20:34	--	- volunteer staff and helpful users will be happy to assist you.
+2015-07-11 15:20:34	--	-
+2015-07-11 15:20:34	--	- You can meet us at FOSSCON (http://www.fosscon.org) where we get
+2015-07-11 15:20:34	--	- together with like-minded FOSS enthusiasts for talks and
+2015-07-11 15:20:34	--	- real-life collaboration.
+2015-07-11 15:20:34	--	-
+2015-07-11 15:20:34	--	- We would like to thank Private Internet Access
+2015-07-11 15:20:34	--	- (https://www.privateinternetaccess.com/) and the other
+2015-07-11 15:20:34	--	- organisations that help keep freenode and our other projects
+2015-07-11 15:20:34	--	- running for their sustained support.
+2015-07-11 15:20:34	--	-
+2015-07-11 15:20:34	--	- In particular we would like to thank the sponsor
+2015-07-11 15:20:34	--	- of this server, details of which can be found above.
+2015-07-11 15:20:34	--	-
+2015-07-11 15:20:34	--	End of /MOTD command.
+2015-07-11 15:20:34	--	User mode [+Zi] by yuppie
+2015-07-11 15:27:55	--	irc: disconnected from server

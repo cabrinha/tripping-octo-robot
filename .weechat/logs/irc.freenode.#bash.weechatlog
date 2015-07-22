@@ -1,0 +1,414 @@
+2015-07-11 10:47:22	-->	yuppie (~Space_Cas@unaffiliated/space-case/x-0038823) has joined #bash
+2015-07-11 10:47:22	--	Topic for #bash is "FAQ: http://mywiki.wooledge.org/BashFAQ | Guide: http://mywiki.wooledge.org/BashGuide | Ref: http://gnu.org/s/bash/manual | http://wiki.bash-hackers.org/ | http://mywiki.wooledge.org/Quotes | Check your script: http://www.shellcheck.net/ | Mailing list: https://lists.gnu.org/mailman/listinfo/help-bash | Devel: http://xrl.us/bmodjy"
+2015-07-11 10:47:22	--	Topic set by pgas (~user@pdpc/supporter/active/pgas) on Wed, 18 Feb 2015 05:43:30
+2015-07-11 10:47:22	--	Channel #bash: 1009 nicks (1 op, 0 voices, 1008 normals)
+2015-07-11 10:47:22	***	Buffer Playback...
+2015-07-11 10:47:22	pgas	[09:39:22] isomorphismes: yes, I also saw that bash is doing the right thing, hence your ls command is broken
+2015-07-11 10:47:22	isomorphismes	[09:39:29] how do I unset -x ?
+2015-07-11 10:47:22	pgas	[09:39:30] !pe > cupantae
+2015-07-11 10:47:22	greybot	[09:39:30] cupantae: Parameter Expansion expands parameters: "$foo", "$1". You can use it to perform string or array operations: "${file%.mp3}", "${0##*/}", "${files[@]: -4}". They should *always* be quoted. See: http://mywiki.wooledge.org/BashFAQ/073 and "Parameter Expansion" in man bash. Also see http://wiki.bash-hackers.org/syntax/pe.
+2015-07-11 10:47:22	pgas	[09:39:36] isomorphismes: set +x
+2015-07-11 10:47:22	isomorphismes	[09:39:43] thanks
+2015-07-11 10:47:22	isomorphismes	[09:40:43] can I somehow echo *log | xargs cat | grep ?
+2015-07-11 10:47:22	pgas	[09:40:43] that doesn't explain your initial grep example though was that a fake?
+2015-07-11 10:47:22	isomorphismes	[09:40:57] pgas: nope all real
+2015-07-11 10:47:22	isomorphismes	[09:41:09] I kinda think it's at the glob expansion level not ls itself
+2015-07-11 10:47:22	isomorphismes	[09:41:10] whatever's wrong
+2015-07-11 10:47:22	cupantae	[09:41:20] pgas: thanks again. TBH, I might leave those tabs open and do it the bad way for now. :P the script only has to be run once. it's ok if it's slow.
+2015-07-11 10:47:22	pgas	[09:41:29] isomorphismes: nope in the trace you see that the glob expansion is fine
+2015-07-11 10:47:22	isomorphismes	[09:41:33] also of course when I asked on superuser or unix.SE they weren't going to believe "my ls is broken"
+2015-07-11 10:47:22	pgas	[09:41:43] isomorphismes: and in your first grep... there is no expansion
+2015-07-11 10:47:22	pgas	[09:42:05] this one: grep -E 'pqr.png' "*Rhist"
+2015-07-11 10:47:22	zxd	[09:42:09] !paste
+2015-07-11 10:47:22	greybot	[09:42:09] Paste short snippets (up to 5 lines) in channel. Paste more using https://gist.github.com/ or http://sprunge.us/ (see !sprunge). Please don't use pastebin.com, it's full of ads and has the annoying habit of adding whitespace
+2015-07-11 10:47:22	isomorphismes	[09:42:42] https://dpaste.de/yTeA
+2015-07-11 10:47:22	isomorphismes	[09:43:16] !sprunge
+2015-07-11 10:47:22	greybot	[09:43:17] To upload to sprunge from your terminal, use: <command> | curl -F 'sprunge=<-' http://sprunge.us # or see !sprungefunc.
+2015-07-11 10:47:22	pgas	[09:43:23] I have a hard time believing your ls is broken and your grep is parsing globs itself
+2015-07-11 10:47:22	pgas	[09:43:37] isomorphismes: yes....xargs is broken for this, that is not news
+2015-07-11 10:47:22	isomorphismes	[09:43:43] !sprungefunc
+2015-07-11 10:47:22	greybot	[09:43:43] sprunge() { tail -n +1 -- "$@" | curl -F 'sprunge=<-' http://sprunge.us; } # usage: sprunge file1 file2 ... # or cmd | sprunge
+2015-07-11 10:47:22	pgas	[09:46:58] isomorphismes: can you do: declare -fp ls
+2015-07-11 10:47:22	pgas	[09:47:42] # ls () { echo foo; };alias ls='ls --color-auto'; set -x; ls *
+2015-07-11 10:47:22	shbot	[09:47:42] pgas: + ls '*'
+2015-07-11 10:47:22	shbot	[09:47:42] pgas: + echo foo
+2015-07-11 10:47:22	shbot	[09:47:42] pgas: foo
+2015-07-11 10:47:22	pgas	[09:48:02] set -x would have shown this
+2015-07-11 10:47:22	isomorphismes	[09:49:23] !42
+2015-07-11 10:47:22	greybot	[09:49:24] 6 times 9
+2015-07-11 10:47:22	isomorphismes	[09:49:58] pgas: declare is not found
+2015-07-11 10:47:22	cupantae	[09:54:17] by the way, i have also found that if you do something like "$(echo " , bash expects the closing second quote FIRST, THEN the ) and THEN the closing first quote.
+2015-07-11 10:47:22	cupantae	[09:55:13] in other words, it doesn't entertain the notion of x="$(thing " . It just asks for more input.
+2015-07-11 10:47:22	cupantae	[09:55:31] and this is good.
+2015-07-11 10:47:22	isomorphismes	[09:56:59] I have problems with mv and cp too fwiw
+2015-07-11 10:47:22	pgas	[10:05:06] isomorphismes: declare not found means you are not using bash
+2015-07-11 10:47:22	pgas	[10:06:49] cupantae: yes, $( ) is a totally different context, you can do;  echo "$( echo "$(echo "foo")")"
+2015-07-11 10:47:22	zxd1	[10:07:14] what is $"foo bar"   used for
+2015-07-11 10:47:22	pgas	[10:07:24] !$"
+2015-07-11 10:47:22	greybot	[10:07:24] Bash supports $"..." quoting syntax for locale-specific translation. If the current locale is C or POSIX, the dollar sign is ignored. If the string is translated and replaced, the replacement is double-quoted. See http://mywiki.wooledge.org/BashFAQ/098
+2015-07-11 10:47:22	isomorphismes	[10:16:28] GNU bash, version 4.2.25(1)-release (i686-pc-linux-gnu)
+2015-07-11 10:47:22	isomorphismes	[10:17:20] pgas: sorry the error was: "bash: declare: ls: not found"
+2015-07-11 10:47:22	everym4n	[10:33:02] what's the right/fast way to create file with 1 000 000 of zeros(not null)?
+2015-07-11 10:47:22	pgas	[10:33:49] hmm, what do you mean 0(not null) ? the ascii char 0?
+2015-07-11 10:47:22	izabera	[10:33:49] dd bs=1000 count=1000 < /dev/zero | tr '\0' 0 > file
+2015-07-11 10:47:22	everym4n	[10:35:25] pgas: yes
+2015-07-11 10:47:22	specimen1337	[10:38:54] yop
+2015-07-11 10:47:22	***	Playback Complete.
+2015-07-11 10:47:27	--	Channel created on Sun, 26 Nov 2006 00:42:44
+2015-07-11 10:47:42	-->	gkdeb (~gkdeb@r179-24-88-184.dialup.adsl.anteldata.net.uy) has joined #bash
+2015-07-11 10:47:56	<--	OS-15707 (~biz@162-201-75-88.lightspeed.tukrga.sbcglobal.net) has quit
+2015-07-11 10:48:44	<--	gkdeb (~gkdeb@r179-24-88-184.dialup.adsl.anteldata.net.uy) has quit (Client Quit)
+2015-07-11 10:48:48	<--	konsolebox (~konsolebo@112.198.64.68) has quit (Ping timeout: 240 seconds)
+2015-07-11 10:50:21	-->	eGGsha (~eGGsha@178.141.9.173) has joined #bash
+2015-07-11 10:50:30	-->	jackbrown (~se@unaffiliated/jackbrown) has joined #bash
+2015-07-11 10:50:55	<--	jackbrown (~se@unaffiliated/jackbrown) has quit (Remote host closed the connection)
+2015-07-11 10:51:27	-->	K4k__ (~K4k@130.207.218.197) has joined #bash
+2015-07-11 10:51:30	<--	axoneme074 (727dada6@gateway/web/freenode/ip.114.125.173.166) has quit (Ping timeout: 246 seconds)
+2015-07-11 10:52:26	<--	SimonNa (~simon@p4FF1A747.dip0.t-ipconnect.de) has quit (Ping timeout: 256 seconds)
+2015-07-11 10:53:48	-->	jackbrown (~se@unaffiliated/jackbrown) has joined #bash
+2015-07-11 10:56:11	-->	K4k (~K4k@unaffiliated/k4k) has joined #bash
+2015-07-11 10:56:17	-->	gkdeb (~gkdeb@r179-24-88-184.dialup.adsl.anteldata.net.uy) has joined #bash
+2015-07-11 10:57:19	-->	jraglin (~jraglin@67.239.197.217) has joined #bash
+2015-07-11 10:58:26	<--	K4k__ (~K4k@130.207.218.197) has quit (Ping timeout: 244 seconds)
+2015-07-11 10:59:41	<--	K4k (~K4k@unaffiliated/k4k) has quit (Client Quit)
+2015-07-11 10:59:41	<--	xyzwhatever (~xyzwhatev@ee-ibt-hpx-dock-1-236.ethz.ch) has quit (Remote host closed the connection)
+2015-07-11 10:59:41	-->	daspence (~daspence@h218.67.89.75.dynamic.ip.windstream.net) has joined #bash
+2015-07-11 10:59:41	-->	K4k (~K4k@unaffiliated/k4k) has joined #bash
+2015-07-11 10:59:41	<--	_0bitcount (~Big_Byte@85.251.242.3.dyn.user.ono.com) has quit (Quit: Leaving)
+2015-07-11 11:00:24	<--	pld (~pld@unaffiliated/pld) has quit (Ping timeout: 255 seconds)
+2015-07-11 11:00:49	<--	achylles (~achylles@bzq-79-179-115-189.red.bezeqint.net) has quit (Ping timeout: 256 seconds)
+2015-07-11 11:01:07	-->	Muhannad (~Muhannad@2.88.82.208) has joined #bash
+2015-07-11 11:04:59	-->	wicope (~wicope@31.Red-81-36-192.dynamicIP.rima-tde.net) has joined #bash
+2015-07-11 11:05:06	-->	achylles (~achylles@bzq-79-179-115-189.red.bezeqint.net) has joined #bash
+2015-07-11 11:05:12	-->	mathys1 (~Thunderbi@217.138.90.18) has joined #bash
+2015-07-11 11:05:15	-->	m0viefreak (~asdf@unaffiliated/m0viefreak) has joined #bash
+2015-07-11 11:05:23	-->	konsolebox (~konsolebo@112.198.64.68) has joined #bash
+2015-07-11 11:05:27	<--	mathys (~Thunderbi@host86-186-205-191.range86-186.btcentralplus.com) has quit (Ping timeout: 256 seconds)
+2015-07-11 11:05:29	<--	konsolebox (~konsolebo@112.198.64.68) has quit (Remote host closed the connection)
+2015-07-11 11:05:29	--	irc: disconnected from server
+2015-07-11 11:05:43	-->	yuppie (~Space_Cas@unaffiliated/space-case/x-0038823) has joined #bash
+2015-07-11 11:05:43	--	Topic for #bash is "FAQ: http://mywiki.wooledge.org/BashFAQ | Guide: http://mywiki.wooledge.org/BashGuide | Ref: http://gnu.org/s/bash/manual | http://wiki.bash-hackers.org/ | http://mywiki.wooledge.org/Quotes | Check your script: http://www.shellcheck.net/ | Mailing list: https://lists.gnu.org/mailman/listinfo/help-bash | Devel: http://xrl.us/bmodjy"
+2015-07-11 11:05:43	--	Topic set by pgas (~user@pdpc/supporter/active/pgas) on Wed, 18 Feb 2015 05:43:30
+2015-07-11 11:05:43	--	Channel #bash: 1011 nicks (1 op, 0 voices, 1010 normals)
+2015-07-11 11:06:02	--	Channel created on Sun, 26 Nov 2006 00:42:44
+2015-07-11 11:06:09	-->	hubutm20 (~hubutm20@79.114.18.255) has joined #bash
+2015-07-11 11:06:35	-->	distantsail (~Dennis@pool-100-4-73-140.nrflva.fios.verizon.net) has joined #bash
+2015-07-11 11:06:58	<--	distantsail (~Dennis@pool-100-4-73-140.nrflva.fios.verizon.net) has left #bash
+2015-07-11 11:07:43	<--	jasonwryan (~jasonwrya@fsf/member/jasonwryan) has quit (Ping timeout: 264 seconds)
+2015-07-11 11:07:51	<--	elgatov (~elgatov@175.Red-95-123-47.staticIP.rima-tde.net) has quit (Read error: Connection reset by peer)
+2015-07-11 11:07:51	-->	konsolebox (~konsolebo@112.198.64.68) has joined #bash
+2015-07-11 11:08:32	-->	elgatov (~elgatov@96.Red-83-35-13.dynamicIP.rima-tde.net) has joined #bash
+2015-07-11 11:08:43	-->	xvx (~xvx@83.137.251.72) has joined #bash
+2015-07-11 11:10:43	<--	devdazed (~russ_nyc@cpe-158-222-243-74.nyc.res.rr.com) has quit (Quit: Computer has gone to sleep.)
+2015-07-11 11:11:24	-->	b1101 (~b@fsf/member/b1101) has joined #bash
+2015-07-11 11:13:01	--	synthmeat is now known as cultit
+2015-07-11 11:13:28	--	cultit is now known as synthmeat
+2015-07-11 11:14:14	<--	bertro (~bertro@unaffiliated/bertro) has quit (Read error: Connection reset by peer)
+2015-07-11 11:15:31	-->	mathys (~Thunderbi@host86-186-205-191.range86-186.btcentralplus.com) has joined #bash
+2015-07-11 11:17:07	-->	axoneme074 (727dada6@gateway/web/freenode/ip.114.125.173.166) has joined #bash
+2015-07-11 11:17:16	-->	sazed__ (~saze__@IGLD-84-228-17-145.inter.net.il) has joined #bash
+2015-07-11 11:17:26	<--	PryMar56 (~prymar@unaffiliated/prymar56) has quit (Quit: Leaving)
+2015-07-11 11:17:44	--	irc: disconnected from server
+2015-07-11 13:07:42	-->	yuppie (~Space_Cas@unaffiliated/space-case/x-0038823) has joined #bash
+2015-07-11 13:07:42	--	Topic for #bash is "FAQ: http://mywiki.wooledge.org/BashFAQ | Guide: http://mywiki.wooledge.org/BashGuide | Ref: http://gnu.org/s/bash/manual | http://wiki.bash-hackers.org/ | http://mywiki.wooledge.org/Quotes | Check your script: http://www.shellcheck.net/ | Mailing list: https://lists.gnu.org/mailman/listinfo/help-bash | Devel: http://xrl.us/bmodjy"
+2015-07-11 13:07:42	--	Topic set by pgas (~user@pdpc/supporter/active/pgas) on Wed, 18 Feb 2015 05:43:30
+2015-07-11 13:07:42	--	Channel #bash: 1015 nicks (1 op, 0 voices, 1014 normals)
+2015-07-11 13:07:42	***	Buffer Playback...
+2015-07-11 13:07:42	Groggle	[11:36:50] I did a module on it in college but have long since forgotten everything about it.
+2015-07-11 13:07:42	izabera	[11:38:39] # printf '%s\n' line{1..5} | sed -n 'x;$p'
+2015-07-11 13:07:42	shbot	[11:38:40] izabera: line4
+2015-07-11 13:07:42	Nomenclatura	[12:03:28] question. I want to merge two binaries but I want to have 1 bit from this and 1 bit from the next. Not a "cat >>"
+2015-07-11 13:07:42	Nomenclatura	[12:03:47] no idea how to have singular bits selected :S
+2015-07-11 13:07:42	izabera	[12:04:31] why
+2015-07-11 13:07:42	herpoderp	[12:05:02] what the....
+2015-07-11 13:07:42	Nomenclatura	[12:14:26] there is "head" but it handles bytes, no bits
+2015-07-11 13:07:42	izabera	[12:15:22] are you trying to perform some kind of steganography or what?
+2015-07-11 13:07:42	bekks	[12:15:43] Security by obscurity. :)
+2015-07-11 13:07:42	zacts	[12:16:15] obscurity by "security"
+2015-07-11 13:07:42	zacts	[12:16:26] security by obscurity iff obscurity by "security"
+2015-07-11 13:07:42	zacts	[12:16:31] ^ the quotes are important there
+2015-07-11 13:07:42	Nomenclatura	[12:16:38] yes :3
+2015-07-11 13:07:42	izabera	[12:17:00] ok, let's start by saying that bash is definitely not the right tool
+2015-07-11 13:07:42	izabera	[12:17:29] that said, it should be relatively easy but it'll be _very_ slow
+2015-07-11 13:07:42	Nomenclatura	[12:18:49] hah yes I know
+2015-07-11 13:07:42	Nomenclatura	[12:19:47] I guess everything is easy once you know how... the only thing I rly dunno how to is how to select bits
+2015-07-11 13:07:42	Nomenclatura	[12:19:56] the rest I can figure out
+2015-07-11 13:07:42	kurahaupo_	[12:22:10] Nomenclatura: make a  256x256 lookup table, and index it by pairs of bytes
+2015-07-11 13:07:42	izabera	[12:22:25] something like this?    http://arin.ga/ma3WjQ/raw
+2015-07-11 13:07:42	izabera	[12:23:04] make sure that file1 and file2 are the same size
+2015-07-11 13:07:42	izabera	[12:23:15] no wait that's wrong
+2015-07-11 13:07:42	izabera	[12:23:24] it only prints half the bits
+2015-07-11 13:07:42	Nomenclatura	[12:24:56] actually files are streams kurahaupo_ :S
+2015-07-11 13:07:42	Nomenclatura	[12:25:15] but I get it :)
+2015-07-11 13:07:42	daspence	[12:33:52] how would I unmount more than 1 drive at once?
+2015-07-11 13:07:42	Nomenclatura	[12:36:37] lol it worked
+2015-07-11 13:07:42	Nomenclatura	[12:36:48] too well actually
+2015-07-11 13:07:42	Nomenclatura	[12:37:07] so well it crashed me
+2015-07-11 13:07:42	Nomenclatura	[12:37:17] Thanks for the idea :)
+2015-07-11 13:07:42	kurahaupo_	[12:40:24] daspence: does your umount command take multiple paths?
+2015-07-11 13:07:42	daspence	[12:40:49] yes it does
+2015-07-11 13:07:42	daspence	[12:40:58] thanks kurahaupo_ :)
+2015-07-11 13:07:42	mathys1	[12:51:40] hi guys I have a log file and if I find a keywords in that file I will catch the timestamp before of this keywords, how can do this in bash?
+2015-07-11 13:07:42	izabera	[12:52:43] the timestamp from the line above?
+2015-07-11 13:07:42	izabera	[12:52:59] or the same line?
+2015-07-11 13:07:42	mathys1	[12:55:02] from the lines before
+2015-07-11 13:07:42	mathys1	[12:55:15] for example I will have something like that:
+2015-07-11 13:07:42	mathys1	[12:55:21] TIMESTAMP = 12131223232;
+2015-07-11 13:07:42	mathys1	[12:55:26] command1;
+2015-07-11 13:07:42	mathys1	[12:55:34] command2 etc etc
+2015-07-11 13:07:42	mathys1	[12:55:38] keyword
+2015-07-11 13:07:42	mathys1	[12:55:52] when I will find the keyword I need to catch up the TIMESTAMP before
+2015-07-11 13:07:42	mathys1	[12:57:55] is it clear my issue?
+2015-07-11 13:07:42	mathys1	[12:57:56] :)
+2015-07-11 13:07:42	mathys1	[12:58:06] I hope is possible to do with bash
+2015-07-11 13:07:42	mathys1	[13:03:59] ?
+2015-07-11 13:07:42	geirha	[13:05:51] awk '/TIMESTAMP = /{timestamp=$3} /keyword/ { print "found keyword under timestamp:", timestamp }'
+2015-07-11 13:07:42	geirha	[13:07:01] maybe timestamp=$3+0 to get rid of the ; too
+2015-07-11 13:07:42	***	Playback Complete.
+2015-07-11 13:07:46	--	Channel created on Sun, 26 Nov 2006 00:42:44
+2015-07-11 13:07:55	<--	fstd (~fstd@unaffiliated/fisted) has quit (Remote host closed the connection)
+2015-07-11 13:08:29	mathys1	what does it mean $3 ?
+2015-07-11 13:08:40	geirha	third field of that line
+2015-07-11 13:10:38	mathys1	thenks for your help geirha but the SET TIMESTAMP is not always the third field before the keyword, could be one or 10 fields back
+2015-07-11 13:10:42	mathys1	*thanks
+2015-07-11 13:11:21	--	irc: disconnected from server
+2015-07-11 13:11:33	-->	yuppie (~Space_Cas@unaffiliated/space-case/x-0038823) has joined #bash
+2015-07-11 13:11:33	--	Topic for #bash is "FAQ: http://mywiki.wooledge.org/BashFAQ | Guide: http://mywiki.wooledge.org/BashGuide | Ref: http://gnu.org/s/bash/manual | http://wiki.bash-hackers.org/ | http://mywiki.wooledge.org/Quotes | Check your script: http://www.shellcheck.net/ | Mailing list: https://lists.gnu.org/mailman/listinfo/help-bash | Devel: http://xrl.us/bmodjy"
+2015-07-11 13:11:33	--	Topic set by pgas (~user@pdpc/supporter/active/pgas) on Wed, 18 Feb 2015 05:43:30
+2015-07-11 13:11:33	--	Channel #bash: 1013 nicks (1 op, 0 voices, 1012 normals)
+2015-07-11 13:11:33	***	Buffer Playback...
+2015-07-11 13:11:33	geirha	[13:11:23] are you saying it will be on the same line as the keyword?
+2015-07-11 13:11:33	***	Playback Complete.
+2015-07-11 13:11:38	--	Channel created on Sun, 26 Nov 2006 00:42:44
+2015-07-11 13:12:03	geirha	Also, your example did not have SET anywhere
+2015-07-11 13:12:30	-->	ryguyy (~ryguyy@nyc-333.nycbit.com) has joined #bash
+2015-07-11 13:12:49	-->	kerframil (~kerframil@gentoo/user/kerframil) has joined #bash
+2015-07-11 13:13:00	geirha	If the line is really four words:   SET TIMESTAMP = 1234;
+2015-07-11 13:13:16	geirha	awk '/SET TIMESTAMP = /{ timestamp = $4+0 } /keyword/ { print "found keyword under timestamp:", timestamp }'
+2015-07-11 13:13:51	<--	jzacsh (~jzacsh@drupal.org/user/427067/view) has quit (Quit: leaving)
+2015-07-11 13:14:23	mathys1	this is a better example to get it :)
+2015-07-11 13:14:24	mathys1	http://pastebin.com/S897nm5Z
+2015-07-11 13:14:24	pasteban	Paste is available without ads on http://pastebin.com/raw?i=S897nm5Z
+2015-07-11 13:14:48	geirha	*sigh* you just added extra spaces earlier, for no good reason
+2015-07-11 13:15:01	mathys1	between SET TIMESTAMP and the keyword I can have one or 100 other commands
+2015-07-11 13:15:11	geirha	that's irrelevant
+2015-07-11 13:15:22	geirha	awk -F= '/SET TIMESTAMP=/{ timestamp = $2+0 } /KEYWORD/ { print "found keyword under timestamp:", timestamp }'
+2015-07-11 13:15:41	-->	ScioMin (~ScioMin@cpc11-slam5-2-0-cust41.2-4.cable.virginm.net) has joined #bash
+2015-07-11 13:15:55	geirha	Next time you give example input, make it representable of the actual data
+2015-07-11 13:16:12	<--	^wald0 (~^wald0@unaffiliated/wald0/x-7689991) has quit (Quit: ^wald0)
+2015-07-11 13:16:20	mathys1	thanks geirha, can you explain how works this script? I 've never used awk
+2015-07-11 13:17:12	geirha	Whenever it finds a line matching SET TIMESTAMP, it stores the number in the variable timestamp. Whenever it finds a line matching KEYWORD, it prints whatever's currently stored in the timestamp variable
+2015-07-11 13:18:40	-->	Kemosabe (~Kemosabe@124-169-216-56.dyn.iinet.net.au) has joined #bash
+2015-07-11 13:19:27	<--	HewwoThere (~HewloTher@ppp-54-31.grapevine.net.au) has left #bash ("Leaving")
+2015-07-11 13:19:34	mathys1	and what does it mean this: { timestamp = $2+0 }?
+2015-07-11 13:19:46	mathys1	$2 + 0 what is it?
+2015-07-11 13:20:04	geirha	adding 0 forces it to be treated as a number
+2015-07-11 13:20:17	<--	s00pcan (~chris@209.197.20.203) has quit (Ping timeout: 240 seconds)
+2015-07-11 13:20:38	geirha	a quick hack to remove the /*!*/; at the end
+2015-07-11 13:20:40	-->	r0x_ (~r0x@78.163.29.236) has joined #bash
+2015-07-11 13:21:44	<--	Warnaud (~patatra@26.169.77.83.dynamic.wline.res.cust.swisscom.ch) has quit (Quit: AddToFunc ExitFunction I Exec exec sudo halt)
+2015-07-11 13:21:54	-->	Warnaud (~patatra@26.169.77.83.dynamic.wline.res.cust.swisscom.ch) has joined #bash
+2015-07-11 13:22:00	mathys1	and $2 what is it?
+2015-07-11 13:22:13	geirha	second field of the line
+2015-07-11 13:22:27	-->	s00pcan (~chris@108-208-65-111.lightspeed.livnmi.sbcglobal.net) has joined #bash
+2015-07-11 13:22:49	<--	Warnaud (~patatra@26.169.77.83.dynamic.wline.res.cust.swisscom.ch) has quit (Client Quit)
+2015-07-11 13:23:06	<--	s00pcan (~chris@108-208-65-111.lightspeed.livnmi.sbcglobal.net) has quit (Remote host closed the connection)
+2015-07-11 13:23:07	geirha	with field separator set to =, (with -F=), that means $1 contains "SET TIMESTAMP", and $2 contains "1436636948/*!*/;"
+2015-07-11 13:23:15	geirha	and $2+0 becomes 1436636948
+2015-07-11 13:23:21	mathys1	uhm if I had used $1 in the timestamp variable I would found "SET TIMESTAMP=", right?
+2015-07-11 13:23:43	geirha	yes, though minus the =
+2015-07-11 13:24:12	<--	NeverDie (~NeverDie@cpe-74-72-21-199.nyc.res.rr.com) has quit (Quit: I'm off to sleep. ZZZzzz…)
+2015-07-11 13:24:47	mathys1	if the keyword is composed by 2 words can I use    /"KEY WORDS"/    ?
+2015-07-11 13:25:00	geirha	no
+2015-07-11 13:25:08	mathys1	awk -F= '/SET TIMESTAMP=/{ timestamp = $2+0 } /" KEY WORDS"/
+2015-07-11 13:25:15	geirha	/.../ are themselves a sort of quoting
+2015-07-11 13:25:21	mathys1	ah
+2015-07-11 13:25:30	mathys1	and how can use a space in that case?
+2015-07-11 13:25:58	geirha	awk -F= '/SET TIMESTAMP=/{ timestamp = $2+0 } / KEY WORDS/ { print timestamp }'
+2015-07-11 13:26:26	geirha	awk -F= '/SET TIMESTAMP=/{ timestamp = $2+0 } / KEY WORDS/ { print timestamp,":",$0 }'
+2015-07-11 13:27:06	mathys1	print timestamp,":",$0     what does it mean this?
+2015-07-11 13:27:07	geirha	$0 is the current line, so that will print 1436636948 : followed by the line that matched
+2015-07-11 13:27:08	-->	markovh (zncuser@unaffiliated/markovh) has joined #bash
+2015-07-11 13:27:14	-->	gentunian (~seba@unaffiliated/gentunian) has joined #bash
+2015-07-11 13:28:29	<--	gkdeb (~gkdeb@r179-24-88-184.dialup.adsl.anteldata.net.uy) has quit (Quit: Leaving.)
+2015-07-11 13:30:08	--	Mode #bash [-b *!~eGGsha@178.141.*] by candide
+2015-07-11 13:31:28	<--	otherflow (~otherflow@unaffiliated/otherflow) has quit (Remote host closed the connection)
+2015-07-11 13:31:43	<--	Czechton (~quassel@2001:41d0:8:1edb::1) has left #bash ("http://quassel-irc.org - Chat comfortably. Anywhere.")
+2015-07-11 13:31:47	-->	r4yan2 (~ray@5.90.77.145) has joined #bash
+2015-07-11 13:32:15	mathys1	ok thanks
+2015-07-11 13:32:28	mathys1	but the /KEYWORDS/ if like an if?
+2015-07-11 13:32:59	mathys1	if it find a KEYWORD then run the code between { ....}
+2015-07-11 13:33:05	<--	jlf (~user@pdpc/supporter/active/jlf) has quit (Ping timeout: 256 seconds)
+2015-07-11 13:33:11	mathys1	is it right?
+2015-07-11 13:33:18	geirha	condition1 { action1 } condition2 { action2 } ...
+2015-07-11 13:33:42	geirha	for every line, it checks condition1, if true, it runs action1. then it checks condition2, if true it runs action2, etc...
+2015-07-11 13:33:54	-->	s00pcan (~chris@209.197.20.204) has joined #bash
+2015-07-11 13:36:36	mathys1	but in this script: awk -F= '/SET TIMESTAMP=/{ timestamp = $2+0 } / KEY WORDS/ { print timestamp,":",$0 }'     I have only one condition because "/SET TIMESTAMP=/{ timestamp = $2+0 }" is only an assignement, is it right?
+2015-07-11 13:36:50	-->	kurahaupo (~Kurahaupo@80.199.252.27.dyn.cust.vf.net.nz) has joined #bash
+2015-07-11 13:37:31	-->	arnaud___ (~arnaud@2601:646:8300:b801:b18c:eee0:51bd:1309) has joined #bash
+2015-07-11 13:37:52	<--	Ceber (~PHP5439-0@dslb-088-072-187-133.088.072.pools.vodafone-ip.de) has quit (Ping timeout: 246 seconds)
+2015-07-11 13:37:52	<--	geggam (~geggam@108-218-203-177.uvs.sntcca.sbcglobal.net) has quit (Ping timeout: 246 seconds)
+2015-07-11 13:37:53	<--	masasin (~Thunderbi@p12060-ipngn100101kyoto.kyoto.ocn.ne.jp) has quit (Ping timeout: 256 seconds)
+2015-07-11 13:38:05	<--	xkef (~xkef@178-83-195-8.dynamic.hispeed.ch) has quit (Ping timeout: 244 seconds)
+2015-07-11 13:38:17	geirha	/SET TIMESTAMP=/ is condition1
+2015-07-11 13:38:28	<--	arnaud___ (~arnaud@2601:646:8300:b801:b18c:eee0:51bd:1309) has quit (Client Quit)
+2015-07-11 13:38:28	geirha	{ timestamp = $2+0 } is action1
+2015-07-11 13:38:42	geirha	/ KEY WORDS/ is condition2
+2015-07-11 13:39:01	geirha	{ print timestamp,":",$0 } is action2
+2015-07-11 13:40:07	-->	stoogenmeyer (~stoogenme@bzq-79-179-183-179.red.bezeqint.net) has joined #bash
+2015-07-11 13:40:46	<--	tuxdev_ (~tim@unaffiliated/tuxdev) has quit (Ping timeout: 248 seconds)
+2015-07-11 13:40:48	-->	gkdeb (~gkdeb@r179-24-88-184.dialup.adsl.anteldata.net.uy) has joined #bash
+2015-07-11 13:41:43	<--	bitvijays (~bitvijays@unaffiliated/bitvijays) has quit (Quit: leaving)
+2015-07-11 13:41:46	<--	elgatov (~elgatov@96.Red-83-35-13.dynamicIP.rima-tde.net) has quit (Read error: Connection reset by peer)
+2015-07-11 13:42:33	-->	bitvijays (~bitvijays@unaffiliated/bitvijays) has joined #bash
+2015-07-11 13:42:52	<--	wicope (~wicope@31.Red-81-36-192.dynamicIP.rima-tde.net) has quit (Remote host closed the connection)
+2015-07-11 13:42:56	mathys1	yes thanks :)
+2015-07-11 13:43:19	mathys1	but last question geirha, your help is very useful :)
+2015-07-11 13:43:37	mathys1	in the log I will have a lot of SET TIMESTAMP and a lot of keywords
+2015-07-11 13:43:40	-->	geggam (~geggam@108-218-203-177.uvs.sntcca.sbcglobal.net) has joined #bash
+2015-07-11 13:44:33	mathys1	if I need to store the value of that timestamp in a file could be good this : / KEY WORDS/ { $0 > $binlogdir/$timestamp } ?
+2015-07-11 13:44:36	-->	Ceber (~PHP5439-0@dslb-092-072-036-039.092.072.pools.vodafone-ip.de) has joined #bash
+2015-07-11 13:44:51	<--	sanketdg (~sanketdg@43.251.170.108) has quit (Quit: Leaving)
+2015-07-11 13:45:02	<--	Willis (Willis@107.161.160.241) has quit (Ping timeout: 248 seconds)
+2015-07-11 13:45:33	-->	_0xAX (~alex@5.76.37.198) has joined #bash
+2015-07-11 13:45:35	-->	eNTi (~eNTi@185.50.234.16) has joined #bash
+2015-07-11 13:46:59	--	Guest25331 is now known as shawniverson
+2015-07-11 13:47:15	<--	noahmg123 (~noah@pool-173-65-120-225.tampfl.fios.verizon.net) has quit (Ping timeout: 256 seconds)
+2015-07-11 13:47:28	--	shawniverson is now known as Guest69399
+2015-07-11 13:47:50	-->	Willis (Willis@107.161.160.241) has joined #bash
+2015-07-11 13:48:14	<--	nadar (~nobody@p548A26CB.dip0.t-ipconnect.de) has quit (Ping timeout: 248 seconds)
+2015-07-11 13:48:38	<--	r4yan2 (~ray@5.90.77.145) has quit (Read error: Connection reset by peer)
+2015-07-11 13:48:56	<--	ajaysingh (~ajaysingh@122.171.125.85) has quit (Ping timeout: 244 seconds)
+2015-07-11 13:49:02	--	Guest69399 is now known as shawniverson
+2015-07-11 13:49:22	-->	strayPuppy (~vipp@unaffiliated/straypuppy) has joined #bash
+2015-07-11 13:49:42	-->	dansmith_btc (~dansmith@static-ip-188-138-10-193.inaddr.ip-pool.com) has joined #bash
+2015-07-11 13:50:40	-->	ajaysingh (~ajaysingh@122.171.125.85) has joined #bash
+2015-07-11 13:51:01	<--	Nahra (~user@unaffiliated/nahra) has quit (Remote host closed the connection)
+2015-07-11 13:53:02	--	irc: disconnected from server
+2015-07-11 13:53:08	-->	yuppie (~Space_Cas@unaffiliated/space-case/x-0038823) has joined #bash
+2015-07-11 13:53:08	--	Topic for #bash is "FAQ: http://mywiki.wooledge.org/BashFAQ | Guide: http://mywiki.wooledge.org/BashGuide | Ref: http://gnu.org/s/bash/manual | http://wiki.bash-hackers.org/ | http://mywiki.wooledge.org/Quotes | Check your script: http://www.shellcheck.net/ | Mailing list: https://lists.gnu.org/mailman/listinfo/help-bash | Devel: http://xrl.us/bmodjy"
+2015-07-11 13:53:08	--	Topic set by pgas (~user@pdpc/supporter/active/pgas) on Wed, 18 Feb 2015 05:43:30
+2015-07-11 13:53:08	--	Channel #bash: 1009 nicks (1 op, 0 voices, 1008 normals)
+2015-07-11 13:53:12	--	Channel created on Sun, 26 Nov 2006 00:42:44
+2015-07-11 13:53:27	-->	Nahra (~user@unaffiliated/nahra) has joined #bash
+2015-07-11 13:54:22	-->	noahmg123 (~noah@pool-173-65-120-225.tampfl.fios.verizon.net) has joined #bash
+2015-07-11 13:54:40	-->	icebourg (~icebourg@65-128-63-165.hlrn.qwest.net) has joined #bash
+2015-07-11 13:55:01	<--	ajaysingh (~ajaysingh@122.171.125.85) has quit (Read error: Connection reset by peer)
+2015-07-11 13:55:10	-->	ajaysingh (~ajaysingh@122.171.99.61) has joined #bash
+2015-07-11 13:55:14	<--	langlee (sid97604@gateway/web/irccloud.com/x-puamyhwhtehjopek) has quit
+2015-07-11 13:55:24	<--	ajaysingh (~ajaysingh@122.171.99.61) has quit (Read error: Connection reset by peer)
+2015-07-11 13:55:48	-->	ajaysingh (~ajaysingh@122.171.99.61) has joined #bash
+2015-07-11 13:56:50	mathys1	geirha thanks a lot !! :)
+2015-07-11 13:57:25	-->	spvensko (~spvensko@unaffiliated/spvensko) has joined #bash
+2015-07-11 13:57:28	-->	alexandros_c (~amcollie7@unaffiliated/alexandros-c/x-1684531) has joined #bash
+2015-07-11 14:01:17	<--	Nahra (~user@unaffiliated/nahra) has quit (Remote host closed the connection)
+2015-07-11 14:01:19	<--	sazed__ (~saze__@IGLD-84-228-34-62.inter.net.il) has quit (Ping timeout: 246 seconds)
+2015-07-11 14:01:34	<--	sazed (~saze__@IGLD-84-228-34-62.inter.net.il) has quit (Ping timeout: 256 seconds)
+2015-07-11 14:02:49	<--	lokulin (~lokulin@li733-68.members.linode.com) has quit (Ping timeout: 256 seconds)
+2015-07-11 14:03:02	<--	Groggle (~w0269804@blk-224-164-55.eastlink.ca) has quit (Quit: Quitting)
+2015-07-11 14:03:04	-->	Alex-SF_ (~Alex-SF@c-71-198-228-84.hsd1.ca.comcast.net) has joined #bash
+2015-07-11 14:03:17	<--	}ls{ (~uhelp@unaffiliated/ls/x-8089558) has quit (Quit: User terminated by real life interrupt)
+2015-07-11 14:04:45	-->	hahuang61 (~hahuang65@c-50-136-152-183.hsd1.ca.comcast.net) has joined #bash
+2015-07-11 14:05:05	<--	hahuang65 (~hahuang65@c-50-136-152-183.hsd1.ca.comcast.net) has quit (Ping timeout: 256 seconds)
+2015-07-11 14:05:07	<--	_0xAX (~alex@5.76.37.198) has quit (Remote host closed the connection)
+2015-07-11 14:05:39	<--	Alex-SF (~Alex-SF@c-71-198-228-84.hsd1.ca.comcast.net) has quit (Ping timeout: 256 seconds)
+2015-07-11 14:05:39	--	Alex-SF_ is now known as Alex-SF
+2015-07-11 14:08:04	<--	rafaelcpalmeida (~rafaelcpa@pa3-84-91-120-114.netvisao.pt) has quit (Remote host closed the connection)
+2015-07-11 14:08:41	<--	b1101 (~b@fsf/member/b1101) has quit (Quit: b1101)
+2015-07-11 14:08:57	-->	MagePsycho (~razen@86.98.123.238) has joined #bash
+2015-07-11 14:12:51	<--	jasondotstar (~jasondots@rrcs-98-101-143-46.midsouth.biz.rr.com) has quit (Remote host closed the connection)
+2015-07-11 14:14:28	<--	sphenxes (~sphenxes@178-191-161-139.adsl.highway.telekom.at) has quit (Remote host closed the connection)
+2015-07-11 14:17:22	-->	sigh (~sigh@ppp121-44-160-25.lns20.syd7.internode.on.net) has joined #bash
+2015-07-11 14:19:24	<--	ajaysingh (~ajaysingh@122.171.99.61) has quit (Quit: ajaysingh)
+2015-07-11 14:19:57	-->	langlee (sid97604@gateway/web/irccloud.com/x-dupvydltxgslecby) has joined #bash
+2015-07-11 14:20:31	<--	meat_py (~meat_py@c-73-166-210-32.hsd1.tx.comcast.net) has quit (Remote host closed the connection)
+2015-07-11 14:20:38	-->	foot (~foot@c-98-210-244-109.hsd1.ca.comcast.net) has joined #bash
+2015-07-11 14:21:01	-->	lokulin (~lokulin@li733-68.members.linode.com) has joined #bash
+2015-07-11 14:21:10	-->	meat_py (~meat_py@c-73-166-210-32.hsd1.tx.comcast.net) has joined #bash
+2015-07-11 14:23:16	geirha	mathys1: yes, but not quite like that
+2015-07-11 14:24:07	mathys1	and how can store it in a file?
+2015-07-11 14:24:35	<--	node9 (~node9@CPE0c473dd24701-CM0c473dd24700.cpe.net.cable.rogers.com) has quit (Read error: No route to host)
+2015-07-11 14:25:07	<--	hellofunk (~user@84.241.211.43) has quit (Ping timeout: 264 seconds)
+2015-07-11 14:25:31	geirha	awk -v logdir="$binlogdir" -F= '/SET TIMESTAMP=/{ if(timestamp) close(logdir"/"timestamp); timestamp = $2+0 } / KEY WORDS/ { print > (logdir"/"timestamp) }'
+2015-07-11 14:25:48	<--	dansmith_btc (~dansmith@static-ip-188-138-10-193.inaddr.ip-pool.com) has left #bash ("Leaving")
+2015-07-11 14:26:04	-->	bin__ (~bin__@2620:119:5042:900::61) has joined #bash
+2015-07-11 14:26:55	-->	Groggle (~w0269804@blk-224-164-55.eastlink.ca) has joined #bash
+2015-07-11 14:27:31	-->	gkdeb__ (~gkdeb@r186-54-182-67.dialup.adsl.anteldata.net.uy) has joined #bash
+2015-07-11 14:28:29	<--	gkdeb (~gkdeb@r179-24-88-184.dialup.adsl.anteldata.net.uy) has quit (Read error: Connection reset by peer)
+2015-07-11 14:28:37	<--	eggoez (galau@just.eg.goez.my.id) has quit (Ping timeout: 256 seconds)
+2015-07-11 14:28:47	<--	meat_py (~meat_py@c-73-166-210-32.hsd1.tx.comcast.net) has quit (Remote host closed the connection)
+2015-07-11 14:28:54	<--	sokle (~sokle@78-199-30.adsl.cyta.gr) has left #bash
+2015-07-11 14:29:28	<--	eb0t (~ebot@unaffiliated/eblip) has quit (Quit: WeeChat 1.1.1)
+2015-07-11 14:30:30	<--	Lingo____ (~Lingo@79.164.169.89) has quit (Quit: Be back later ...)
+2015-07-11 14:30:45	<--	Groggle (~w0269804@blk-224-164-55.eastlink.ca) has quit (Remote host closed the connection)
+2015-07-11 14:31:00	-->	meat_py (~meat_py@c-73-166-210-32.hsd1.tx.comcast.net) has joined #bash
+2015-07-11 14:31:35	-->	ocb (~ocb@gateway/vpn/privateinternetaccess/ocb) has joined #bash
+2015-07-11 14:32:22	-->	xaa (~xaa@203.158-243-81.adsl-dyn.isp.belgacom.be) has joined #bash
+2015-07-11 14:34:06	<--	j0map0ma (~j0map0ma@c-24-61-41-244.hsd1.ma.comcast.net) has quit (Read error: Connection reset by peer)
+2015-07-11 14:34:18	-->	nicotux (~nicotux@mylittlepony.trollab.org) has joined #bash
+2015-07-11 14:35:11	-->	jraglin (~jraglin@67.239.197.217) has joined #bash
+2015-07-11 14:35:44	-->	rafaelcpalmeida (~rafaelcpa@pa3-84-91-120-114.netvisao.pt) has joined #bash
+2015-07-11 14:37:06	-->	eggoez (galau@just.eg.goez.my.id) has joined #bash
+2015-07-11 14:38:26	-->	felixjet (~felixjet@198.Red-79-148-153.dynamicIP.rima-tde.net) has joined #bash
+2015-07-11 14:44:35	<--	Jesin (~Jesin@Dyn136250.cc.lehigh.edu) has quit (Quit: Leaving)
+2015-07-11 14:49:38	-->	Jesin (~Jesin@Dyn136250.cc.lehigh.edu) has joined #bash
+2015-07-11 14:50:09	-->	eperez (~eperez@c-69-140-232-70.hsd1.md.comcast.net) has joined #bash
+2015-07-11 14:52:24	<--	eperez (~eperez@c-69-140-232-70.hsd1.md.comcast.net) has quit (Remote host closed the connection)
+2015-07-11 14:53:11	-->	Warnaud (~patatra@26.169.77.83.dynamic.wline.res.cust.swisscom.ch) has joined #bash
+2015-07-11 14:53:36	<--	Warnaud (~patatra@26.169.77.83.dynamic.wline.res.cust.swisscom.ch) has quit (Client Quit)
+2015-07-11 14:54:47	-->	CEnnis91 (uid3543@gateway/web/irccloud.com/x-adwdcjbwreonuprn) has joined #bash
+2015-07-11 14:55:43	<--	tm (~sinnlos@87.118.98.159) has quit (Ping timeout: 264 seconds)
+2015-07-11 14:56:58	<--	Zeranoe (~Zeranoe@97.91.35.24) has quit (Quit: Leaving)
+2015-07-11 14:57:54	-->	tm (~sinnlos@87.118.98.159) has joined #bash
+2015-07-11 14:58:19	-->	Lingo____ (~Lingo@79.164.169.89) has joined #bash
+2015-07-11 14:58:57	<--	scartozzo (~scartozzo@2-233-3-55.ip215.fastwebnet.it) has quit (Read error: Connection reset by peer)
+2015-07-11 14:59:17	-->	scartozzo (~scartozzo@2-233-3-55.ip215.fastwebnet.it) has joined #bash
+2015-07-11 14:59:47	<--	MrCoffee (~coffee@unaffiliated/ridout) has quit (Quit: Lost terminal)
+2015-07-11 15:00:13	-->	f_davis (~fdavis@cpe-172-248-152-50.socal.res.rr.com) has joined #bash
+2015-07-11 15:01:02	-->	oxhak (~OxHaK@unaffiliated/oxhak) has joined #bash
+2015-07-11 15:01:45	<--	multi_io (~olaf@x55b24eec.dyn.telefonica.de) has quit (Ping timeout: 256 seconds)
+2015-07-11 15:03:10	<--	s00pcan (~chris@209.197.20.204) has quit (Ping timeout: 252 seconds)
+2015-07-11 15:03:30	-->	multi_io (~olaf@x55b24c1a.dyn.telefonica.de) has joined #bash
+2015-07-11 15:03:40	-->	plitter (~plitter@178.74.61.20) has joined #bash
+2015-07-11 15:05:05	-->	s00pcan (~chris@108-208-65-111.lightspeed.livnmi.sbcglobal.net) has joined #bash
+2015-07-11 15:06:56	<--	gkdeb__ (~gkdeb@r186-54-182-67.dialup.adsl.anteldata.net.uy) has quit (Quit: Leaving.)
+2015-07-11 15:07:52	<--	ndrei (~avo@83.142.149.227) has quit (Ping timeout: 256 seconds)
+2015-07-11 15:07:52	<--	telex (teletype@freeshell.de) has quit (Remote host closed the connection)
+2015-07-11 15:08:21	-->	gkdeb (~gkdeb@r186-54-182-67.dialup.adsl.anteldata.net.uy) has joined #bash
+2015-07-11 15:08:29	-->	telex (teletype@freeshell.de) has joined #bash
+2015-07-11 15:10:35	-->	hellofunk (~user@84.241.211.43) has joined #bash
+2015-07-11 15:11:58	<--	kurahaupo (~Kurahaupo@80.199.252.27.dyn.cust.vf.net.nz) has quit (Ping timeout: 252 seconds)
+2015-07-11 15:14:42	<--	icebourg (~icebourg@65-128-63-165.hlrn.qwest.net) has quit
+2015-07-11 15:16:19	<--	gkdeb (~gkdeb@r186-54-182-67.dialup.adsl.anteldata.net.uy) has quit (Quit: Leaving.)
+2015-07-11 15:17:13	<--	Lingo____ (~Lingo@79.164.169.89) has quit (Quit: Lingo: www.lingoirc.com)
+2015-07-11 15:17:41	-->	gkdeb (~gkdeb@r186-54-182-67.dialup.adsl.anteldata.net.uy) has joined #bash
+2015-07-11 15:18:17	-->	_Atom_ (~jawat@2605:6000:e9c4:c00:8807:6524:926d:7136) has joined #bash
+2015-07-11 15:18:39	--	irc: disconnected from server
+2015-07-11 15:18:49	-->	yuppie (~Space_Cas@unaffiliated/space-case/x-0038823) has joined #bash
+2015-07-11 15:18:49	--	Topic for #bash is "FAQ: http://mywiki.wooledge.org/BashFAQ | Guide: http://mywiki.wooledge.org/BashGuide | Ref: http://gnu.org/s/bash/manual | http://wiki.bash-hackers.org/ | http://mywiki.wooledge.org/Quotes | Check your script: http://www.shellcheck.net/ | Mailing list: https://lists.gnu.org/mailman/listinfo/help-bash | Devel: http://xrl.us/bmodjy"
+2015-07-11 15:18:49	--	Topic set by pgas (~user@pdpc/supporter/active/pgas) on Wed, 18 Feb 2015 05:43:30
+2015-07-11 15:18:49	--	Channel #bash: 1007 nicks (1 op, 0 voices, 1006 normals)
+2015-07-11 15:18:53	--	Channel created on Sun, 26 Nov 2006 00:42:44
+2015-07-11 15:19:17	--	irc: disconnected from server
+2015-07-11 15:19:23	-->	yuppie (~Space_Cas@unaffiliated/space-case/x-0038823) has joined #bash
+2015-07-11 15:19:23	--	Topic for #bash is "FAQ: http://mywiki.wooledge.org/BashFAQ | Guide: http://mywiki.wooledge.org/BashGuide | Ref: http://gnu.org/s/bash/manual | http://wiki.bash-hackers.org/ | http://mywiki.wooledge.org/Quotes | Check your script: http://www.shellcheck.net/ | Mailing list: https://lists.gnu.org/mailman/listinfo/help-bash | Devel: http://xrl.us/bmodjy"
+2015-07-11 15:19:23	--	Topic set by pgas (~user@pdpc/supporter/active/pgas) on Wed, 18 Feb 2015 05:43:30
+2015-07-11 15:19:23	--	Channel #bash: 1007 nicks (1 op, 0 voices, 1006 normals)
+2015-07-11 15:19:27	--	Channel created on Sun, 26 Nov 2006 00:42:44
+2015-07-11 15:19:55	<--	konsolebox (~konsolebo@112.198.64.68) has quit (Quit: Leaving)
+2015-07-11 15:20:03	<--	achylles (~achylles@bzq-79-179-115-189.red.bezeqint.net) has quit (Ping timeout: 255 seconds)
+2015-07-11 15:20:29	--	irc: disconnected from server
+2015-07-11 15:20:34	-->	yuppie (~Space_Cas@unaffiliated/space-case/x-0038823) has joined #bash
+2015-07-11 15:20:34	--	Topic for #bash is "FAQ: http://mywiki.wooledge.org/BashFAQ | Guide: http://mywiki.wooledge.org/BashGuide | Ref: http://gnu.org/s/bash/manual | http://wiki.bash-hackers.org/ | http://mywiki.wooledge.org/Quotes | Check your script: http://www.shellcheck.net/ | Mailing list: https://lists.gnu.org/mailman/listinfo/help-bash | Devel: http://xrl.us/bmodjy"
+2015-07-11 15:20:34	--	Topic set by pgas (~user@pdpc/supporter/active/pgas) on Wed, 18 Feb 2015 05:43:30
+2015-07-11 15:20:34	--	Channel #bash: 1005 nicks (1 op, 0 voices, 1004 normals)
+2015-07-11 15:20:38	--	Channel created on Sun, 26 Nov 2006 00:42:44
+2015-07-11 15:20:47	<--	gkdeb (~gkdeb@r186-54-182-67.dialup.adsl.anteldata.net.uy) has quit (Client Quit)
+2015-07-11 15:22:17	-->	ndrei (~avo@83.142.149.227) has joined #bash
+2015-07-11 15:22:49	<--	noahmg123 (~noah@pool-173-65-120-225.tampfl.fios.verizon.net) has quit (Ping timeout: 265 seconds)
+2015-07-11 15:23:15	-->	PryMar56 (~prymar@unaffiliated/prymar56) has joined #bash
+2015-07-11 15:24:29	<--	Arch-TK (Arch-TK@fsf/member/Arch-TK) has quit (Quit: I hate quit messages with fucking URLs in them.)
+2015-07-11 15:24:46	<--	_Atom_ (~jawat@2605:6000:e9c4:c00:8807:6524:926d:7136) has quit (Ping timeout: 248 seconds)
+2015-07-11 15:25:47	-->	kurahaupo (~Kurahaupo@80.199.252.27.dyn.cust.vf.net.nz) has joined #bash
+2015-07-11 15:27:32	-->	Arch-TK (Arch-TK@fsf/member/Arch-TK) has joined #bash
+2015-07-11 15:27:55	--	irc: disconnected from server

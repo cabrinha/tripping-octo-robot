@@ -1,0 +1,277 @@
+2015-07-11 10:47:22	-->	yuppie (~Space_Cas@unaffiliated/space-case/x-0038823) has joined #perl
+2015-07-11 10:47:22	--	Topic for #perl is "No pasting! Use http://fpaste.scsys.co.uk/perl to show code! | perl-5.22.0 released! http://ow.ly/NJzEF - Perls <= v5.18 EOLd | Modern Perl: http://xrl.us/bjc4vf | FAQ: http://faq.perl.org | Channel FAQ: http://xrl.us/bmzccn | Search for modules: http://metacpan.org | http://www.youtube.com/user/yapceu and yapcna"
+2015-07-11 10:47:22	--	Topic set by mauke (~mauke@p3m/member/mauke) on Mon, 01 Jun 2015 14:36:31
+2015-07-11 10:47:22	--	Channel #perl: 688 nicks (0 ops, 0 voices, 688 normals)
+2015-07-11 10:47:22	***	Buffer Playback...
+2015-07-11 10:47:22	 *	GumbyPAN [09:41:30] CPAN Upload: Dist-Zilla-Plugin-Author-KENTNL-RecommendFixes-0.005001 by KENTNL https://metacpan.org/release/KENTNL/Dist-Zilla-Plugin-Author-KENTNL-RecommendFixes-0.005001
+2015-07-11 10:47:22	Craftsmanship	[09:55:34] Can someone recommend a module that will take dates and give me something like "about 3 days ago"?
+2015-07-11 10:47:22	anno	[09:58:10] check out Time::Human
+2015-07-11 10:47:22	mst	[09:58:43] also DateTime::Format::Human::Duration
+2015-07-11 10:47:22	mst	[09:58:51] neither's quite perfect but should give you some ideas
+2015-07-11 10:47:22	 *	GumbyPAN [10:01:34] CPAN Upload: CMS-Drupal-0.092 by TONKIN https://metacpan.org/release/TONKIN/CMS-Drupal-0.092
+2015-07-11 10:47:22	tm604	[10:02:44] http://blogs.perl.org/users/chansen/2015/07/simple-and-efficient-formatting-of-relative-datetime-durations-using-timemoment.html
+2015-07-11 10:47:22	miniCruzer	[10:03:49] 4/
+2015-07-11 10:47:22	anno	[10:04:24] invalid division by nothing
+2015-07-11 10:47:22	smls	[10:04:57] Is it safe to mix readline and seek?
+2015-07-11 10:47:22	Craftsmanship	[10:05:58] I can't imagine using them otherwise
+2015-07-11 10:47:22	smls	[10:07:03] Well, readline is usually used by itself in the form   while (<$fh>) { ... }
+2015-07-11 10:47:22	Craftsmanship	[10:08:55] DateTime::Format::Human::Duration seems like a good start
+2015-07-11 10:47:22	Craftsmanship	[10:09:10] I'm sure i can make it more vague
+2015-07-11 10:47:22	mst	[10:10:47] Craftsmanship: if unsure if you've succeeded, test it against http://trout.me.uk/caption.jpg
+2015-07-11 10:47:22	Craftsmanship	[10:11:25] mst: I'll just paste it on #mojo and see who gets upset
+2015-07-11 10:47:22	Grinnz	[10:14:32] mst, the issue with Getopt::Long in perlbrew is not because it's missing, it's because the perlbrew bootstrap script does not load vendorarchlib or something and this bug has been open for like a year
+2015-07-11 10:47:22	Grinnz	[10:14:50] the solution is download perlbrew.pl and add the right libs to what it loads
+2015-07-11 10:47:22	Grinnz	[10:15:14] https://github.com/gugod/App-perlbrew/issues/409
+2015-07-11 10:47:22	mst	[10:16:36] Grinnz: I gave no fucks about that, I just wanted him to have a complete perl install and then cpan things
+2015-07-11 10:47:22	mst	[10:16:40] it was already 5.16
+2015-07-11 10:47:22	mst	[10:16:49] at that point, fuck teaching a newbie how to upgrade
+2015-07-11 10:47:22	Grinnz	[10:16:52] yeah, he had other issues
+2015-07-11 10:47:22	Grinnz	[10:17:11] i'm just saying for future reference, if you see the Getopt::Long or Cwd problem with perlbrew and it's a redhat system :P
+2015-07-11 10:47:22	mst	[10:17:40] right
+2015-07-11 10:47:22	 *	GumbyPAN [10:21:37] CPAN Upload: CMS-Drupal-0.093 by TONKIN https://metacpan.org/release/TONKIN/CMS-Drupal-0.093
+2015-07-11 10:47:22	magistr	[10:27:39] How to define own type in perl?
+2015-07-11 10:47:22	anno	[10:28:14] type?
+2015-07-11 10:47:22	anno	[10:29:32] what would you consider perls native types?
+2015-07-11 10:47:22	Grinnz	[10:30:41] blonde, brunette, redhead, raven?
+2015-07-11 10:47:22	anno	[10:32:42] so much about perl types
+2015-07-11 10:47:22	***	Playback Complete.
+2015-07-11 10:47:39	--	Channel created on Sun, 26 Nov 2006 00:42:39
+2015-07-11 10:48:10	<--	fender011 (~fender010@106.37.99.47) has quit (Quit: WeeChat 1.0.1)
+2015-07-11 10:48:48	<--	konsolebox (~konsolebo@112.198.64.68) has quit (Ping timeout: 240 seconds)
+2015-07-11 10:49:34	<--	oish (~charlie@159.22.169.217.in-addr.arpa) has quit (Ping timeout: 248 seconds)
+2015-07-11 10:52:30	daemon	hey all what did I get wrong with this match?
+2015-07-11 10:52:31	daemon	eval: my $x = "Host: myHost\n";  my ($targetHost) = $heap->{buffer} =~ m#Host: (.*?)#; return $targetHost;
+2015-07-11 10:52:31	perlbot	daemon: No output.
+2015-07-11 10:52:41	daemon	ah wait
+2015-07-11 10:52:45	daemon	nm
+2015-07-11 10:57:19	-->	jraglin (~jraglin@67.239.197.217) has joined #perl
+2015-07-11 11:02:50	-->	Nedd (~Nedd@190.150.220.124) has joined #perl
+2015-07-11 11:03:13	<--	lawalker (~Thunderbi@12.239.220.130) has quit (Ping timeout: 246 seconds)
+2015-07-11 11:04:59	-->	wicope (~wicope@31.Red-81-36-192.dynamicIP.rima-tde.net) has joined #perl
+2015-07-11 11:05:14	<--	p3n (~p3n@94.201.148.186) has quit (Read error: Connection reset by peer)
+2015-07-11 11:05:23	-->	konsolebox (~konsolebo@112.198.64.68) has joined #perl
+2015-07-11 11:05:29	<--	konsolebox (~konsolebo@112.198.64.68) has quit (Remote host closed the connection)
+2015-07-11 11:05:29	--	irc: disconnected from server
+2015-07-11 11:05:43	-->	yuppie (~Space_Cas@unaffiliated/space-case/x-0038823) has joined #perl
+2015-07-11 11:05:43	--	Topic for #perl is "No pasting! Use http://fpaste.scsys.co.uk/perl to show code! | perl-5.22.0 released! http://ow.ly/NJzEF - Perls <= v5.18 EOLd | Modern Perl: http://xrl.us/bjc4vf | FAQ: http://faq.perl.org | Channel FAQ: http://xrl.us/bmzccn | Search for modules: http://metacpan.org | http://www.youtube.com/user/yapceu and yapcna"
+2015-07-11 11:05:43	--	Topic set by mauke (~mauke@p3m/member/mauke) on Mon, 01 Jun 2015 14:36:31
+2015-07-11 11:06:01	--	Channel #perl: 686 nicks (0 ops, 0 voices, 686 normals)
+2015-07-11 11:06:02	--	Channel created on Sun, 26 Nov 2006 00:42:39
+2015-07-11 11:06:09	-->	p3n (~p3n@94.201.148.186) has joined #perl
+2015-07-11 11:06:29	-->	happy-dude (uid62780@gateway/web/irccloud.com/x-zbqidsybhnqofxxd) has joined #perl
+2015-07-11 11:07:51	-->	konsolebox (~konsolebo@112.198.64.68) has joined #perl
+2015-07-11 11:12:20	-->	Hor|zon (~masaosama@213.152.224.226) has joined #perl
+2015-07-11 11:13:19	-->	devinceartas (~devincear@rrcs-24-106-184-123.se.biz.rr.com) has joined #perl
+2015-07-11 11:14:46	-->	small-wolf (~g@c-76-126-208-151.hsd1.ca.comcast.net) has joined #perl
+2015-07-11 11:16:55	<--	Hor|zon (~masaosama@213.152.224.226) has quit (Ping timeout: 252 seconds)
+2015-07-11 11:17:44	--	irc: disconnected from server
+2015-07-11 13:07:42	-->	yuppie (~Space_Cas@unaffiliated/space-case/x-0038823) has joined #perl
+2015-07-11 13:07:42	--	Topic for #perl is "No pasting! Use http://fpaste.scsys.co.uk/perl to show code! | perl-5.22.0 released! http://ow.ly/NJzEF - Perls <= v5.18 EOLd | Modern Perl: http://xrl.us/bjc4vf | FAQ: http://faq.perl.org | Channel FAQ: http://xrl.us/bmzccn | Search for modules: http://metacpan.org | http://www.youtube.com/user/yapceu and yapcna"
+2015-07-11 13:07:42	--	Topic set by mauke (~mauke@p3m/member/mauke) on Mon, 01 Jun 2015 14:36:31
+2015-07-11 13:07:42	--	Channel #perl: 690 nicks (0 ops, 0 voices, 690 normals)
+2015-07-11 13:07:42	***	Buffer Playback...
+2015-07-11 13:07:42	 *	GumbyPAN [11:21:48] CPAN Upload: Net-SNTP-Client-0.06 by GARYFALOS https://metacpan.org/release/GARYFALOS/Net-SNTP-Client-0.06
+2015-07-11 13:07:42	MikOo	[11:40:33] mst: I didn't find it with a simple linear reading
+2015-07-11 13:07:42	MikOo	[11:40:41] so thank you
+2015-07-11 13:07:42	mst	[11:42:10] MikOo: I opened the docs, did Ctrl-F for utf8, noticed that paragraph mentioned sqlite_unicode, went and read the docs for it
+2015-07-11 13:07:42	daemon	[11:43:47] hey all I am connecting to a tcp service with poe-component-client-tcp with poe-filter-ssl
+2015-07-11 13:07:42	daemon	[11:44:01] how do I tell it to connect without a clientside ssl certificate
+2015-07-11 13:07:42	daemon	[11:44:18] at the moment it seems to throw up
+2015-07-11 13:07:42	daemon	[11:44:19] POE::Filter::SSL: UNEXPECTED ERROR: ERR1:-1 ERR2:1 at /usr/local/lib/perl5/site_perl/POE/Wheel/ReadWrite.pm line 280.
+2015-07-11 13:07:42	MikOo	[11:45:14] mst: Yes I am a silly buzzard
+2015-07-11 13:07:42	 *	GumbyPAN [12:01:55] CPAN Upload: marc-moose-1.0.27 by FREDERICD https://metacpan.org/release/FREDERICD/marc-moose-1.0.27
+2015-07-11 13:07:42	Nomenclatura	[12:10:58] uhm, question... I actually dunno much of perl but no idea how to do this in bash :s .... I want to merge two binaries but I want to have singular bits selected in a A1B1A2B2C1C2[...] fashion. Any ideas how to do this in perl? ;)
+2015-07-11 13:07:42	Nomenclatura	[12:11:35] gotta be better at perl, it often saves my butt
+2015-07-11 13:07:42	anno	[12:14:39] vec($new, 2*$_, 1) = vec($bin1, $_, 1); vec($new, 2*$_ + 1, 1) = vec($bin2, $_, 1) for 0 .. 8*length $bin1;
+2015-07-11 13:07:42	anno	[12:15:14] well, not quite like that, but use vec() to interleave the bits
+2015-07-11 13:07:42	pink_mist	[12:15:34] something like: use List::MoreUtils 'zip'; print C zip @{[ split //, <A> ]}, @{[ split //, <B> ]}; where A, B, and C are filehandles to the files you want to read from and write to
+2015-07-11 13:07:42	fALSO	[12:15:41] Hi anyone willing to help me with perl arrays/hashes ? im trying to make this work : https://ideone.com/aneOiS
+2015-07-11 13:07:42	b0at	[12:16:37] fALSO: $theme is already a scalar. if you want the count of the arrayref's elements, dereference it: scalar(@$theme)
+2015-07-11 13:07:42	pink_mist	[12:17:02] fALSO: you don't have 'use warnings;'
+2015-07-11 13:07:42	Nomenclatura	[12:17:13] oh I see how...
+2015-07-11 13:07:42	fALSO	[12:17:55] im making a little script for irssi, but not really a perl master :-P
+2015-07-11 13:07:42	Nomenclatura	[12:18:02] anno: :D that actually gave me a better idea :D
+2015-07-11 13:07:42	Nomenclatura	[12:18:35] anno: and thnks, that was more than I expected :D
+2015-07-11 13:07:42	pink_mist	[12:18:48] Nomenclatura: oh sorry, I read your question wrong, so please do disregard me =)
+2015-07-11 13:07:42	pink_mist	[12:19:00] anno++
+2015-07-11 13:07:42	Nomenclatura	[12:19:15] pink_mist: thanks :)
+2015-07-11 13:07:42	rindolf	[12:27:32] Nomenclatura: you can speed up the operation by creating a lookup table from two octets to one 16-bit word.
+2015-07-11 13:07:42	rindolf	[12:27:54] Nomenclatura: instead of doing it bit by bit.
+2015-07-11 13:07:42	anno	[12:29:57] the lookup table can be a memoized function
+2015-07-11 13:07:42	Nomenclatura	[12:37:54] Ok, I have it now thanks :3
+2015-07-11 13:07:42	 *	GumbyPAN [12:57:04] CPAN Upload: MySQL-Admin-0.86 by LZE https://metacpan.org/release/LZE/MySQL-Admin-0.86
+2015-07-11 13:07:42	***	Playback Complete.
+2015-07-11 13:07:55	<--	fstd (~fstd@unaffiliated/fisted) has quit (Remote host closed the connection)
+2015-07-11 13:07:58	--	Channel created on Sun, 26 Nov 2006 00:42:39
+2015-07-11 13:09:11	<--	miniCruzer (sam@cpe-96-28-29-163.kya.res.rr.com) has quit (Remote host closed the connection)
+2015-07-11 13:09:33	-->	sdgvf (alice@hardch.at) has joined #perl
+2015-07-11 13:11:21	--	irc: disconnected from server
+2015-07-11 13:11:33	-->	yuppie (~Space_Cas@unaffiliated/space-case/x-0038823) has joined #perl
+2015-07-11 13:11:33	--	Topic for #perl is "No pasting! Use http://fpaste.scsys.co.uk/perl to show code! | perl-5.22.0 released! http://ow.ly/NJzEF - Perls <= v5.18 EOLd | Modern Perl: http://xrl.us/bjc4vf | FAQ: http://faq.perl.org | Channel FAQ: http://xrl.us/bmzccn | Search for modules: http://metacpan.org | http://www.youtube.com/user/yapceu and yapcna"
+2015-07-11 13:11:33	--	Topic set by mauke (~mauke@p3m/member/mauke) on Mon, 01 Jun 2015 14:36:31
+2015-07-11 13:11:33	--	Channel #perl: 689 nicks (0 ops, 0 voices, 689 normals)
+2015-07-11 13:11:50	--	Channel created on Sun, 26 Nov 2006 00:42:39
+2015-07-11 13:12:49	-->	kerframil (~kerframil@gentoo/user/kerframil) has joined #perl
+2015-07-11 13:13:03	-->	itaipu (~marco@191.46.162.47) has joined #perl
+2015-07-11 13:18:39	-->	Kemosabe (~Kemosabe@124-169-216-56.dyn.iinet.net.au) has joined #perl
+2015-07-11 13:19:24	-->	Tideflat (~beet@216.57.176.185) has joined #perl
+2015-07-11 13:19:25	<--	kirotawa (~kirotawa@177.205.183.186.dynamic.adsl.gvt.net.br) has quit (Quit: WeeChat 0.4.2)
+2015-07-11 13:20:17	<--	s00pcan (~chris@209.197.20.203) has quit (Ping timeout: 240 seconds)
+2015-07-11 13:20:40	-->	r0x_ (~r0x@78.163.29.236) has joined #perl
+2015-07-11 13:20:56	-->	kirotawa (~kirotawa@177.205.183.186.dynamic.adsl.gvt.net.br) has joined #perl
+2015-07-11 13:21:01	<--	diana_olhovik_ (~quassel@78.111.186.99) has quit (Ping timeout: 265 seconds)
+2015-07-11 13:22:27	-->	s00pcan (~chris@108-208-65-111.lightspeed.livnmi.sbcglobal.net) has joined #perl
+2015-07-11 13:23:06	<--	s00pcan (~chris@108-208-65-111.lightspeed.livnmi.sbcglobal.net) has quit (Remote host closed the connection)
+2015-07-11 13:27:08	-->	markovh (zncuser@unaffiliated/markovh) has joined #perl
+2015-07-11 13:32:11	 *	GumbyPAN CPAN Upload: Acme-Unicodify-0.003 by JMASLAK https://metacpan.org/release/JMASLAK/Acme-Unicodify-0.003
+2015-07-11 13:33:52	-->	Saturn812 (~Saturn812@128-69-6-128.broadband.corbina.ru) has joined #perl
+2015-07-11 13:33:54	-->	s00pcan (~chris@209.197.20.204) has joined #perl
+2015-07-11 13:34:05	<--	peconi (~peconi@76.10.210.62) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2015-07-11 13:35:36	-->	Deesl (~bsdboy@redhat/deesl) has joined #perl
+2015-07-11 13:36:50	-->	kurahaupo (~Kurahaupo@80.199.252.27.dyn.cust.vf.net.nz) has joined #perl
+2015-07-11 13:37:18	-->	PeterThoeny (~PeterThoe@75-25-128-244.lightspeed.sjcpca.sbcglobal.net) has joined #perl
+2015-07-11 13:37:18	<--	PeterThoeny (~PeterThoe@75-25-128-244.lightspeed.sjcpca.sbcglobal.net) has quit (Changing host)
+2015-07-11 13:37:18	-->	PeterThoeny (~PeterThoe@twiki/founder/peterthoeny) has joined #perl
+2015-07-11 13:37:52	<--	geggam (~geggam@108-218-203-177.uvs.sntcca.sbcglobal.net) has quit (Ping timeout: 246 seconds)
+2015-07-11 13:42:12	 *	GumbyPAN CPAN Upload: Parallel-WorkUnit-1.000 by JMASLAK https://metacpan.org/release/JMASLAK/Parallel-WorkUnit-1.000
+2015-07-11 13:42:52	<--	wicope (~wicope@31.Red-81-36-192.dynamicIP.rima-tde.net) has quit (Remote host closed the connection)
+2015-07-11 13:43:40	-->	geggam (~geggam@108-218-203-177.uvs.sntcca.sbcglobal.net) has joined #perl
+2015-07-11 13:45:01	<--	Tideflat (~beet@216.57.176.185) has quit (Quit: Leaving)
+2015-07-11 13:47:10	<--	Deesl (~bsdboy@redhat/deesl) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2015-07-11 13:48:34	<--	seekr (~seekr@unaffiliated/seekr) has quit (Ping timeout: 265 seconds)
+2015-07-11 13:51:01	<--	Nahra (~user@unaffiliated/nahra) has quit (Remote host closed the connection)
+2015-07-11 13:51:18	-->	Nahra (~user@unaffiliated/nahra) has joined #perl
+2015-07-11 13:52:14	 *	GumbyPAN CPAN Upload: Dist-Zilla-Plugin-TemplateCJM-4.23 by CJM https://metacpan.org/release/CJM/Dist-Zilla-Plugin-TemplateCJM-4.23
+2015-07-11 13:52:14	 *	GumbyPAN CPAN Upload: Acme-MakeMoneyAtHome-1.002002 by AVENJ https://metacpan.org/release/AVENJ/Acme-MakeMoneyAtHome-1.002002
+2015-07-11 13:53:02	--	irc: disconnected from server
+2015-07-11 13:53:08	-->	yuppie (~Space_Cas@unaffiliated/space-case/x-0038823) has joined #perl
+2015-07-11 13:53:08	--	Topic for #perl is "No pasting! Use http://fpaste.scsys.co.uk/perl to show code! | perl-5.22.0 released! http://ow.ly/NJzEF - Perls <= v5.18 EOLd | Modern Perl: http://xrl.us/bjc4vf | FAQ: http://faq.perl.org | Channel FAQ: http://xrl.us/bmzccn | Search for modules: http://metacpan.org | http://www.youtube.com/user/yapceu and yapcna"
+2015-07-11 13:53:08	--	Topic set by mauke (~mauke@p3m/member/mauke) on Mon, 01 Jun 2015 14:36:31
+2015-07-11 13:53:08	--	Channel #perl: 693 nicks (0 ops, 0 voices, 693 normals)
+2015-07-11 13:53:24	--	Channel created on Sun, 26 Nov 2006 00:42:39
+2015-07-11 13:53:58	<--	daemon (daemon@2001:470:1f09:17e:70c1:b8dc:dfcf:c1e3) has quit (Quit: Leaving)
+2015-07-11 13:54:12	<--	devinceartas (~devincear@cpe-24-211-137-138.nc.res.rr.com) has quit (Quit: Computer has gone to sleep.)
+2015-07-11 13:55:29	-->	Deesl (~bsdboy@redhat/deesl) has joined #perl
+2015-07-11 14:01:17	<--	Nahra (~user@unaffiliated/nahra) has quit (Remote host closed the connection)
+2015-07-11 14:02:16	<--	wlsn (~wlsn@host-92-10-19-89.as43234.net) has quit (Quit: Leaving)
+2015-07-11 14:02:49	<--	lokulin (~lokulin@li733-68.members.linode.com) has quit (Ping timeout: 256 seconds)
+2015-07-11 14:04:11	-->	whynot (whynot@206-117-203-46.pool.ukrtel.net) has joined #perl
+2015-07-11 14:05:47	<--	nallar (~nallar@nallar.me) has quit (Ping timeout: 252 seconds)
+2015-07-11 14:06:19	-->	gnudon (~user@50.12.145.188) has joined #perl
+2015-07-11 14:06:20	<--	davido__ (~davido@c-50-168-241-168.hsd1.ut.comcast.net) has quit (Read error: Connection reset by peer)
+2015-07-11 14:06:54	<--	itaipu (~marco@191.46.162.47) has quit (Ping timeout: 248 seconds)
+2015-07-11 14:07:42	-->	davido__ (~davido@c-50-168-241-168.hsd1.ut.comcast.net) has joined #perl
+2015-07-11 14:10:03	-->	nallar (~nallar@nallar.me) has joined #perl
+2015-07-11 14:10:18	<--	psyprus (~psyprus@unaffiliated/psyprus) has quit (Read error: Connection reset by peer)
+2015-07-11 14:10:33	-->	psyprus (~psyprus@199.115.98.226) has joined #perl
+2015-07-11 14:13:26	<--	Deesl (~bsdboy@redhat/deesl) has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+2015-07-11 14:13:50	-->	liambrown (~lima@70.103.159.2) has joined #perl
+2015-07-11 14:14:19	-->	devmikey (~irc@unaffiliated/devmikey) has joined #perl
+2015-07-11 14:15:36	-->	KnownSyntax (~KnownSynt@unaffiliated/knownsyntax) has joined #perl
+2015-07-11 14:18:37	-->	bin_005 (~ctlM@80.83.238.93) has joined #perl
+2015-07-11 14:21:31	-->	lokulin (~lokulin@li733-68.members.linode.com) has joined #perl
+2015-07-11 14:22:13	-->	devinceartas (~devincear@cpe-24-211-137-138.nc.res.rr.com) has joined #perl
+2015-07-11 14:25:56	-->	theCole (~theCole@2602:306:bc59:94e0:2544:161f:6fdc:3e61) has joined #perl
+2015-07-11 14:26:18	<--	devmikey (~irc@unaffiliated/devmikey) has quit (Quit: devmikey)
+2015-07-11 14:28:37	<--	eggoez (galau@just.eg.goez.my.id) has quit (Ping timeout: 256 seconds)
+2015-07-11 14:28:56	<--	aBound (~aBound@unaffiliated/abound) has quit (Quit: Leaving)
+2015-07-11 14:29:51	<--	PeterThoeny (~PeterThoe@twiki/founder/peterthoeny) has quit (Quit: PeterThoeny)
+2015-07-11 14:29:58	-->	devmikey (~irc@unaffiliated/devmikey) has joined #perl
+2015-07-11 14:30:22	<--	theCole (~theCole@2602:306:bc59:94e0:2544:161f:6fdc:3e61) has quit (Ping timeout: 248 seconds)
+2015-07-11 14:30:30	<--	Lingo____ (~Lingo@79.164.169.89) has quit (Quit: Be back later ...)
+2015-07-11 14:31:10	<--	devmikey (~irc@unaffiliated/devmikey) has quit (Read error: Connection reset by peer)
+2015-07-11 14:31:14	-->	diana_olhovik (~quassel@37.19.206.82) has joined #perl
+2015-07-11 14:34:40	<--	sauvin (~sauvin@about/linux/staff/sauvin) has quit (Remote host closed the connection)
+2015-07-11 14:35:11	-->	jraglin (~jraglin@67.239.197.217) has joined #perl
+2015-07-11 14:35:24	<--	t0x0sh (~tosh@t0x0sh.org) has quit (Ping timeout: 250 seconds)
+2015-07-11 14:37:06	-->	eggoez (galau@just.eg.goez.my.id) has joined #perl
+2015-07-11 14:40:32	-->	PeterThoeny (~PeterThoe@75-25-128-244.lightspeed.sjcpca.sbcglobal.net) has joined #perl
+2015-07-11 14:40:32	<--	PeterThoeny (~PeterThoe@75-25-128-244.lightspeed.sjcpca.sbcglobal.net) has quit (Changing host)
+2015-07-11 14:40:32	-->	PeterThoeny (~PeterThoe@twiki/founder/peterthoeny) has joined #perl
+2015-07-11 14:44:06	<--	PeterThoeny (~PeterThoe@twiki/founder/peterthoeny) has quit (Client Quit)
+2015-07-11 14:44:06	<--	omarrr (~omarrr@dhcp-077-248-039-198.chello.nl) has quit (Quit: Leaving)
+2015-07-11 14:48:06	-->	bin_005_j (~ctlM@80.83.238.93) has joined #perl
+2015-07-11 14:50:14	-->	Hor|zon (~masaosama@213.152.224.226) has joined #perl
+2015-07-11 14:51:10	<--	bin_005 (~ctlM@80.83.238.93) has quit (Ping timeout: 248 seconds)
+2015-07-11 14:52:42	-->	devmikey (~irc@unaffiliated/devmikey) has joined #perl
+2015-07-11 14:54:02	-->	troller (~p@80.240.216.69) has joined #perl
+2015-07-11 14:55:00	<--	Hor|zon (~masaosama@213.152.224.226) has quit (Ping timeout: 264 seconds)
+2015-07-11 14:55:42	-->	CEnnis91 (uid3543@gateway/web/irccloud.com/x-adwdcjbwreonuprn) has joined #perl
+2015-07-11 14:56:48	<--	liambrown (~lima@70.103.159.2) has quit (Ping timeout: 264 seconds)
+2015-07-11 14:57:08	-->	revhippie (~jdavis@96-38-37-134.static.kgpt.tn.charter.com) has joined #perl
+2015-07-11 14:58:19	-->	Lingo____ (~Lingo@79.164.169.89) has joined #perl
+2015-07-11 14:58:42	tybalt89	sub bitzip { $memo{"@_"} //= pack 'B*', join '', unpack('B*', join '', @_) =~ /(.)(?=.{7}(.))/g } # hehehe
+2015-07-11 14:59:05	tybalt89	( it's too quiet :)
+2015-07-11 15:01:05	mauke	perl -e 'my ((), ((), ((), ())))'
+2015-07-11 15:01:45	<--	multi_io (~olaf@x55b24eec.dyn.telefonica.de) has quit (Ping timeout: 256 seconds)
+2015-07-11 15:01:57	huf	what stub
+2015-07-11 15:02:02	mauke	your perl is too old
+2015-07-11 15:02:37	huf	yes.
+2015-07-11 15:02:48	huf	this one is ;) the other one just said nothing. far less interesting
+2015-07-11 15:02:59	mauke	() is OP_STUB
+2015-07-11 15:03:10	<--	s00pcan (~chris@209.197.20.204) has quit (Ping timeout: 252 seconds)
+2015-07-11 15:03:24	huf	what's the image behind the name?
+2015-07-11 15:03:30	-->	multi_io (~olaf@x55b24c1a.dyn.telefonica.de) has joined #perl
+2015-07-11 15:03:45	<--	b100s (~b100s@62.122.208.211) has quit (Ping timeout: 256 seconds)
+2015-07-11 15:04:00	mauke	u wot
+2015-07-11 15:04:17	anno	schall und rauch
+2015-07-11 15:04:34	huf	mauke: i dont understand how the word stub is connected to ()
+2015-07-11 15:04:45	mauke	manually
+2015-07-11 15:05:01	huf	christ...
+2015-07-11 15:05:04	Grinnz	with chewing gum
+2015-07-11 15:05:05	-->	s00pcan (~chris@108-208-65-111.lightspeed.livnmi.sbcglobal.net) has joined #perl
+2015-07-11 15:06:38	-->	fennesz (~fennesz@ppp-2-84-229-1.home.otenet.gr) has joined #perl
+2015-07-11 15:06:39	 *	GumbyPAN CPAN Upload: Swagger2-0.42 by JHTHORSEN https://metacpan.org/release/JHTHORSEN/Swagger2-0.42
+2015-07-11 15:09:01	popl	It's conversation like this that could make someone snap.
+2015-07-11 15:09:14	huf	x-wing, b-wing, che-wing
+2015-07-11 15:09:38	preaction	patrick ew-wing
+2015-07-11 15:10:16	mst	o/ wrigley's chewing gum / carrying the big fresh padlist o/
+2015-07-11 15:10:17	huf	oh yeah, the show dallas had a ton of e-wings
+2015-07-11 15:10:20	popl	"you're-going-to-die-alone"-wing
+2015-07-11 15:10:34	mst	popl: guessing that's your specialist ship
+2015-07-11 15:10:38	mauke	wtf, when did less start using pcre syntax for searches?
+2015-07-11 15:10:53	popl	mst: hm/
+2015-07-11 15:10:54	popl	?
+2015-07-11 15:11:01	mst	"we swapped mauke's regexp engine with folgers crystals ... let's see if he notices"
+2015-07-11 15:11:07	huf	:D
+2015-07-11 15:11:26	huf	9 out of 10 maukes cant tell the difference between pcre and a dead crab?
+2015-07-11 15:11:58	<--	kurahaupo (~Kurahaupo@80.199.252.27.dyn.cust.vf.net.nz) has quit (Ping timeout: 252 seconds)
+2015-07-11 15:12:20	<--	troller (~p@80.240.216.69) has quit (Ping timeout: 252 seconds)
+2015-07-11 15:12:24	 *	anno eats the dead crab with a drop of lemon juice
+2015-07-11 15:12:28	-->	seekr (~seekr@unaffiliated/seekr) has joined #perl
+2015-07-11 15:13:03	huf	lemon 24 hour race?
+2015-07-11 15:13:46	-->	ompaul (~ompaul@unaffiliated/ompaul) has joined #perl
+2015-07-11 15:13:49	-->	austeritysucks (~as@unaffiliated/austeritysucks) has joined #perl
+2015-07-11 15:13:57	<--	anewuser (anewuser@unaffiliated/anewuser) has quit (Quit: anewuser)
+2015-07-11 15:14:12	mauke	   libpcre.so.1 => /usr/lib/libpcre.so.1 (0xb76a8000)
+2015-07-11 15:14:15	mauke	what are you doing, arch
+2015-07-11 15:14:32	rewt	anno, you have crabs?
+2015-07-11 15:16:03	-->	b100s (~b100s@62.122.208.211) has joined #perl
+2015-07-11 15:16:30	<--	popl (~1024@unaffiliated/popl) has quit (Quit: Touch the frog.)
+2015-07-11 15:16:36	-->	peconi (~peconi@d27-96-144-78.nap.wideopenwest.com) has joined #perl
+2015-07-11 15:17:13	<--	Lingo____ (~Lingo@79.164.169.89) has quit (Quit: Lingo: www.lingoirc.com)
+2015-07-11 15:17:21	<--	Kelzier (~duka@79.175.77.199) has quit (Ping timeout: 256 seconds)
+2015-07-11 15:17:41	<--	peregrine` (~peregrine@178.20.51.132) has quit (Ping timeout: 246 seconds)
+2015-07-11 15:18:39	--	irc: disconnected from server
+2015-07-11 15:18:49	-->	yuppie (~Space_Cas@unaffiliated/space-case/x-0038823) has joined #perl
+2015-07-11 15:18:49	--	Topic for #perl is "No pasting! Use http://fpaste.scsys.co.uk/perl to show code! | perl-5.22.0 released! http://ow.ly/NJzEF - Perls <= v5.18 EOLd | Modern Perl: http://xrl.us/bjc4vf | FAQ: http://faq.perl.org | Channel FAQ: http://xrl.us/bmzccn | Search for modules: http://metacpan.org | http://www.youtube.com/user/yapceu and yapcna"
+2015-07-11 15:18:49	--	Topic set by mauke (~mauke@p3m/member/mauke) on Mon, 01 Jun 2015 14:36:31
+2015-07-11 15:18:49	--	Channel #perl: 692 nicks (0 ops, 0 voices, 692 normals)
+2015-07-11 15:19:05	--	Channel created on Sun, 26 Nov 2006 00:42:39
+2015-07-11 15:19:17	--	irc: disconnected from server
+2015-07-11 15:19:23	-->	yuppie (~Space_Cas@unaffiliated/space-case/x-0038823) has joined #perl
+2015-07-11 15:19:23	--	Topic for #perl is "No pasting! Use http://fpaste.scsys.co.uk/perl to show code! | perl-5.22.0 released! http://ow.ly/NJzEF - Perls <= v5.18 EOLd | Modern Perl: http://xrl.us/bjc4vf | FAQ: http://faq.perl.org | Channel FAQ: http://xrl.us/bmzccn | Search for modules: http://metacpan.org | http://www.youtube.com/user/yapceu and yapcna"
+2015-07-11 15:19:23	--	Topic set by mauke (~mauke@p3m/member/mauke) on Mon, 01 Jun 2015 14:36:31
+2015-07-11 15:19:23	--	Channel #perl: 692 nicks (0 ops, 0 voices, 692 normals)
+2015-07-11 15:19:41	--	Channel created on Sun, 26 Nov 2006 00:42:39
+2015-07-11 15:19:55	<--	konsolebox (~konsolebo@112.198.64.68) has quit (Quit: Leaving)
+2015-07-11 15:20:29	--	irc: disconnected from server
+2015-07-11 15:20:34	-->	yuppie (~Space_Cas@unaffiliated/space-case/x-0038823) has joined #perl
+2015-07-11 15:20:34	--	Topic for #perl is "No pasting! Use http://fpaste.scsys.co.uk/perl to show code! | perl-5.22.0 released! http://ow.ly/NJzEF - Perls <= v5.18 EOLd | Modern Perl: http://xrl.us/bjc4vf | FAQ: http://faq.perl.org | Channel FAQ: http://xrl.us/bmzccn | Search for modules: http://metacpan.org | http://www.youtube.com/user/yapceu and yapcna"
+2015-07-11 15:20:34	--	Topic set by mauke (~mauke@p3m/member/mauke) on Mon, 01 Jun 2015 14:36:31
+2015-07-11 15:20:34	--	Channel #perl: 691 nicks (0 ops, 0 voices, 691 normals)
+2015-07-11 15:20:50	--	Channel created on Sun, 26 Nov 2006 00:42:39
+2015-07-11 15:21:18	<--	ompaul (~ompaul@unaffiliated/ompaul) has quit (Quit: and zebedee said its time for other stuff)
+2015-07-11 15:23:37	<--	fennesz (~fennesz@ppp-2-84-229-1.home.otenet.gr) has quit (Quit: Leaving)
+2015-07-11 15:25:47	-->	kurahaupo (~Kurahaupo@80.199.252.27.dyn.cust.vf.net.nz) has joined #perl
+2015-07-11 15:27:55	--	irc: disconnected from server
