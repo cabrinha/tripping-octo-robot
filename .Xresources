@@ -1,3 +1,4 @@
+URxvt*termName: rxvt-unicode
 Xft.antialias: 1
 Xft.autohint: 0
 Xft.dpi: 96
@@ -34,6 +35,7 @@ URxvt*url-launcher: firefox
 URxvt*letterSpace: -1
 !URxvt.font: xft:gohufont:size=14:antialias=false:hinting=false
 URxvt.font: xft:SourceCodePro:size=10:antialias=true:hinting=true
+!URxvt.font: xft:Menlo-Regular:size=10:antialias=true:hinting=true
 
 !! Colorizing things (needs work)
 
