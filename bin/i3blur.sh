@@ -1,0 +1,1 @@
+../.dotfiles_neeasade/lock/bin/i3blur.sh

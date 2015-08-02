@@ -1,0 +1,49 @@
+#!/bin/bash
+# jellybean theme
+
+THEME_NAME=zenburn
+
+GTK_THEME=zenburn
+
+# vim theme name
+VIM_COLORS=zenburn
+
+# termite theme name
+TERMITE_CONFIG=zenburn
+
+# Background command
+export BG_COMMAND='feh --bg-fill /home/neeasade/images/walls/fill/tree.jpg'
+
+. ~/.config/bspwm/themes/base.bspwm_theme $TERMITE_CONFIG
+
+# BSPWM variables
+# naming convention is b_<config_option>
+b_border_width=3
+b_window_gap=12
+b_split_ratio=0.6
+export pPadding=1
+
+# Panel variables
+PANEL_HEIGHT=28
+PANEL_FONT_MAIN="Terminus-8"
+PANEL_FONT_ICON="FontAwesome-8"
+PANEL_GAP=4
+PANEL_UNDERLINE=5
+
+export pRest="$pIcon"
+export desktopDisplay=name # [icon|name] - display desktop names or DO/DF variables.
+export showFreeDesktops=true # option to show nothing for free desktops
+export desktopDisplayType=together # [together| separate] - show desktops in separate blocks or together in one block
+export NoModeToggle="" # if defined, no monocle/tiling toggle.
+
+# Workspace variables
+export DO='+'
+export DF='-'
+export DT='[-]'
+export DM='[]'
+
+# dunst variables
+DUNST_FONT="Terminus 8"
+
+# This is needed for spacing on the dmenu_run script.
+[ "$BSPWM_GAPS" = false ] && export PANEL_GAP=0
