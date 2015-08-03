@@ -105,3 +105,4 @@ export HISTFILESIZE=100000
 
 # autostartx if running on the first tty:
 if [[ -z $DISPLAY && $XDG_VTNR -eq 1 ]]; then exec startx; fi
+eval $(dircolors ~/.dircolors)

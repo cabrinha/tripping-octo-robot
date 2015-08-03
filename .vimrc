@@ -82,7 +82,7 @@ execute 'colorscheme ' vim_colors
 set t_Co=256
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1 " neovim true colors.
 " neovim remap esc for term mode.
-tnoremap <Esc> <C-\><C-n>
+"tnoremap <Esc> <C-\><C-n>
 
 set encoding=utf-8
 

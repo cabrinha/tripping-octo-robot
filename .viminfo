@@ -80,39 +80,49 @@ $
 	background = rgba(63, 63, 63, 0.8)
 	
 "1	LINE	0
-	
+	#	deleted:    .Xresources
 "2	LINE	0
-	]
-"3	LINE	0
-	[
-"4	LINE	0
-	}
-"5	LINE	0
 	
+"3	LINE	0
+	]
+"4	LINE	0
+	[
+"5	LINE	0
+	}
 "6	LINE	0
-	# Update interval in seconds
+	
 "7	LINE	0
-	PERL_MM_OPT="INSTALL_BASE=/home/yuppie/perl5"; export PERL_MM_OPT;
+	# Update interval in seconds
 "8	LINE	0
-	PERL_MB_OPT="--install_base \"/home/yuppie/perl5\""; export PERL_MB_OPT;
+	PERL_MM_OPT="INSTALL_BASE=/home/yuppie/perl5"; export PERL_MM_OPT;
 "9	LINE	0
-	PERL_LOCAL_LIB_ROOT="/home/yuppie/perl5${PERL_LOCAL_LIB_ROOT+:}${PERL_LOCAL_LIB_ROOT}"; export PERL_LOCAL_LIB_ROOT;
+	PERL_MB_OPT="--install_base \"/home/yuppie/perl5\""; export PERL_MB_OPT;
 ""-	CHAR	0
-	l
+	#
 
 # File marks:
-'0  8  18  ~/.zshrc
-'1  6  0  ~/devel/neeasade/dotfiles/.git/COMMIT_EDITMSG
-'2  18  0  ~/devel/neeasade/dotfiles/.git/COMMIT_EDITMSG
-'3  13  0  ~/devel/neeasade/dotfiles/.git/COMMIT_EDITMSG
-'4  50  0  ~/devel/neeasade/dotfiles/.git/COMMIT_EDITMSG
-'5  95  25  ~/.bashrc
-'6  71  0  ~/.dotfiles_neeasade/termite/.config/termite/config
-'7  16  0  ~/.dotfiles_neeasade/termite/.config/termite/config
-'8  72  0  ~/.dotfiles_neeasade/termite/.config/termite/config
-'9  70  0  ~/.dotfiles_neeasade/termite/.config/termite/config
+'0  6  21  ~/devel/tripping-octo-robot/.git/COMMIT_EDITMSG
+'1  8  7  ~/devel/tripping-octo-robot/.git/COMMIT_EDITMSG
+'2  1014  0  ~/devel/tripping-octo-robot/.git/COMMIT_EDITMSG
+'3  549  83  ~/devel/tripping-octo-robot/.git/COMMIT_EDITMSG
+'4  885  61  ~/devel/tripping-octo-robot/.git/COMMIT_EDITMSG
+'5  27  0  ~/devel/tripping-octo-robot/.git/COMMIT_EDITMSG
+'6  2126  0  ~/devel/tripping-octo-robot/.git/COMMIT_EDITMSG
+'7  9  0  ~/devel/tripping-octo-robot/.git/COMMIT_EDITMSG
+'8  7  19  ~/devel/tripping-octo-robot/.git/COMMIT_EDITMSG
+'9  8  18  ~/.zshrc
 
 # Jumplist (newest first):
+-'  6  21  ~/devel/tripping-octo-robot/.git/COMMIT_EDITMSG
+-'  1  0  ~/devel/tripping-octo-robot/.git/COMMIT_EDITMSG
+-'  8  7  ~/devel/tripping-octo-robot/.git/COMMIT_EDITMSG
+-'  1014  0  ~/devel/tripping-octo-robot/.git/COMMIT_EDITMSG
+-'  549  83  ~/devel/tripping-octo-robot/.git/COMMIT_EDITMSG
+-'  885  61  ~/devel/tripping-octo-robot/.git/COMMIT_EDITMSG
+-'  27  0  ~/devel/tripping-octo-robot/.git/COMMIT_EDITMSG
+-'  2126  0  ~/devel/tripping-octo-robot/.git/COMMIT_EDITMSG
+-'  9  0  ~/devel/tripping-octo-robot/.git/COMMIT_EDITMSG
+-'  7  19  ~/devel/tripping-octo-robot/.git/COMMIT_EDITMSG
 -'  8  18  ~/.zshrc
 -'  52  0  ~/.zshrc
 -'  1  0  ~/.zshrc
@@ -149,7 +159,6 @@ $
 -'  1  0  ~/devel/perl/screech/screech.pl
 -'  1  0  ~/.vimrc
 -'  5  20  ~/devel/tripping-octo-robot/.git/COMMIT_EDITMSG
--'  1  0  ~/devel/tripping-octo-robot/.git/COMMIT_EDITMSG
 -'  1  0  ~/.dotfiles_neeasade/depends.txt
 -'  9  39  ~/.config/bspwm/panel/panel_conky
 -'  6  27  ~/.config/bspwm/panel/panel_conky
@@ -202,17 +211,21 @@ $
 -'  819  22  ~/.config/subtle/subtle.rb
 -'  98  0  ~/.config/subtle/subtle.rb
 -'  987  0  ~/.config/subtle/subtle.rb
--'  1  0  ~/.config/subtle/subtle.rb
--'  1127  19  ~/.config/subtle/subtle.rb
--'  1134  30  ~/.config/subtle/subtle.rb
--'  4  54  /tmp/yaourt-tmp-yuppie/aur-ttf-pragmatapro/ttf-pragmatapro.install
--'  1  0  /tmp/yaourt-tmp-yuppie/aur-ttf-pragmatapro/ttf-pragmatapro.install
--'  13  2  /tmp/yaourt-tmp-yuppie/aur-ttf-pragmatapro/PKGBUILD
--'  1  0  /tmp/yaourt-tmp-yuppie/aur-ttf-pragmatapro/PKGBUILD
--'  2  67  ~/.fehbg
--'  1781  0  ~/.config/subtle/subtle.rb
 
 # History of marks within files (newest to oldest):
+
+> ~/devel/tripping-octo-robot/.git/COMMIT_EDITMSG
+	"	6	21
+	^	6	22
+	.	6	21
+	+	5	20
+	+	9	0
+	+	7	0
+	+	9	0
+	+	8	0
+	+	9	0
+	+	10	0
+	+	6	21
 
 > ~/.zshrc
 	"	8	18
@@ -375,12 +388,6 @@ $
 	.	129	9
 	+	1164	10
 	+	129	9
-
-> ~/devel/tripping-octo-robot/.git/COMMIT_EDITMSG
-	"	5	20
-	^	5	21
-	.	5	20
-	+	5	20
 
 > ~/.dotfiles_neeasade/depends.txt
 	"	1	0

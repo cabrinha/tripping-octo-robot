@@ -8,21 +8,23 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0/iad3
+~MSle0~/pkgdir
 
 # Last Substitute Search Pattern:
-~MSle0~&<neeasade>
+~MSle0&<neeasade>
 
 # Last Substitute String:
 $
 
 # Command Line History (newest to oldest):
-:wq
-:%s/<neeasade>//g
 :q!
+:wq
+:w
+:q
+:set nospell
+:%s/<neeasade>//g
 :PlugInstall
 :PluginInstall
-:w
 :syn on
 :colorscheme zenburn
 :colorscheme base16-twilight
@@ -30,23 +32,33 @@ $
 :colorscheme tomorrow-night-eighties
 :colorscheme gruvbox
 :colorscheme
-:q
 :colorscheme 
 :%s/BATS/bats/g
 :%s/BATC/batc/g
 :'<,'>q
 :%s
 :colorscheme mustang
-:set nospell
 :colorschemedefault
 
 # Search String History (newest to oldest):
 ? \s\+$
+?/pkgdir
+?/*
+?/g
+?////
+?//
+?/\
+?/build
+?/right
+?/765
+?/cur_song
+?/eval
+?/tno
+?/little
 ? <neeasade>
 ?/iad3
 ? BATS
 ? BATC
-?/little
 ?/ls
 ?/fzf
 ?/ter
@@ -59,216 +71,519 @@ $
 # Input Line History (newest to oldest):
 
 # Registers:
-"0	CHAR	0
-	echo -n "#$( cat ~/.config/termite/config | grep -1 "$1" | head -n 1 | grep -oE "#[a-zA-Z0-9]{6}" | cut -c 2- )";
+""0	CHAR	0
+	 
 "1	LINE	0
-	```
+	    skrol="$(skroll -d 0.3 -l <<< "$cur_song" )"
 "2	LINE	0
-	```
+	    
 "3	LINE	0
-	super+e pcmanfm
+	    skrolling=$( basename "$(mpc current)" | sed "s/^\(.*\)\..*$/\1/" | cut -c1-30 | skroll -d 0.3 -l )
 "4	LINE	0
 	```
 "5	LINE	0
 	```
 "6	LINE	0
-	theres the panel/gap toggles, which you have
+	super+e pcmanfm
 "7	LINE	0
-	[14:48:37] <yuppie> legit
+	```
 "8	LINE	0
-	[14:48:34]  I think that's about it
+	```
 "9	LINE	0
-	
-""-	CHAR	0
-	 is cycle through windows
+	theres the panel/gap toggles, which you have
+"-	CHAR	0
+	 
 
 # global variables:
 
 # File marks:
-'0  18  2  ~/devel/tripping-octo-robot/README.md
-'1  1  0  ~/.fehbg
-'2  1  0  ~/.xinitrc
-'3  6  22  ~/.config/mpd/mpd.conf
-'4  36  0  ~/.xinitrc
-'5  57  0  ~/root/pacman/etc/pacman.conf
-'6  1  0  ~/.tmux.conf
-'7  71  0  ~/.dotfiles_neeasade/termite/.config/termite/config
-'8  77  28  ~/.tmux.conf
-'9  104  0  ~/.bashrc
+'0  7  0  ~/bin/bar
+'1  1  0  ~/bin/panelt
+'2  40  0  ~/bin/dzen_cal
+'3  16  0  ~/.config/mpd/mpd.conf
+'4  11  21  ~/.config/bspwm/panel/notify
+'5  1  0  ~/.dotfiles_neeasade/deploy.sh
+'6  1  0  ~/.dotfiles_neeasade/ranger/.config/ranger/rc.conf
+'7  55  0  ~/.dotfiles_neeasade/ranger/.config/ranger/options.py
+'8  30  2  /tmp/yaourt-tmp-yuppie/aur-conky-git/PKGBUILD
+'9  11  30  /tmp/yaourt-tmp-yuppie/aur-conky-git/PKGBUILD
 
 # Jumplist (newest first):
--'  18  2  ~/devel/tripping-octo-robot/README.md
--'  23  0  ~/devel/tripping-octo-robot/README.md
--'  1  0  ~/devel/tripping-octo-robot/README.md
--'  1  0  ~/.fehbg
--'  1  0  ~/.xinitrc
--'  6  22  ~/.config/mpd/mpd.conf
--'  1  0  ~/.config/mpd/mpd.conf
--'  36  0  ~/.xinitrc
--'  57  0  ~/root/pacman/etc/pacman.conf
--'  1  0  ~/root/pacman/etc/pacman.conf
--'  1  0  ~/.tmux.conf
--'  71  0  ~/.dotfiles_neeasade/termite/.config/termite/config
--'  8  0  ~/.dotfiles_neeasade/termite/.config/termite/config
--'  1  0  ~/.dotfiles_neeasade/termite/.config/termite/config
--'  77  28  ~/.tmux.conf
--'  104  0  ~/.bashrc
--'  10  53  ~/.bashrc
--'  13  44  ~/.bashrc
--'  12  0  ~/.bashrc
--'  1  0  ~/.bashrc
--'  17  93  ~/.config/bspwm/panel/info.sh
--'  1  0  ~/.config/bspwm/panel/info.sh
--'  107  0  ~/.bashrc
--'  18  103  ~/.config/bspwm/panel/info.sh
--'  23  50  ~/.config/bspwm/panel/info.sh
--'  4  0  ~/.nvimrc
--'  1  0  ~/.nvimrc
--'  49  0  ~/.nvimrc
--'  1  0  ~/.nvim
--'  28  0  ~/.config/bspwm/panel/panel
--'  1  0  ~/.config/bspwm/panel/panel
--'  92  0  ~/.config/bspwm/bspwmrc
--'  1  0  ~/.config/bspwm/bspwmrc
--'  11  7  ~/.config/bspwm/panel/info.sh
--'  101  26  ~/.config/bspwm/panel/info.sh
--'  129  0  ~/.nvimrc
--'  77  49  ~/.config/bspwm/panel/info.sh
--'  78  0  ~/.config/bspwm/panel/info.sh
--'  72  30  ~/.config/bspwm/themes/base.bspwm_theme
--'  36  0  ~/.config/bspwm/themes/base.bspwm_theme
--'  1  0  ~/.config/bspwm/themes/base.bspwm_theme
--'  31  0  ~/bin/dzen_mpd
--'  1  0  ~/bin/dzen_mpd
--'  32  13  ~/.config/bspwm/themes/base.bspwm_theme
--'  84  0  ~/.config/bspwm/themes/base.bspwm_theme
--'  33  16  ~/.config/bspwm/themes/jellybean.bspwm_theme
--'  1  0  ~/.config/bspwm/themes/jellybean.bspwm_theme
--'  1  0  ~/.zshrc
--'  52  46  ~/.zshrc
--'  110  27  ~/.bashrc
--'  76  0  ~/.bashrc
--'  17  0  ~/.bashrc
--'  124  0  ~/.config/sxhkd/sxhkdrc
--'  1  0  ~/.config/sxhkd/sxhkdrc
--'  1  88  ~/webm
--'  27  34  ~/bin/record
--'  1  0  ~/bin/record
--'  43  50  ~/devel/perl/screech/screech.pl
--'  1  0  ~/devel/perl/screech/screech.pl
--'  5  0  ~/.config/bspwm/bspwmrc
--'  23  0  ~/devel/perl/screech/screech.pl
--'  61  0  ~/.bash_utils
--'  1  0  ~/.bash_utils
--'  116  12  ~/bin/record
--'  8  0  ~/bin/i3blur.sh
--'  1  0  ~/bin/i3blur.sh
--'  83  0  ~/.tmux.conf
--'  81  8  ~/.tmux.conf
--'  36  0  ~/.tmux.conf
+-'  7  0  ~/bin/bar
+-'  1  0  ~/bin/bar
+-'  1  0  ~/bin/panelt
+-'  40  0  ~/bin/dzen_cal
+-'  1  0  ~/bin/dzen_cal
 -'  16  0  ~/.config/mpd/mpd.conf
--'  30  42  ~/.config/bspwm/panel/panel
--'  57  0  ~/.config/bspwm/panel/title.sh
--'  1  0  ~/.config/bspwm/panel/title.sh
--'  28  0  ~/.config/bspwm/bspwmrc
+-'  1  0  ~/.config/mpd/mpd.conf
+-'  11  21  ~/.config/bspwm/panel/notify
+-'  1  0  ~/.config/bspwm/panel/notify
+-'  1  0  ~/.dotfiles_neeasade/deploy.sh
+-'  1  0  ~/.dotfiles_neeasade/ranger/.config/ranger/rc.conf
+-'  55  0  ~/.dotfiles_neeasade/ranger/.config/ranger/options.py
+-'  1  0  ~/.dotfiles_neeasade/ranger/.config/ranger/options.py
+-'  30  2  /tmp/yaourt-tmp-yuppie/aur-conky-git/PKGBUILD
+-'  1  0  /tmp/yaourt-tmp-yuppie/aur-conky-git/PKGBUILD
+-'  11  30  /tmp/yaourt-tmp-yuppie/aur-conky-git/PKGBUILD
+-'  64  18  /tmp/yaourt-tmp-yuppie/aur-conky-git/PKGBUILD
+-'  63  14  /tmp/yaourt-tmp-yuppie/aur-conky-git/PKGBUILD
+-'  62  50  /tmp/yaourt-tmp-yuppie/aur-conky-git/PKGBUILD
+-'  61  48  /tmp/yaourt-tmp-yuppie/aur-conky-git/PKGBUILD
+-'  60  45  /tmp/yaourt-tmp-yuppie/aur-conky-git/PKGBUILD
+-'  59  14  /tmp/yaourt-tmp-yuppie/aur-conky-git/PKGBUILD
+-'  58  16  /tmp/yaourt-tmp-yuppie/aur-conky-git/PKGBUILD
+-'  65  0  /tmp/yaourt-tmp-yuppie/aur-conky-git/PKGBUILD
+-'  50  20  /tmp/yaourt-tmp-yuppie/aur-conky-git/PKGBUILD
+-'  44  32  /tmp/yaourt-tmp-yuppie/aur-conky-git/PKGBUILD
+-'  43  22  /tmp/yaourt-tmp-yuppie/aur-conky-git/PKGBUILD
+-'  42  23  /tmp/yaourt-tmp-yuppie/aur-conky-git/PKGBUILD
+-'  41  4  /tmp/yaourt-tmp-yuppie/aur-conky-git/PKGBUILD
+-'  39  10  /tmp/yaourt-tmp-yuppie/aur-conky-git/PKGBUILD
+-'  31  3  /tmp/yaourt-tmp-yuppie/aur-conky-git/PKGBUILD
+-'  47  4  /tmp/yaourt-tmp-yuppie/aur-conky-git/PKGBUILD
+-'  46  4  /tmp/yaourt-tmp-yuppie/aur-conky-git/PKGBUILD
+-'  45  4  /tmp/yaourt-tmp-yuppie/aur-conky-git/PKGBUILD
+-'  1  0  ~/.config/bspwm/panel/panel_conky
+-'  1  0  ~/.config/bspwm/panel/notify_mpd
+-'  1  0  ~/.config/bspwm/panel/execute_panel
+-'  1  0  ~/.config/bspwm/panel/config
+-'  55  0  ~/.config/bspwm/panel/panel_battery
+-'  1  0  ~/.config/bspwm/panel/panel_battery
+-'  6  6  ~/.config/bspwm/panel/notify
+-'  30  27  ~/.config/bspwm/panel/panel
+-'  1  0  ~/.config/bspwm/panel/panel
+-'  104  37  ~/.config/bspwm/panel/info.sh
+-'  1  0  ~/.config/bspwm/panel/info.sh
+-'  64  0  ~/.config/bspwm/panel/info.sh
+-'  108  28  ~/.config/bspwm/panel/info.sh
+-'  71  21  ~/.config/bspwm/panel/info.sh
+-'  80  5  ~/.config/bspwm/panel/info.sh
+-'  69  0  ~/.config/bspwm/panel/info.sh
+-'  78  24  ~/.config/bspwm/panel/info.sh
+-'  60  23  ~/.config/bspwm/panel/info.sh
+-'  42  35  ~/.config/bspwm/bspwmrc
+-'  1  0  ~/.config/bspwm/bspwmrc
+-'  71  0  ~/.dotfiles_neeasade/termite/.config/termite/config
+-'  1  0  ~/.dotfiles_neeasade/termite/.config/termite/config
 -'  1  0  ~/.config/bspwm/wm
--'  2  0  ~/.dotfiles_neeasade/termite/.config/termite/config
--'  29  0  ~/.bspwm_theme
--'  1  0  ~/.bspwm_theme
--'  27  10  ~/.bspwm_theme
--'  109  3  ~/.config/bspwm/panel/info.sh
--'  38  0  ~/.xinitrc
--'  24  1  ~/devel/perl/screech/screech.pl
--'  22  0  ~/.nvimrc
+-'  108  29  ~/.bashrc
+-'  1  0  ~/.bashrc
+-'  65  17  ~/.dircolors
+-'  1  0  ~/.dircolors
+-'  160  0  ~/.config/sxhkd/sxhkdrc
+-'  1  0  ~/.config/sxhkd/sxhkdrc
+-'  60  0  ~/.config/bspwm/bspwmrc
+-'  111  7  ~/.config/sxhkd/sxhkdrc
+-'  98  4  ~/.config/sxhkd/sxhkdrc
+-'  20  12  ~/.config/bspwm/themes/base.bspwm_theme
+-'  1  0  ~/.config/bspwm/themes/base.bspwm_theme
+-'  31  14  ~/.config/bspwm/themes/base.bspwm_theme
+-'  72  7  ~/.config/bspwm/panel/info.sh
+-'  80  0  ~/.config/bspwm/panel/panel
+-'  1  0  ~/devel/perl/screech/screech.pl
+-'  86  0  ~/devel/perl/screech/screech.pl
+-'  1  0  ~/devel/tripping-octo-robot/info_lol.sh
+-'  86  0  ~/.vimrc
+-'  85  0  ~/.vimrc
 -'  1  0  ~/.vimrc
--'  8  5  ~/.nvimrc
--'  8  0  ~/.dotfiles_neeasade/vim/.vim/autoload
--'  9  49  ~/.nvimrc
--'  155  0  ~/.nvimrc
--'  38  0  ~/.bspwm_theme
--'  16  73  ~/.bspwm_theme
--'  9  0  ~/.dotfiles_neeasade/vim/.vim/colors
--'  41  5  ~/.nvimrc
--'  153  0  ~/.bashrc
--'  156  0  ~/.bashrc
--'  108  3  ~/devel/tripping-octo-robot/.bashrc
--'  1  0  ~/devel/tripping-octo-robot/.bashrc
--'  95  16  ~/.bashrc
--'  1  0  ~/.Xresources
--'  28  0  ~/.xinitrc
+-'  214  18  ~/devel/tripping-octo-robot/.weechat/irc.conf
+-'  1  0  ~/devel/tripping-octo-robot/.weechat/irc.conf
+-'  17  9  ~/devel/tripping-octo-robot/depends.txt
+-'  2  0  ~/devel/tripping-octo-robot/depends.txt
+-'  1  0  ~/devel/tripping-octo-robot/depends.txt
+-'  4  0  ~/devel/tripping-octo-robot/README.md
+-'  1  0  ~/devel/tripping-octo-robot/README.md
+-'  13  40  ~/devel/tripping-octo-robot/README.md
+-'  1  0  ~/devel/tripping-octo-robot
+-'  27  23  ~/.config/bspwm/panel/panel
+-'  28  46  ~/.config/bspwm/panel/panel
+-'  14  0  ~/.xinitrc
+-'  1  0  ~/.xinitrc
+-'  64  0  ~/.config/bspwm/panel/title.sh
+-'  1  0  ~/.config/bspwm/panel/title.sh
+-'  1  0  ~/.ncmpcpp/config
+-'  71  0  ~/.config/bspwm/panel/title.sh
+-'  49  47  ~/.config/bspwm/panel/panel
+-'  61  0  ~/.config/bspwm/panel/title.sh
+-'  24  0  ~/.config/bspwm/bspwmrc
+-'  57  17  ~/.config/bspwm/panel/info.sh
+-'  65  0  ~/.config/bspwm/panel/info.sh
 
 # History of marks within files (newest to oldest):
 
+> ~/bin/panelt
+	"	1	0
+
+> ~/bin/dzen_cal
+	"	40	0
+
+> ~/.config/mpd/mpd.conf
+	"	16	0
+	^	6	23
+	.	6	22
+	+	6	22
+
+> ~/.config/bspwm/panel/notify
+	"	11	21
+	^	1	19
+	.	1	14
+	+	6	6
+	+	1	14
+
+> ~/.dotfiles_neeasade/deploy.sh
+	"	1	0
+
+> ~/.dotfiles_neeasade/ranger/.config/ranger/rc.conf
+	"	1	0
+
+> ~/.dotfiles_neeasade/ranger/.config/ranger/options.py
+	"	55	0
+
+> /tmp/yaourt-tmp-yuppie/aur-conky-git/PKGBUILD
+	"	30	2
+	^	30	3
+	.	30	2
+	+	31	2
+	+	11	30
+	+	30	2
+
+> ~/.config/bspwm/panel/panel_conky
+	"	1	0
+
+> ~/.config/bspwm/panel/notify_mpd
+	"	1	0
+
+> ~/.config/bspwm/panel/execute_panel
+	"	1	0
+
+> ~/.config/bspwm/panel/config
+	"	1	0
+
+> ~/.config/bspwm/panel/panel_battery
+	"	55	0
+
+> ~/.config/bspwm/panel/panel
+	"	30	27
+	^	28	24
+	.	28	23
+	+	30	42
+	+	1	6
+	+	28	23
+
+> ~/.config/bspwm/panel/info.sh
+	"	104	37
+	^	23	14
+	.	100	46
+	+	120	10
+	+	111	24
+	+	112	31
+	+	120	10
+	+	111	31
+	+	99	31
+	+	99	31
+	+	17	92
+	+	23	45
+	+	99	26
+	+	23	4
+	+	18	108
+	+	23	25
+	+	91	26
+	+	77	0
+	+	30	0
+	+	100	26
+	+	17	68
+	+	23	51
+	+	18	103
+	+	17	93
+	+	23	46
+	+	90	47
+	+	79	23
+	+	69	28
+	+	69	47
+	+	78	0
+	+	79	22
+	+	69	102
+	+	79	22
+	+	69	54
+	+	79	20
+	+	69	44
+	+	78	8
+	+	79	22
+	+	78	8
+	+	69	0
+	+	78	23
+	+	18	82
+	+	23	14
+	+	100	46
+
+> ~/.config/bspwm/panel/panelt
+	"	1	0
+
+> ~/.config/bspwm/bspwmrc
+	"	42	35
+	^	42	47
+	.	42	39
+	+	42	39
+
+> ~/.dotfiles_neeasade/termite/.config/termite/config
+	"	71	0
+	^	71	1
+	.	71	0
+	+	11	19
+	+	71	0
+	+	73	0
+	+	71	0
+
+> ~/.config/bspwm/wm
+	"	1	0
+
+> ~/.bashrc
+	"	108	29
+	^	108	30
+	.	108	0
+	+	147	0
+	+	152	0
+	+	153	0
+	+	154	0
+	+	155	0
+	+	156	0
+	+	143	15
+	+	95	11
+	+	12	15
+	+	13	0
+	+	157	0
+	+	145	0
+	+	150	0
+	+	151	0
+	+	152	0
+	+	153	0
+	+	154	0
+	+	155	0
+	+	10	54
+	+	88	0
+	+	63	0
+	+	64	0
+	+	65	0
+	+	66	0
+	+	67	0
+	+	68	0
+	+	69	0
+	+	70	0
+	+	71	0
+	+	73	0
+	+	76	0
+	+	138	68
+	+	131	0
+	+	131	0
+	+	111	27
+	+	109	0
+	+	104	17
+	+	93	24
+	+	94	0
+	+	63	0
+	+	64	0
+	+	65	0
+	+	66	0
+	+	67	0
+	+	68	0
+	+	69	0
+	+	70	0
+	+	71	0
+	+	73	0
+	+	74	0
+	+	10	0
+	+	74	0
+	+	99	0
+	+	100	0
+	+	101	0
+	+	102	0
+	+	103	0
+	+	104	0
+	+	108	0
+
+> ~/.dircolors
+	"	65	17
+	^	65	18
+	.	65	17
+	+	66	17
+	+	65	17
+
+> ~/.config/sxhkd/sxhkdrc
+	"	160	0
+	^	160	0
+	.	161	0
+	+	15	13
+	+	14	0
+	+	19	13
+	+	23	23
+	+	27	20
+	+	31	22
+	+	35	19
+	+	39	15
+	+	43	28
+	+	47	17
+	+	67	11
+	+	78	5
+	+	82	18
+	+	86	32
+	+	90	22
+	+	94	0
+	+	97	0
+	+	98	4
+	+	94	23
+	+	39	0
+	+	123	17
+	+	127	4
+	+	130	0
+	+	134	13
+	+	161	0
+
+> ~/.config/bspwm/themes/base.bspwm_theme
+	"	20	12
+	^	20	13
+	.	20	13
+	+	74	37
+	+	72	30
+	+	19	15
+	+	12	76
+	+	20	13
+
+> ~/devel/perl/screech/screech.pl
+	"	1	0
+
 > ~/devel/tripping-octo-robot/README.md
-	"	18	2
-	^	18	3
-	.	51	6
-	+	54	0
-	+	15	10
+	"	57	2
+	^	57	3
+	.	57	2
+	+	59	0
+	+	16	10
+	+	58	0
 	+	53	0
-	+	52	0
-	+	18	0
-	+	20	0
-	+	23	0
+	+	19	0
+	+	21	0
 	+	24	0
-	+	28	0
-	+	32	0
-	+	36	0
-	+	38	0
-	+	39	9
-	+	44	0
-	+	48	0
-	+	18	2
-	+	20	3
-	+	22	2
-	+	23	3
+	+	25	0
+	+	29	0
+	+	33	0
+	+	37	0
+	+	39	0
+	+	40	9
+	+	45	0
+	+	49	0
+	+	19	2
+	+	21	3
 	+	23	2
 	+	24	3
-	+	26	2
-	+	28	3
-	+	30	2
-	+	32	3
-	+	34	2
-	+	38	0
-	+	38	2
-	+	38	3
-	+	38	2
-	+	39	12
-	+	41	2
-	+	44	3
-	+	46	2
-	+	48	3
-	+	50	2
-	+	52	2
-	+	38	0
-	+	16	0
-	+	17	15
-	+	19	5
-	+	23	0
-	+	21	11
-	+	23	7
-	+	25	6
-	+	27	5
-	+	29	10
-	+	31	20
-	+	33	9
-	+	35	12
-	+	36	3
-	+	37	11
-	+	39	9
-	+	39	9
-	+	41	16
-	+	43	19
-	+	45	13
-	+	47	5
-	+	49	20
-	+	51	6
+	+	24	2
+	+	25	3
+	+	27	2
+	+	29	3
+	+	31	2
+	+	33	3
+	+	35	2
+	+	39	0
+	+	39	2
+	+	39	3
+	+	39	2
+	+	40	12
+	+	42	2
+	+	45	3
+	+	47	2
+	+	49	3
+	+	51	2
+	+	53	2
+	+	39	0
+	+	17	0
+	+	18	15
+	+	20	5
+	+	24	0
+	+	22	11
+	+	24	7
+	+	26	6
+	+	28	5
+	+	30	10
+	+	32	20
+	+	34	9
+	+	36	12
+	+	37	3
+	+	38	11
+	+	40	9
+	+	40	9
+	+	42	16
+	+	44	19
+	+	46	13
+	+	48	5
+	+	50	20
+	+	52	6
+	+	60	57
+	+	1	18
+	+	3	72
+	+	13	41
+	+	14	14
+	+	57	2
 
-> ~/.fehbg
+> ~/devel/tripping-octo-robot/.bashrc
 	"	1	0
+	^	108	0
+	.	19	0
+	+	10	54
+	+	19	0
+
+> ~/.vimrc
+	"	1	0
+	^	85	1
+	.	85	0
+	+	1	16
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	18	12
+	+	1	0
+	+	39	0
+	+	38	1
+	+	126	0
+	+	127	0
+	+	128	0
+	+	129	0
+	+	1	0
+	+	40	0
+	+	41	0
+	+	128	0
+	+	129	0
+	+	128	0
+	+	129	0
+	+	85	0
+
+> ~/.bspwm_theme
+	"	15	0
+	^	22	15
+	.	22	14
+	+	16	72
+	+	27	10
+	+	22	14
+
+> ~/devel/tripping-octo-robot/info_lol.sh
+	"	1	0
+
+> ~/devel/tripping-octo-robot/.weechat/irc.conf
+	"	214	18
+	.	193	18
+	+	155	21
+	+	146	22
+	+	167	21
+	+	193	18
+
+> ~/devel/tripping-octo-robot/depends.txt
+	"	17	9
+	^	17	10
+	.	17	9
+	+	28	0
+	+	17	9
 
 > ~/.xinitrc
-	"	1	0
+	"	14	0
 	^	8	1
 	.	8	0
 	+	28	41
@@ -280,11 +595,14 @@ $
 	+	2	19
 	+	8	0
 
-> ~/.config/mpd/mpd.conf
-	"	6	22
-	^	6	23
-	.	6	22
-	+	6	22
+> ~/.config/bspwm/panel/title.sh
+	"	64	0
+
+> ~/.ncmpcpp/config
+	"	1	0
+
+> ~/.fehbg
+	"	1	0
 
 > ~/root/pacman/etc/pacman.conf
 	"	57	0
@@ -322,108 +640,6 @@ $
 	+	75	18
 	+	74	16
 
-> ~/.dotfiles_neeasade/termite/.config/termite/config
-	"	71	0
-	^	71	1
-	.	71	0
-	+	11	19
-	+	71	0
-	+	73	0
-	+	71	0
-
-> ~/.bashrc
-	"	104	0
-	^	104	1
-	.	104	0
-	+	146	0
-	+	151	0
-	+	152	0
-	+	153	0
-	+	154	0
-	+	155	0
-	+	142	15
-	+	95	11
-	+	12	15
-	+	13	0
-	+	156	0
-	+	144	0
-	+	149	0
-	+	150	0
-	+	151	0
-	+	152	0
-	+	153	0
-	+	154	0
-	+	10	54
-	+	88	0
-	+	63	0
-	+	64	0
-	+	65	0
-	+	66	0
-	+	67	0
-	+	68	0
-	+	69	0
-	+	70	0
-	+	71	0
-	+	73	0
-	+	76	0
-	+	137	68
-	+	130	0
-	+	130	0
-	+	110	27
-	+	108	0
-	+	104	17
-	+	93	24
-	+	94	0
-	+	63	0
-	+	64	0
-	+	65	0
-	+	66	0
-	+	67	0
-	+	68	0
-	+	69	0
-	+	70	0
-	+	71	0
-	+	73	0
-	+	74	0
-	+	10	0
-	+	74	0
-	+	99	0
-	+	100	0
-	+	101	0
-	+	102	0
-	+	103	0
-	+	104	0
-
-> ~/.config/bspwm/panel/info.sh
-	"	23	46
-	^	17	94
-	.	23	46
-	+	121	10
-	+	112	24
-	+	113	31
-	+	121	10
-	+	112	31
-	+	100	31
-	+	100	31
-	+	17	92
-	+	23	45
-	+	100	26
-	+	23	4
-	+	18	108
-	+	23	25
-	+	92	26
-	+	78	0
-	+	30	0
-	+	101	26
-	+	17	68
-	+	23	51
-	+	18	103
-	+	17	93
-	+	23	46
-
-> ~/.config/bspwm/panel/title.sh
-	"	71	0
-
 > ~/.nvimrc
 	"	4	0
 	^	4	0
@@ -451,24 +667,6 @@ $
 	+	129	0
 	+	9	0
 
-> ~/.config/bspwm/panel/panel
-	"	28	0
-	^	28	47
-	.	28	46
-	+	30	42
-	+	1	6
-	+	28	46
-
-> ~/.config/bspwm/bspwmrc
-	"	92	0
-
-> ~/.config/bspwm/themes/base.bspwm_theme
-	"	72	30
-	^	72	31
-	.	72	30
-	+	74	37
-	+	72	30
-
 > ~/bin/dzen_mpd
 	"	31	0
 	^	1	19
@@ -489,9 +687,6 @@ $
 	.	52	13
 	+	52	13
 
-> ~/.config/sxhkd/sxhkdrc
-	"	124	0
-
 > /usr/share/nvim/runtime/doc/help.txt
 	"	1	0
 
@@ -511,9 +706,6 @@ $
 	.	116	0
 	+	116	0
 
-> ~/devel/perl/screech/screech.pl
-	"	43	50
-
 > ~/.bash_utils
 	"	61	0
 	^	61	1
@@ -522,50 +714,6 @@ $
 
 > ~/bin/i3blur.sh
 	"	8	0
-
-> ~/.config/bspwm/wm
-	"	1	0
-
-> ~/.bspwm_theme
-	"	29	0
-	^	22	15
-	.	22	14
-	+	16	72
-	+	27	10
-	+	22	14
-
-> ~/.vimrc
-	"	1	0
-	^	129	1
-	.	129	0
-	+	1	16
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	18	12
-	+	1	0
-	+	39	0
-	+	38	1
-	+	126	0
-	+	127	0
-	+	128	0
-	+	129	0
-	+	1	0
-	+	40	0
-	+	41	0
-	+	128	0
-	+	129	0
-	+	128	0
-	+	129	0
-
-> ~/devel/tripping-octo-robot/.bashrc
-	"	108	3
-	^	108	0
-	.	19	0
-	+	10	54
-	+	19	0
 
 > ~/.Xresources
 	"	1	0
@@ -636,14 +784,5 @@ $
 	.	16	35
 	+	16	35
 
-> ~/.dircolors
-	"	65	17
-	^	65	18
-	.	65	17
-	+	65	17
-
 > ~/.dotfiles_neeasade/.bashrc
-	"	1	0
-
-> ~/.ncmpcpp/config
 	"	1	0
