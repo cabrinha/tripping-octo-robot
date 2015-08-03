@@ -11,7 +11,7 @@ His actual dots may be found [here](https://github.com/neeasade/dotfiles)
 *   font - Dejavu Sans Mono/Droid Sans/Terminus
 
 [Workflow webm](https://sr.ht/61e69.webm)
-![Screenshot](https://sr.ht/c2ac.png)
+![Screenshot](https://u.teknik.io/gtWppx.jpg)
 
 ##Keybinds
 

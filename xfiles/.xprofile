@@ -1,4 +1,0 @@
-#!/bin/bash
-
-#grep out exec line that launches bspwm
-eval "$(cat .xinitrc | grep -v "exec")"
