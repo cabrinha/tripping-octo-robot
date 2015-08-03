@@ -1,0 +1,61 @@
+#!/usr/bin/env bash
+
+inTerm() {
+    [[ -t 0 || -p /dev/stdin ]]
+}
+
+isRunning() {
+    pgrep $1 &> /dev/null
+}
+
+info() {
+    if inTerm; then
+        echo -e "\e[34m$1\e[0m" >&2
+    else
+        zenity --info --text="$*" &> /dev/null
+    fi
+}
+
+err() {
+    if inTerm; then
+        echo -e "\e[31m$1\e[0m" >&2
+    else
+        zenity --error --text="$*" &> /dev/null
+    fi
+}
+
+die() {
+    if [[ -n "$1" ]]; then
+        err "$1"
+    fi
+    exit 1
+}
+
+has() {
+    verbose=false
+    if [[ $1 == '-v' ]]; then
+        verbose=true
+        shift
+    fi
+    if command -v "$1" &> /dev/null; then
+        return 0
+    else
+        [[ "$verbose" == true ]] && err "$1 not found"
+        return 1
+    fi
+}
+
+ask() {
+    if inTerm; then
+        prompt='Y/n'
+        read -n1 -p "$* [$prompt] " ans
+        echo ''
+        if [[ ${ans^} == Y* ]]; then
+            return 0
+        else
+            return 1
+        fi
+    else
+        zenity --question --text="$@" 2> /dev/null
+    fi
+}

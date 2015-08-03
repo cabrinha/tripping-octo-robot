@@ -1,0 +1,1 @@
+../../../.dotfiles_neeasade/bspwm/.config/bspwm/panel/title.sh

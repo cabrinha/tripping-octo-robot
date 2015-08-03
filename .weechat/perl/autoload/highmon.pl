@@ -1,0 +1,1 @@
+../../../.dotfiles_neeasade/weechat/.weechat/perl/autoload/highmon.pl

@@ -1,0 +1,116 @@
+#!/usr/bin/env bash
+
+source ~/.bash_utils
+
+file="$(date +%F-%s).gif"
+window=false
+region=false
+duration=10
+delay=0
+declare -A dimensions
+
+usage() {
+    more <<'HELP'
+'Usage: record [OPTIONS]
+  -h  this help
+  -f  specify file name [defaults to $(date +%F-%s).gif]
+  -F  specify file name and overwrite if exists
+  -d  specify duration
+  -D  specify delay
+  -w  select window
+  -s  draw selectable region'
+# -k  display keystrokes during recording
+HELP
+}
+
+delay() {
+    for (( i=delay; i>0; --i )) ; do
+        echo -ne "$i..             \r"
+        sleep 1
+    done
+    echo -ne 'recording                \r'
+}
+
+getdimensions() {
+    if [[ "$window" == true ]]; then
+        echo -ne 'click a window\r'
+        xwininfo=$(xwininfo)
+        read x y w h < <(awk -F':' '/Absolute upper-left X/ { x = $2 }
+        /Absolute upper-left Y/ { y = $2 }
+        /Width/ { w = $2 }
+        /Height/ { h = $2 }
+        END { print x, y, w, h }' <<< "$xwininfo")
+        dimensions=( ['x']="$x" ['y']="$y" ['w']="$w" ['h']="$h" )
+    elif [[ "$region" == true ]]; then
+        if ! has xrectsel; then
+            die 'xrectsel required for -s'
+        fi
+        echo -ne 'select a region\r'
+        #TODO: don't use eval
+        eval dimensions=( $(xrectsel "['x']='%x' ['y']='%y' ['w']='%w' ['h']='%h'") )
+    else
+        scrsize=$(xdpyinfo | awk '/dimensions/{print $2}')
+        dimensions=( ['x']='0' ['y']='0' ['w']="${scrsize%%x*}" ['h']="${scrsize#*x}" )
+    fi
+}
+
+record() {
+    #TODO: maybe remove byzanz altogether in favor of plain ffmpeg?
+    case "$1" in
+        'byzanz')
+            byzanz-record \
+                --duration="$duration"\
+                --x="${dimensions['x']}"\
+                --y="${dimensions['y']}"\
+                --width="${dimensions['w']}"\
+                --height="${dimensions['h']}"\
+                "$file" ;;
+        'ffmpeg')
+            size="${dimensions['w']}x${dimensions['h']}"
+            offset=":0.0+${dimensions['x']},${dimensions['y']}"
+            ffmpeg -y -loglevel panic\
+                -f x11grab -s "$size" -i "$offset" -t "$duration"\
+                -c:v libvpx -crf 12 -s "$size" -b:v 1200k \
+                -preset fast \
+                -b 1000k -threads 4 \
+                -f webm "$file" ;;
+        *)
+            die 'how did I get here?'
+    esac
+}
+
+OPTERR=0
+while getopts "f:F:d:D:swh" opt; do
+    case "$opt" in
+        f) file="$OPTARG"; overwrite=false ;;
+        F) file="$OPTARG"; overwrite=true ;;
+        w) window=true; region=false ;;
+        s) window=false; region=true ;;
+        d) duration="$OPTARG" ;;
+        D) delay="$OPTARG" ;;
+    #   k) screenkeys=true ;;
+        h) usage; exit 0 ;;
+    esac
+done
+
+case "$file" in
+    *gif)
+        if ! has byzanz-record; then
+            die 'need byzanz-record for recording gifs'
+        fi
+        cmd='byzanz' ;;
+    *webm)
+        if ! has ffmpeg; then
+            die 'need ffmpeg for recording webms'
+        fi
+        cmd='ffmpeg' ;;
+    *) die 'unknown file type, must be gif or webm' ;;
+esac
+
+if [[ -f "$file" && "$overwrite" == false ]] && ! prompt "overwrite ${file}? "; then
+    die
+fi
+
+getdimensions
+delay
+record "$cmd"

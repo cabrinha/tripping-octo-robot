@@ -1,0 +1,3 @@
+set nospell
+autocmd VimEnter * set nospell
+colorscheme Tomorrow-Night-Eighties
