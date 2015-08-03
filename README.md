@@ -12,10 +12,44 @@ Neeasade's dotfiles
 [Workflow webm](https://sr.ht/61e69.webm)
 ![Screenshot](https://sr.ht/c2ac.png)
 
-##TODO(ricing roadmap)
-*   more BSPWM window manuevers
-*   dzen2 applets/panel things as I think of them
-*   better document and 'clean' things within the dotfiles themselves(never ends)
+##Keybinds
+
+Launch Chromium:
+```
+super + o
+```
+Launch dmenu
+```
+super + space
+```
+Launch Termite
+```
+super + enter
+```
+Move Window
+```
+super + shift + hjkl
+```
+Move Focus
+```
+super + hjkl
+```
+Close Window
+```
+super + w
+```
+Preset Direction?
+```
+super + ctrl + hjkl
+```
+Rotate Desktop
+```
+super + ;
+```
+Cycle through Windows
+```
+Alt + Tab
+```
 
 ##Multihead
 5 desktops are made per monitor, and super + # will focuse on that desktop for the current monitor. A panel is created per desktop, with workspace status for that monitor. Additionally, the title on a monitor is for the last active window on a desktop, as determined by a change in bspc window focus history. This behavior can be changed in the title.sh script. Windows can be moved across monitors and workspaces in an i3-like fashion, see [this post](http://blog.neeasade.net/2015/04/28/BSPWM-Multihead.html) for more details.
