@@ -1,1 +1,43 @@
-../.dotfiles_neeasade/bin/bin/ltheme
+#!/bin/sh
+# Load a bspwm theme based on argument
+unset block
+rm ~/.bspwm_theme
+ln -s ~/.config/bspwm/themes/${1}.bspwm_theme ~/.bspwm_theme
+. ~/.bspwm_theme
+
+rm ~/.config/termite/config
+ln -s ~/.config/termite/themes/${TERMITE_CONFIG}.config ~/.config/termite/config
+
+# tell all termites to reload their theme:
+killall -s USR1 termite &
+
+# tell tmux to reload it's theme
+tmux source-file ~/.tmux.conf &
+
+# set the background
+$BG_COMMAND &
+
+# Keep the current gap setting and reload bspwm
+[[ $(bspc config window_gap) -le 0 ]] && export BSPWM_GAPS=false \
+                                      || export BSPWM_GAPS=true
+
+~/.config/bspwm/bspwmrc &
+
+# reload gtk theme
+rm ~/.gtkrc-2.0
+ln -s ~/.config/gtk-settings/$GTK_THEME ~/.gtkrc-2.0
+gtkrc-reload &
+
+# Kill dunst and restart with the right colors.
+killall dunst
+
+# reset $defaultBG and FG for dunst relaunch:
+dunst -shrink -geometry 200x200+1725+35 \
+    -fn "$DUNST_FONT" \
+    -lb "$pBG" -lf "$pFG" \
+    -nb "$pBG" -nf "$pFG" \
+    -cb "$pFG" -cf "$pBG" &
+
+sleep 0.5
+
+notify-send "Theme $1 loaded."
