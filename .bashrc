@@ -14,6 +14,8 @@ export defaultBG="$(getTermColor background)"
 export defaultFG="$(getTermColor foreground)"
 export activeFG="$(getTermColor color15)"
 
+# Add my perl
+PATH=~/perl-5.22.0/bin:$PATH
 
 # Add bin to path
 PATH=$PATH:~/bin
@@ -102,6 +104,8 @@ export HISTFILESIZE=100000
 #  [ -n "$file" ] && ${EDITOR} "$file"
 #}
 #export FZF_CTRL_T_COMMAND=fe
+
+. ~/.aliases
 
 # autostartx if running on the first tty:
 if [[ -z $DISPLAY && $XDG_VTNR -eq 1 ]]; then exec startx; fi

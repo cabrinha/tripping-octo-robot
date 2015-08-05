@@ -8,17 +8,17 @@ export PATH=$PATH:~/.gem/ruby/1.8/bin:/opt/nginx/sbin
 
 # Set my editor and git editor
 export GIT_EDITOR='/usr/bin/vim'
-export EDITOR=vim
-export BROWSER=chromium
+#export EDITOR=vim
+export BROWSER=firefox
 
 # Set the path nginx
-export NGINX_PATH='/opt/nginx'
+#export NGINX_PATH='/opt/nginx'
 
 # Don't check mail when opening terminal.
 unset MAILCHECK
 
 # Set IRC client
-export IRC_CLIENT='irssi'
+export IRC_CLIENT='weechat'
 
 # Set this to the command you use for todo.txt-cli
 export TODO="/home/$USER/.todo.txt"
