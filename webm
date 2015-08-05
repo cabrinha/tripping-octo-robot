@@ -1,1 +1,0 @@
-ffmpeg -y -loglevel panic -f x11grab -c:v libvpx -crf 12 -b:v 1200k -preset slow -b 1000k -threads 4 -f webm "$(date +%F-%s).webm"
