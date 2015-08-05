@@ -141,7 +141,7 @@ super + p
     i3blur.sh
 
 super + o
-    chromium
+    firefox # || chromium
 
 super + e
     pcmanfm
