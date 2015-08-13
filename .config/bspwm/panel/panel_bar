@@ -13,6 +13,9 @@ cycle='bspc desktop -l next' # cycle tiled/monocle
 winfocus='bspc window -f '   # focus on a window
 while read -r line ; do
     case $line in
+    M*)
+        mpd_infos="${line#?}"
+    ;;
     S*)
         sys_infos="${line#?}"
     ;;
@@ -90,5 +93,5 @@ while read -r line ; do
 
         wm_infos=" $wm_infos%{B$pBG}";;
     esac
-    printf "%s\n" "%{l}$wm_infos %{c}$title %{r}$sys_infos"
+    printf "%s\n" "%{l}$wm_infos $mpd_infos %{c}$title %{r}$sys_infos"
 done

@@ -67,6 +67,8 @@ for i in $num_mon; do
     # name to be displayed.
     #xtitle -t 80 -sf 'T\\X%s//' > "$PANEL_FIFO$i" &
     title.sh $i > "${PANEL_FIFO}$i" &
+    # Making my MPD go on the left
+    mpd.sh $i > "${PANEL_FIFO}$i" &
 
     # info.sh outputs system information.
     if [ -z "$(eval echo \$'barInfo'$i)" ]; then

@@ -65,7 +65,7 @@ network() {
 }
 
 mpd() {
-    cur_song=$(basename "$(mpc current)" | sed "s/^\(.*\)\..*$/\1/" | cut -c1-30 )
+    cur_song=$(basename "$(mpc current)" | sed "s/^\(.*\)\..*$/\1/")
     icon f025
     if [ -z "$cur_song" ]; then
         echo "Stopped"
@@ -97,7 +97,7 @@ blockActive=false;
 while :; do
     buf="S"
 
-    [ -z "$*" ] && items="mpd battery network weather clock themeSwitch" \
+    [ -z "$*" ] && items="battery network weather clock themeSwitch" \
                 || items="$@"
 
     for item in $items; do
