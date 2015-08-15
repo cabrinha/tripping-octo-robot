@@ -6,7 +6,7 @@ THEME_NAME=chalk
 GTK_THEME=chalk
 
 # vim theme name
-VIM_COLORS=base16-chalk
+VIM_COLORS=Tomorrow
 
 # termite theme name
 TERMITE_CONFIG=chalk
