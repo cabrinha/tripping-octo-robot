@@ -12,7 +12,48 @@ His actual dots may be found [here](https://github.com/neeasade/dotfiles)
 *   font - Dejavu Sans Mono/Droid Sans/Terminus
 
 [Workflow webm](https://sr.ht/61e69.webm)
-![Screenshot](https://u.teknik.io/gtWppx.jpg)
+##Screenshots
+```
+chalk
+```
+![chalk](https://u.teknik.io/CZXGvL.png)
+![chalk_clean](https://u.teknik.io/CZXGvL.png)
+
+```
+jellybean
+```
+![jellybean](https://u.teknik.io/bRq8Px.png)
+![jellybean_clean](https://u.teknik.io/6FFgSO.png)
+
+```
+lynn
+```
+![lynn](https://u.teknik.io/ohtmHB.png)
+![lynn_clean](https://u.teknik.io/XE2t7F.png)
+
+```
+material
+```
+![material](https://u.teknik.io/jdtzAp.png)
+![material_clean](https://u.teknik.io/QhGqDs.png)
+
+```
+pyonium
+```
+![pyonium](https://u.teknik.io/5gD888.png)
+![pyonium_clean](https://u.teknik.io/6d58u6.png)
+
+```
+twilight
+```
+![twilight](https://u.teknik.io/5AAsDZ.png)
+![twilight_clean](https://u.teknik.io/irRAeG.png)
+
+```
+zenburn
+```
+![zenburn](https://u.teknik.io/ePhEn4.png)
+![zenburn_clean](https://u.teknik.io/SbaIfl.png)
 
 ##Keybinds
 
@@ -91,6 +132,11 @@ git clone http://github.com/neeasade/dotfiles ~/.dotfiles_neeasade && ~/.dotfile
 I take no responsibility for what happens when you do this. Any conflicting files will be moved to ~/dotfile_conflicts
 
 ##Misc:
-*   The philosophy for the prompt was taken from [dcat](http://dcat.iotek.org/prompt/)
 *   Initial information(and still some) displayed in the bar is from [z3bra's](http://z3bra.org) example
 *   the compton setting is modified from [dkeg's](https://bitbucket.org/dkeg/current/src/) config
+
+#TODO
+*   Build a better tmux statusline (powerline/airline)
+*   Configure more vim hotkeys
+*   Fix Termite copypasta settings
+*   Add album art to the MPD widget
