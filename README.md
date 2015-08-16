@@ -16,43 +16,43 @@ His actual dots may be found [here](https://github.com/neeasade/dotfiles)
 ```
 chalk
 ```
-![chalk](https://u.teknik.io/CZXGvL.png)
-![chalk_clean](https://u.teknik.io/CZXGvL.png)
+![chalk](https://u.teknik.io/I0JfPw.png)
+![chalk_clean](https://u.teknik.io/KjBzoE.png)
 
 ```
 jellybean
 ```
-![jellybean](https://u.teknik.io/bRq8Px.png)
+![jellybean](https://u.teknik.io/2diu48.png)
 ![jellybean_clean](https://u.teknik.io/6FFgSO.png)
 
 ```
 lynn
 ```
-![lynn](https://u.teknik.io/ohtmHB.png)
+![lynn](https://u.teknik.io/Yaodct.png)
 ![lynn_clean](https://u.teknik.io/XE2t7F.png)
 
 ```
 material
 ```
-![material](https://u.teknik.io/jdtzAp.png)
+![material](https://u.teknik.io/0OanOg.png)
 ![material_clean](https://u.teknik.io/QhGqDs.png)
 
 ```
 pyonium
 ```
-![pyonium](https://u.teknik.io/5gD888.png)
+![pyonium](https://u.teknik.io/oqgG7U.png)
 ![pyonium_clean](https://u.teknik.io/6d58u6.png)
 
 ```
 twilight
 ```
-![twilight](https://u.teknik.io/5AAsDZ.png)
+![twilight](https://u.teknik.io/zBMrfV.png)
 ![twilight_clean](https://u.teknik.io/irRAeG.png)
 
 ```
 zenburn
 ```
-![zenburn](https://u.teknik.io/ePhEn4.png)
+![zenburn](https://u.teknik.io/AGISw8.png)
 ![zenburn_clean](https://u.teknik.io/SbaIfl.png)
 
 ##Keybinds
