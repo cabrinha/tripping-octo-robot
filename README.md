@@ -1,5 +1,6 @@
 Neeasade's (stolen) dotfiles
 ===================
+This is a spinoff of Neeasade's dotfiles, tweaked to my own liking.
 His actual dots may be found [here](https://github.com/neeasade/dotfiles)
 
 ##Information
