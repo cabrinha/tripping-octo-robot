@@ -13,9 +13,7 @@ His actual dots may be found [here](https://github.com/neeasade/dotfiles)
 
 [Workflow webm](https://sr.ht/61e69.webm)
 ##Screenshots
-```
-chalk
-```
+###chalk
 ![chalk](https://u.teknik.io/I0JfPw.png)
 ![chalk_clean](https://u.teknik.io/KjBzoE.png)
 
