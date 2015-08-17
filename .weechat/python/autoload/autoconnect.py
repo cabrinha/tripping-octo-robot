@@ -1,1 +1,0 @@
-../../../.dotfiles_neeasade/weechat/.weechat/python/autoload/autoconnect.py

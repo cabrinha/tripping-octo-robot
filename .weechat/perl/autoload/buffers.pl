@@ -1,1 +1,0 @@
-../../../.dotfiles_neeasade/weechat/.weechat/perl/autoload/buffers.pl
